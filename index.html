@@ -1,366 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Campus Diaries</title>
-
-<style>
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f8f6f1;
-color:#202020;
-line-height:1.6
-}
-a{color:inherit;text-decoration:none}
-header{
-background:#fff;
-border-bottom:1px solid #ddd;
-padding:22px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:10
-}
-.logo{
-font-family:Georgia,serif;
-font-size:28px;
-font-weight:bold
-}
-nav a{
-margin-left:25px;
-font-size:14px;
-font-weight:bold
-}
-.hero{
-padding:90px 7%;
-background:#e8e0d2;
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:50px;
-align-items:center
-}
-.hero h1{
-font-family:Georgia,serif;
-font-size:58px;
-line-height:1.05;
-margin:0 0 20px
-}
-.hero p{
-font-size:18px;
-max-width:600px
-}
-.hero-button{
-display:inline-block;
-margin-top:15px;
-padding:13px 22px;
-background:#202020;
-color:#fff;
-border-radius:4px;
-font-weight:bold
-}
-.hero-card{
-background:#fff;
-padding:35px;
-border-radius:8px;
-box-shadow:0 10px 30px rgba(0,0,0,.08)
-}
-.hero-card h3{
-font-family:Georgia,serif;
-font-size:25px
-}
-.ticker{
-background:#202020;
-color:#fff;
-padding:12px 7%;
-font-size:13px
-}
-main{
-max-width:1200px;
-margin:auto;
-padding:70px 7%
-}
-.section-title{
-font-family:Georgia,serif;
-font-size:36px;
-margin-bottom:30px
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px
-}
-.card{
-background:#fff;
-padding:25px;
-border:1px solid #e1ddd5;
-border-radius:7px;
-transition:.2s
-}
-.card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 25px rgba(0,0,0,.07)
-}
-.card .tag{
-font-size:12px;
-text-transform:uppercase;
-font-weight:bold;
-letter-spacing:1px
-}
-.card h3{
-font-family:Georgia,serif;
-font-size:24px;
-line-height:1.2
-}
-.card p{
-font-size:14px;
-color:#555
-}
-.feature{
-background:#e8e0d2;
-padding:45px;
-margin:70px 0;
-border-radius:8px
-}
-.feature h2{
-font-family:Georgia,serif;
-font-size:38px
-}
-.categories{
-display:flex;
-flex-wrap:wrap;
-gap:12px
-}
-.category{
-background:#fff;
-border:1px solid #ddd;
-padding:12px 18px;
-border-radius:30px;
-font-weight:bold
-}
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-margin-top:70px
-}
-.about h2{
-font-family:Georgia,serif;
-font-size:38px
-}
-.newsletter{
-background:#202020;
-color:#fff;
-padding:45px;
-margin-top:70px;
-border-radius:8px
-}
-.newsletter h2{
-font-family:Georgia,serif;
-font-size:34px;
-margin-top:0
-}
-.newsletter form{
-display:flex;
-gap:10px;
-max-width:650px;
-flex-wrap:wrap
-}
-.newsletter input[type="email"]{
-flex:1;
-min-width:220px;
-padding:15px;
-border:0;
-border-radius:4px;
-font-size:15px
-}
-.newsletter input[type="submit"]{
-padding:15px 24px;
-background:#fff;
-color:#202020;
-border:0;
-border-radius:4px;
-font-weight:bold;
-font-size:15px;
-cursor:pointer
-}
-.newsletter input[type="submit"]:hover{
-opacity:.85
-}
-.newsletter p{
-font-size:12px;
-margin-top:15px;
-opacity:.75
-}
-footer{
-padding:35px 7%;
-border-top:1px solid #ddd;
-font-size:13px;
-color:#666
-}
-@media(max-width:800px){
-header{padding:18px 5%}
-nav a{margin-left:10px}
-.hero{
-grid-template-columns:1fr;
-padding:60px 7%
-}
-.hero h1{font-size:44px}
-.grid{grid-template-columns:1fr}
-.about{grid-template-columns:1fr}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Campus Diaries — student life, travel, study abroad and lifestyle ideas.">
+  <title>Campus Diaries | Student Life & Travel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<div class="logo">Campus Diaries</div>
-<nav>
-<a href="#latest">Latest</a>
-<a href="#categories">Categories</a>
-<a href="#about">About</a>
-</nav>
-</header>
-
-<div class="ticker">
-<a href="article2.html">NEW → How to Compare European Student Cities Before You Apply</a>
-</div>
-
-<section class="hero">
-<div>
-<h1>Student life, travel & everything in between.</h1>
-<p>
-Campus Diaries is your guide to studying, traveling, saving money,
-organizing your life and making the most of your student years.
-</p>
-<a class="hero-button" href="#latest">Explore the Diaries →</a>
-</div>
-
-<div class="hero-card">
-<div class="tag">Featured</div>
-<h3>Study in Central Europe: Where You Can Study and Travel on Weekends</h3>
-<p>
-Explore student-friendly Central European cities and discover how
-studying abroad can also open the door to weekend adventures.
-</p>
-<a href="article.html"><strong>Read the article →</strong></a>
-</div>
-</section>
+<header class="site-header"><div class="nav-wrap">
+<a class="logo" href="index.html">Campus <span>Diaries</span></a>
+<nav><a href="#latest">Latest</a><a href="#categories">Categories</a><a href="#about">About</a></nav>
+<a class="nav-button" href="article.html">Read the blog →</a>
+</div></header>
 
 <main>
+<section class="hero"><div>
+<p class="eyebrow">STUDENT LIFE • TRAVEL • LIFESTYLE</p>
+<h1>Your next chapter<br><em>starts here.</em></h1>
+<p class="hero-text">Practical guides, study-abroad inspiration, travel ideas and little things that make student life better.</p>
+<div class="hero-actions"><a class="button primary" href="article.html">Start reading →</a><a class="button secondary" href="#categories">Explore topics</a></div>
+</div>
+<div class="hero-card"><div class="stamp">CAMPUS<br>DIARIES</div><div class="hero-card-main">Make the most<br>of where you are.</div><div class="hero-card-bottom"><span>est. 2026</span><span>✦</span><span>your guide</span></div></div>
+</section>
 
-<section id="latest">
-<h2 class="section-title">Latest Diaries</h2>
+<div class="ticker"><span>NEW ON THE BLOG</span><a href="article2.html">How to compare European student cities →</a></div>
 
-<div class="grid">
+<section id="latest" class="section"><div class="section-heading"><div><p class="eyebrow">LATEST</p><h2>Stories worth saving.</h2></div><p>Ideas for studying smarter, travelling further and enjoying the in-between.</p></div>
+<div class="featured-grid">
 
-<a class="card" href="article.html">
-<div class="tag">Travel + Study</div>
-<h3>Study in Central Europe: Where You Can Study and Travel on Weekends</h3>
-<p>Student-friendly cities, travel connections and ideas for exploring Europe while studying.</p>
+<a class="featured-post" href="article.html">
+<div class="post-visual europe"><span>EUROPE</span><div class="visual-title">Study +<br>Weekend Travel</div><div class="route">PRAGUE → VIENNA → BUDAPEST</div></div>
+<div class="post-info"><p class="post-meta">STUDY ABROAD · 8 MIN READ</p><h3>Study in Central Europe: Where You Can Study and Travel on Weekends</h3><p>Compare student cities, transport connections and the things to think about before choosing where to study.</p><span class="read-more">Read story →</span></div>
 </a>
 
-<a class="card" href="article2.html">
-<div class="tag">Study Abroad</div>
-<h3>How to Compare European Student Cities Before You Apply</h3>
-<p>A practical checklist for comparing tuition, rent, transport, travel and everyday student life.</p>
+<a class="small-post" href="article2.html">
+<div class="mini-icon">✈</div><p class="post-meta">NEW · STUDY ABROAD</p>
+<h3>How to compare European student cities</h3>
+<p>Cost, university options, transport and everyday student life — all in one checklist.</p>
+<span class="read-more">Read story →</span>
 </a>
 
-<div class="card">
-<div class="tag">Coming Next</div>
-<h3>More student guides are coming soon.</h3>
-<p>Budgeting, travel essentials, activities and more from Campus Diaries.</p>
-</div>
+<article class="small-post dark"><div class="mini-icon">✦</div><p class="post-meta">COMING NEXT</p><h3>The student travel planning guide</h3><p>How to turn a free weekend into a memorable trip without overcomplicating it.</p></article>
+</div></section>
 
-</div>
-</section>
-
-<section class="feature">
-<div class="tag">Campus Diaries Guide</div>
-<h2>Planning to study abroad?</h2>
-<p>
-Don't just compare universities. Compare the life you'll actually live:
-housing, transport, food, travel, social life and your monthly budget.
-</p>
-<a class="hero-button" href="article2.html">Read the city comparison guide →</a>
-</section>
-
-<section id="categories">
-<h2 class="section-title">Explore Categories</h2>
-
-<div class="categories">
-<div class="category">Study</div>
-<div class="category">Lifestyle</div>
-<div class="category">Room & Organization</div>
-<div class="category">Money</div>
-<div class="category">Travel</div>
-<div class="category">Ideas</div>
-</div>
-</section>
+<section id="categories" class="section"><div class="section-heading"><div><p class="eyebrow">EXPLORE</p><h2>Pick your mood.</h2></div></div>
+<div class="category-grid">
+<a href="article.html" class="category-card"><span>01</span><strong>Study</strong><p>Productivity, university life & study-abroad planning.</p><b>→</b></a>
+<a href="article.html" class="category-card"><span>02</span><strong>Travel</strong><p>Student-friendly destinations, routes & travel ideas.</p><b>→</b></a>
+<a href="article.html" class="category-card"><span>03</span><strong>Lifestyle</strong><p>Routines, style, self-care and everyday inspiration.</p><b>→</b></a>
+<a href="article.html" class="category-card"><span>04</span><strong>Money</strong><p>Budgeting, saving and beginner-friendly side hustles.</p><b>→</b></a>
+<a href="article.html" class="category-card"><span>05</span><strong>Room & Organization</strong><p>Make your space practical, calm and yours.</p><b>→</b></a>
+<a href="article.html" class="category-card"><span>06</span><strong>Ideas</strong><p>Gift guides, lists, activities and things to try.</p><b>→</b></a>
+</div></section>
 
 <section id="about" class="about">
-<div>
-<h2>About Campus Diaries</h2>
-</div>
-
-<div>
-<p>
-Campus Diaries is a student-focused blog about the little and big
-things that make student life interesting.
-</p>
-
-<p>
-From choosing a study destination to planning weekend trips,
-organizing your room and learning how to manage money, this is a
-place for practical guides and inspiration.
-</p>
-</div>
+<div class="about-mark">CD</div>
+<div><p class="eyebrow">ABOUT CAMPUS DIARIES</p><h2>A little corner of the internet for figuring things out.</h2>
+<p>Campus Diaries is for students who want useful information without the boring bits — from choosing a study destination to planning your next weekend away.</p></div>
 </section>
 
 <section class="newsletter">
-<h2>Get the next diary entry 📬</h2>
+<div><p class="eyebrow">THE DIARY NOTE</p><h2>Good ideas, occasionally delivered.</h2><p>New guides, travel inspiration and student-life ideas. No inbox overload.</p></div>
 
-<p>
-Occasional study guides, travel ideas and student-life inspiration.
-</p>
-
-<form
-action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
-method="post"
-class="embeddable-buttondown-form">
-
+<form action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries" method="post" class="embeddable-buttondown-form">
 <label for="bd-email">Enter your email</label>
-
-<input
-type="email"
-name="email"
-id="bd-email"
-placeholder="Your email address"
-required>
-
-<input type="submit" value="Subscribe">
-
-<p>
-<a
-href="https://buttondown.com/refer/campusdiaries"
-target="_blank"
-rel="noopener noreferrer">
-Powered by Buttondown.
-</a>
-</p>
-
+<input type="email" name="email" id="bd-email" placeholder="Your email address" aria-label="Your email address" required>
+<button type="submit">Join →</button>
+<small>Occasional guides, travel ideas and student-life inspiration.</small>
 </form>
 </section>
-
 </main>
 
 <footer>
-© 2026 Campus Diaries · Study · Travel · Lifestyle
+<div class="footer-top"><a class="logo" href="index.html">Campus <span>Diaries</span></a><p>Study. Travel. Live a little.</p></div>
+<div class="footer-bottom"><span>© 2026 Campus Diaries</span><span>Made for the next chapter.</span></div>
 </footer>
 
 </body>
