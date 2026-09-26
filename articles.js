@@ -1,6 +1,18 @@
 const articles = [
 
   {
+    title: "25 Things to Do When You're Bored as a Student",
+    description:
+      "Sometimes you have a completely free afternoon and absolutely no idea what to do with it. Here are 25 simple ideas for having fun, trying something new, getting things done or making an ordinary day a little more interesting.",
+    category: "IDEAS · STUDENT LIFE",
+    label: "IDEAS",
+    route: "TRY → EXPLORE → REPEAT",
+    url: "article6.html",
+    icon: "✦"
+  },
+
+
+  {
     title: "How to Create a Student Room That Feels Calm, Practical & Yours",
     description:
       "Your room doesn't need to look like a perfectly styled Pinterest board. It just needs to work for you — somewhere you can study, rest, get ready and actually feel comfortable.",
