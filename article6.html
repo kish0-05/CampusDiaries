@@ -1,889 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    25 Things to Do When You're Bored as a Student — Campus Diaries
-  </title>
+  <title>25 Things to Do When You're Bored as a Student | Campus Diaries</title>
 
   <meta
     name="description"
-    content="25 simple, fun and useful things to do when you're bored as a student, whether you're alone, with friends or staying in."
+    content="25 simple things to do when you're bored as a student — from exploring your city and trying new hobbies to resetting your room and having a no-phone hour."
   >
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
+  <link rel="stylesheet" href="style.css">
 
   <style>
-
+    /* Article layout */
     .article-layout {
       max-width: 1140px;
       margin: 0 auto;
       padding: 70px 24px 100px;
-
       display: grid;
       grid-template-columns: minmax(0, 1fr) 280px;
       gap: 60px;
       align-items: start;
     }
 
-
     .article-main {
       min-width: 0;
     }
 
-
-    .article-header {
-      margin-bottom: 50px;
+    .article-main h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.95;
+      margin: 12px 0 24px;
+      letter-spacing: -0.04em;
     }
-
-
-    .article-header .post-meta {
-      margin-bottom: 18px;
-    }
-
-
-    .article-header h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 0.98;
-      margin: 0 0 28px;
-      max-width: 850px;
-    }
-
 
     .article-intro {
-      font-size: 21px;
-      line-height: 1.65;
+      font-size: 1.15rem;
+      line-height: 1.7;
       max-width: 760px;
+      margin-bottom: 35px;
     }
 
-
-    .article-content {
-      max-width: 760px;
+    /* Article image */
+    .article-hero-image {
+      width: 100%;
+      margin: 35px 0 55px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eee;
     }
 
+    .article-hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: cover;
+    }
 
-    .article-content h2 {
-      font-size: 30px;
+    .article-main h2 {
+      font-size: 1.8rem;
       line-height: 1.15;
       margin: 55px 0 18px;
     }
 
-
-    .article-content p {
-      font-size: 17px;
+    .article-main p {
+      font-size: 1.05rem;
       line-height: 1.8;
-      margin: 0 0 22px;
+      margin: 0 0 20px;
     }
 
-
-    .article-content ol,
-    .article-content ul {
-      padding-left: 26px;
-      margin: 0 0 28px;
+    .article-main ol {
+      padding-left: 25px;
     }
 
-
-    .article-content li {
-      font-size: 17px;
-      line-height: 1.75;
-      margin-bottom: 14px;
+    .article-main li {
+      margin-bottom: 12px;
+      line-height: 1.7;
     }
-
-
-    .article-content strong {
-      font-weight: 700;
-    }
-
-
-    .article-hero {
-      min-height: 380px;
-      margin-bottom: 55px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      padding: 34px;
-
-      background: #dedbd0;
-      position: relative;
-      overflow: hidden;
-    }
-
-
-    .article-hero::before {
-      content: "";
-      position: absolute;
-
-      width: 230px;
-      height: 230px;
-
-      border-radius: 50%;
-
-      background: rgba(255,255,255,0.45);
-
-      top: -70px;
-      right: -45px;
-    }
-
-
-    .article-hero::after {
-      content: "";
-      position: absolute;
-
-      width: 180px;
-      height: 180px;
-
-      border-radius: 50%;
-
-      background: rgba(255,255,255,0.3);
-
-      bottom: -80px;
-      left: -35px;
-    }
-
-
-    .ideas-label {
-      position: relative;
-      z-index: 1;
-
-      font-size: 13px;
-      letter-spacing: 0.16em;
-      font-weight: 700;
-    }
-
-
-    .ideas-title {
-      position: relative;
-      z-index: 1;
-
-      font-size: clamp(50px, 8vw, 90px);
-      line-height: 0.84;
-      font-weight: 700;
-      max-width: 650px;
-    }
-
-
-    .ideas-route {
-      position: relative;
-      z-index: 1;
-
-      font-size: 12px;
-      letter-spacing: 0.13em;
-      font-weight: 700;
-    }
-
 
     .article-sidebar {
       position: sticky;
       top: 30px;
     }
 
-
     .sidebar-card {
-      padding: 26px;
+      padding: 25px;
       margin-bottom: 20px;
+      border-radius: 16px;
     }
-
 
     .sidebar-card.light {
-      background: #f1ede6;
+      background: #f3efe7;
     }
 
-
     .sidebar-card.dark {
-      background: #1f211e;
+      background: #1f2420;
       color: white;
     }
 
-
     .sidebar-card h3 {
-      margin: 0 0 15px;
-      font-size: 22px;
+      margin-top: 0;
+      font-size: 1.2rem;
     }
-
 
     .sidebar-card p {
-      margin: 0;
       line-height: 1.65;
-      font-size: 15px;
+      margin-bottom: 0;
     }
-
-
-    .sidebar-card ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-
-
-    .sidebar-card li {
-      margin-bottom: 9px;
-      line-height: 1.5;
-      font-size: 15px;
-    }
-
 
     .article-back {
       display: inline-block;
-      margin-bottom: 30px;
-
-      font-size: 14px;
-      font-weight: 700;
+      margin-bottom: 25px;
       text-decoration: none;
+      font-weight: 600;
     }
 
+    .article-category {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
 
     @media (max-width: 900px) {
-
       .article-layout {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
+        padding-top: 45px;
       }
-
 
       .article-sidebar {
         position: static;
       }
-
     }
-
 
     @media (max-width: 600px) {
-
       .article-layout {
-        padding: 45px 20px 70px;
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
-
-      .article-hero {
-        min-height: 300px;
-        padding: 25px;
+      .article-main h1 {
+        font-size: 2.8rem;
       }
 
-
-      .article-header h1 {
-        font-size: 43px;
+      .article-hero-image {
+        margin-bottom: 40px;
       }
-
-
-      .article-intro {
-        font-size: 18px;
-      }
-
-
-      .article-content h2 {
-        font-size: 27px;
-      }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
 
-<!-- HEADER -->
-
-<header class="site-header">
-
-  <div class="nav-wrap">
-
-    <a
-      href="index.html"
-      class="logo"
-    >
-      Campus Diaries
-    </a>
-
-
-    <nav>
-
-      <a href="index.html">
-        Latest
+      <a href="index.html" class="logo">
+        Campus Diaries
       </a>
 
-      <a href="study.html">
-        Categories
-      </a>
+      <nav>
+        <a href="index.html">Latest</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#latest" class="nav-button">Read the blog →</a>
+      </nav>
 
-      <a href="index.html#about">
-        About
-      </a>
-
-      <a
-        href="index.html#newsletter"
-        class="nav-button"
-      >
-        Read the blog →
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
+    </div>
+  </header>
 
 
+  <!-- ARTICLE -->
+  <main class="article-layout">
 
-<main>
+    <article class="article-main">
 
+      <a href="ideas.html" class="article-back">← Back to Ideas</a>
 
-<div class="article-layout">
-
-
-  <!-- MAIN ARTICLE -->
-
-  <article class="article-main">
-
-
-    <a
-      href="ideas.html"
-      class="article-back"
-    >
-      ← Ideas
-    </a>
-
-
-    <header class="article-header">
-
-      <p class="post-meta">
+      <div class="article-category">
         IDEAS · STUDENT LIFE
-      </p>
-
+      </div>
 
       <h1>
         25 Things to Do When You're Bored as a Student
       </h1>
 
-
       <p class="article-intro">
-        Sometimes you have a completely free afternoon and absolutely
-        no idea what to do with it. Here are 25 simple ideas for when
-        you want to have fun, try something new, get things done or
-        just make an ordinary day a little more interesting.
+        Sometimes you have a completely free afternoon and absolutely no idea
+        what to do with it. Here are 25 simple ideas for having fun, trying
+        something new, getting things done or making an ordinary day a little
+        more interesting.
       </p>
 
-    </header>
 
-
-
-    <!-- ARTICLE HERO -->
-
-    <div class="article-hero">
-
-      <span class="ideas-label">
-        IDEAS
-      </span>
-
-
-      <div class="ideas-title">
-        DO<br>
-        SOMETHING<br>
-        DIFFERENT.
+      <!-- ARTICLE IMAGE -->
+      <div class="article-hero-image">
+        <img
+          src="images/article6.jpg"
+          alt="Things to do when you're bored as a student"
+        >
       </div>
 
 
-      <span class="ideas-route">
-        TRY → EXPLORE → REPEAT
-      </span>
-
-    </div>
-
-
-
-    <!-- ARTICLE CONTENT -->
-
-    <div class="article-content">
-
+      <h2>1. Go for a Walk Without a Plan</h2>
 
       <p>
-        Being bored isn't necessarily a bad thing. Sometimes it is
-        exactly what you need after a week of lectures, assignments
-        and deadlines.
+        Put your headphones on, leave your room and just walk. You don't need
+        a destination. Explore a street you've never walked down or find a
+        quiet place to sit for a while.
       </p>
 
 
+      <h2>2. Make a New Playlist</h2>
+
       <p>
-        But if you've been scrolling for an hour and still feel like
-        you haven't actually done anything, it might be time to switch
-        things up.
+        Make a playlist for a specific mood, season or part of your life.
+        You could create one for late-night studying, weekend mornings,
+        travelling or simply songs you never want to forget.
       </p>
 
 
+      <h2>3. Rearrange Your Room</h2>
+
       <p>
-        Here are 25 things you can try — some productive, some social,
-        some creative and some that are simply for fun.
+        You don't need to buy anything. Move your desk, change where you keep
+        your books or simply reorganize a shelf. A small change can make your
+        room feel completely different.
       </p>
 
 
-
-      <h2>
-        1. Go for a Walk Without a Plan
-      </h2>
-
+      <h2>4. Try a New Recipe</h2>
 
       <p>
-        Put your headphones on, choose a direction and just walk.
-        You don't need a destination. Exploring streets around your
-        campus or neighbourhood can make an ordinary afternoon feel
-        completely different.
+        Find something you've never cooked before and give it a try. It can be
+        something simple like pasta, pancakes, cookies or a new drink.
       </p>
 
 
-
-      <h2>
-        2. Make a New Playlist
-      </h2>
-
+      <h2>5. Have a No-Phone Hour</h2>
 
       <p>
-        Create a playlist for a specific mood or moment — late-night
-        studying, weekend mornings, travelling, getting ready or
-        walking around campus.
+        Put your phone somewhere you can't immediately reach it and spend an
+        hour doing something else. Read, draw, cook, clean or simply sit
+        outside.
       </p>
 
 
-
-      <h2>
-        3. Rearrange Your Room
-      </h2>
-
+      <h2>6. Visit Somewhere You've Never Been</h2>
 
       <p>
-        Move your desk, reorganize a shelf or simply change the way
-        your room is arranged. You don't need to buy anything to make
-        your space feel new.
+        You don't need to travel far. Find a café, park, library, bookstore
+        or neighbourhood you've never explored and make an afternoon out of it.
       </p>
 
 
-
-      <h2>
-        4. Try a New Recipe
-      </h2>
-
+      <h2>7. Make a List of Places You Want to Visit</h2>
 
       <p>
-        Pick something you've never made before and give it a try.
-        It can be as simple as a new breakfast, pasta recipe or
-        dessert.
+        Start a travel list. It can include cities you've always wanted to
+        visit, weekend destinations or even places near you that you've never
+        explored.
       </p>
 
 
-
-      <h2>
-        5. Have a No-Phone Hour
-      </h2>
-
+      <h2>8. Clean Out Your Phone</h2>
 
       <p>
-        Put your phone somewhere out of reach for one hour and see
-        what you naturally end up doing. Read, walk, cook, clean,
-        draw or just sit somewhere.
+        Delete screenshots, old downloads and apps you don't use. Organize
+        your photos into albums and clean up your home screen.
       </p>
 
 
-
-      <h2>
-        6. Visit Somewhere You've Never Been
-      </h2>
-
+      <h2>9. Learn Something Completely Random</h2>
 
       <p>
-        Find a café, library, park, bookstore or neighbourhood you've
-        never explored before. You don't need a full-day trip to
-        discover somewhere new.
+        Pick a topic you know almost nothing about and spend 30 minutes
+        learning about it. It could be architecture, astronomy, cooking,
+        languages, history or anything else that catches your attention.
       </p>
 
 
-
-      <h2>
-        7. Make a List of Places You Want to Visit
-      </h2>
-
+      <h2>10. Start a Journal</h2>
 
       <p>
-        Start a travel list and add places you'd like to visit during
-        university. Include both big trips and small weekend ideas.
+        You don't have to write pages every day. Start with a few sentences
+        about what happened today, what you're thinking about or something
+        you're looking forward to.
       </p>
 
 
-
-      <h2>
-        8. Clean Out Your Phone
-      </h2>
-
+      <h2>11. Call Someone You Haven't Spoken to Recently</h2>
 
       <p>
-        Delete screenshots you don't need, organize your photos,
-        remove unused apps and clear old downloads.
+        Think of someone you haven't talked to in a while and send them a
+        message or give them a call. Sometimes a simple conversation can
+        completely change your day.
       </p>
 
 
-
-      <h2>
-        9. Learn Something Completely Random
-      </h2>
-
+      <h2>12. Make a Mini Bucket List</h2>
 
       <p>
-        Pick a topic you've never studied before and spend thirty
-        minutes learning about it. It doesn't have to be useful.
-        Curiosity is enough.
+        Write down ten things you want to do this year. Keep them realistic
+        and fun — places to visit, foods to try, skills to learn or experiences
+        you want to have.
       </p>
 
 
-
-      <h2>
-        10. Start a Journal
-      </h2>
-
+      <h2>13. Go to a Bookstore</h2>
 
       <p>
-        Write down what happened today, what you're thinking about,
-        something you're looking forward to or simply what you did.
-        It doesn't have to become a serious diary.
+        Walk around a bookstore without necessarily planning to buy anything.
+        Pick up books you've never heard of and see what catches your attention.
       </p>
 
 
-
-      <h2>
-        11. Call Someone You Haven't Spoken to Recently
-      </h2>
-
+      <h2>14. Take Yourself on a Solo Coffee Date</h2>
 
       <p>
-        Instead of sending another message, call a friend or family
-        member you haven't properly caught up with.
+        Find a café, order something you like and bring a book, journal or
+        headphones. Spending time alone can actually be pretty enjoyable.
       </p>
 
 
-
-      <h2>
-        12. Make a Mini Bucket List
-      </h2>
-
+      <h2>15. Make a Mood Board</h2>
 
       <p>
-        Write down ten things you'd like to experience this year.
-        They can be tiny: trying a new restaurant, watching a sunrise,
-        taking a day trip or attending an event.
+        Create a digital or physical mood board for the life you want this
+        year. Add places, outfits, rooms, hobbies, quotes, colours and anything
+        else that inspires you.
       </p>
 
 
-
-      <h2>
-        13. Go to a Bookstore
-      </h2>
-
+      <h2>16. Try a New Hobby</h2>
 
       <p>
-        Browse without needing to buy anything. Pick up books you've
-        never heard of and see what catches your attention.
+        Try something you've always been curious about. Photography, drawing,
+        baking, dancing, reading, coding, photography, playing an instrument
+        or learning a language are all places to start.
       </p>
 
 
-
-      <h2>
-        14. Take Yourself on a Solo Coffee Date
-      </h2>
-
+      <h2>17. Have a Movie Night</h2>
 
       <p>
-        Find a café, bring a book or your headphones and spend some
-        time alone. Learning to enjoy your own company is one of the
-        most useful parts of student life.
+        Pick a movie you've been meaning to watch, make some snacks and turn
+        your evening into a proper little event.
       </p>
 
 
-
-      <h2>
-        15. Make a Mood Board
-      </h2>
-
+      <h2>18. Explore Your Campus</h2>
 
       <p>
-        Create a digital or physical collection of images, colours,
-        places and ideas that represent the kind of year or life you
+        Find a building, study space, café, garden or quiet corner you've
+        never visited. You might discover a new favourite place.
+      </p>
+
+
+      <h2>19. Make a Vision Board for Your Semester</h2>
+
+      <p>
+        Think about what you want the next few months to feel like. Add goals,
+        places you want to go, habits you want to build and experiences you
         want to have.
       </p>
 
 
-
-      <h2>
-        16. Try a New Hobby
-      </h2>
-
+      <h2>20. Organize Your Digital Life</h2>
 
       <p>
-        Try something you've always been curious about — photography,
-        drawing, cooking, running, language learning, knitting or
-        anything else that sounds interesting.
+        Clean your laptop, organize your folders and rename files properly.
+        It might not sound exciting, but future-you will appreciate it.
       </p>
 
 
-
-      <h2>
-        17. Have a Movie Night
-      </h2>
-
+      <h2>21. Have a Friends Cooking Night</h2>
 
       <p>
-        Pick a movie you've never seen, make some snacks and actually
-        give yourself permission to relax.
+        Invite a few friends over and cook something together. It doesn't have
+        to be complicated — the point is spending time together.
       </p>
 
 
-
-      <h2>
-        18. Explore Your Campus
-      </h2>
-
+      <h2>22. Take Photos Around Your City</h2>
 
       <p>
-        Find a building, study area, café, garden or corner of campus
-        you've never properly visited.
+        Take your phone or camera outside and look at your surroundings
+        differently. Photograph buildings, signs, streets, food, sunsets or
+        small details you normally walk past.
       </p>
 
 
-
-      <h2>
-        19. Make a Vision Board for Your Semester
-      </h2>
-
+      <h2>23. Plan Your Perfect Weekend</h2>
 
       <p>
-        Think about what you want your semester to feel like rather
-        than only what you want to achieve. Include experiences,
-        friendships, travel, study goals and personal habits.
+        Even if you aren't actually going anywhere, plan a dream weekend.
+        Choose where you'd go, what you'd eat, what you'd see and who you'd
+        spend it with.
       </p>
 
 
-
-      <h2>
-        20. Organize Your Digital Life
-      </h2>
-
+      <h2>24. Do Something You've Been Putting Off</h2>
 
       <p>
-        Clean up your laptop folders, rename important files and
-        create folders for your university work.
+        Pick one small task you've been avoiding and finally do it. Reply to
+        the message, clean the drawer, submit the form or organize the notes.
+        Getting it done feels better than thinking about it.
       </p>
 
 
-
-      <h2>
-        21. Have a Friends Cooking Night
-      </h2>
-
+      <h2>25. Do Absolutely Nothing</h2>
 
       <p>
-        Get a few friends together and cook something simple. It can
-        be more fun than going out and usually gives everyone something
-        to talk about.
+        Being bored isn't always a problem that needs fixing. Sometimes you
+        can simply lie down, listen to music, look out the window and let your
+        brain rest.
       </p>
 
 
-
-      <h2>
-        22. Take Photos Around Your City
-      </h2>
-
+      <h2>Pick One and Go</h2>
 
       <p>
-        Go outside and photograph interesting buildings, streets,
-        cafés, sunsets or everyday moments. You don't need a fancy
-        camera.
+        You don't need to completely transform your day. Pick one idea from
+        this list and try it.
       </p>
-
-
-
-      <h2>
-        23. Plan Your Perfect Weekend
-      </h2>
-
 
       <p>
-        Even if you aren't going anywhere, plan a weekend you'd
-        genuinely enjoy. Choose one place to visit, one person to
-        see, one thing to try and some time to do absolutely nothing.
+        Sometimes the best plans are the ones you make five minutes before
+        leaving your room.
       </p>
 
+    </article>
 
 
-      <h2>
-        24. Do Something You've Been Putting Off
-      </h2>
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <div class="sidebar-card light">
+        <h3>Pick a mood</h3>
+
+        <p>
+          <strong>Need to get out?</strong><br>
+          Go for a walk, explore somewhere new or take yourself on a coffee date.
+        </p>
+
+        <p style="margin-top: 16px;">
+          <strong>Want to stay in?</strong><br>
+          Rearrange your room, make a playlist, cook something or watch a movie.
+        </p>
+
+        <p style="margin-top: 16px;">
+          <strong>Want to be productive?</strong><br>
+          Organize your phone, clean your digital files or finish something
+          you've been putting off.
+        </p>
+      </div>
 
 
-      <p>
-        Reply to the email, organize the folder, book the appointment
-        or finally clean that drawer. Finishing one small task can
-        make the rest of your day feel lighter.
-      </p>
+      <div class="sidebar-card dark">
+        <h3>Remember</h3>
+
+        <p>
+          You don't have to make every free moment productive.
+          Sometimes doing something just because you enjoy it is enough.
+        </p>
+      </div>
+
+    </aside>
+
+  </main>
 
 
-
-      <h2>
-        25. Do Absolutely Nothing
-      </h2>
-
-
-      <p>
-        This one counts too.
-      </p>
-
-
-      <p>
-        You don't have to turn every free hour into a productive
-        activity. Sometimes lying down, listening to music or staring
-        out of the window is exactly what you need.
-      </p>
-
-
-
-      <h2>
-        Pick One and Go
-      </h2>
-
-
-      <p>
-        The point isn't to complete this entire list. Pick one thing
-        that sounds interesting and actually do it.
-      </p>
-
-
-      <p>
-        The best student memories aren't always the big planned
-        experiences. Sometimes they're the random Tuesday afternoons
-        when you decided to leave your room and see what happened.
-      </p>
-
-
-      <p>
-        So next time you're bored, put the phone down, choose
-        something and go make the day a little more interesting.
-      </p>
-
-
-
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="logo">Campus Diaries</div>
+        <p>Study. Travel. Live a little.</p>
+      </div>
     </div>
 
-  </article>
-
-
-
-  <!-- SIDEBAR -->
-
-  <aside class="article-sidebar">
-
-
-    <div class="sidebar-card light">
-
-      <h3>
-        Pick a mood
-      </h3>
-
-
-      <ul>
-
-        <li>
-          Want to be productive? Try 8, 20 or 24.
-        </li>
-
-        <li>
-          Want to go outside? Try 1, 6 or 22.
-        </li>
-
-        <li>
-          Want to relax? Try 5, 14 or 17.
-        </li>
-
-        <li>
-          Want to be creative? Try 2, 15 or 16.
-        </li>
-
-      </ul>
-
+    <div class="footer-bottom">
+      <p>© 2026 Campus Diaries</p>
     </div>
-
-
-
-    <div class="sidebar-card dark">
-
-      <h3>
-        Remember
-      </h3>
-
-
-      <p>
-        You don't have to make every free moment productive.
-        Sometimes the best idea is simply to enjoy your time.
-      </p>
-
-    </div>
-
-
-  </aside>
-
-
-</div>
-
-</main>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="footer-top">
-
-    <a
-      href="index.html"
-      class="logo"
-    >
-      Campus Diaries
-    </a>
-
-
-    <p>
-      Study. Travel. Live a little.
-    </p>
-
-  </div>
-
-
-  <div class="footer-bottom">
-
-    <p>
-      © Campus Diaries
-    </p>
-
-
-    <p>
-      Made for curious students.
-    </p>
-
-  </div>
-
-</footer>
-
+  </footer>
 
 </body>
-
 </html>
