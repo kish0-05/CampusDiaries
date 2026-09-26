@@ -1,18 +1,75 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Campus Diaries — student life, travel, study abroad and lifestyle ideas.">
+
+  <meta
+    name="description"
+    content="Campus Diaries — student life, travel, study abroad and lifestyle ideas."
+  >
+
   <title>Campus Diaries | Student Life & Travel</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Homepage article images */
+    .homepage-post-image {
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .homepage-post-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .homepage-small-image {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      background: #eee;
+      margin-bottom: 22px;
+      border-radius: 14px;
+    }
+
+    .homepage-small-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 700px) {
+      .homepage-post-image {
+        height: 220px;
+      }
+
+      .homepage-small-image {
+        height: 210px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
+
+<!-- HEADER -->
 <header class="site-header">
+
   <div class="nav-wrap">
-    <a class="logo" href="index.html">Campus <span>Diaries</span></a>
+
+    <a class="logo" href="index.html">
+      Campus <span>Diaries</span>
+    </a>
 
     <nav>
       <a href="#latest">Latest</a>
@@ -20,17 +77,26 @@
       <a href="#about">About</a>
     </nav>
 
-    <a class="nav-button" href="article.html">Read the blog →</a>
+    <a class="nav-button" href="article.html">
+      Read the blog →
+    </a>
+
   </div>
+
 </header>
 
+
 <main>
+
 
 <!-- HERO -->
 <section class="hero">
 
   <div>
-    <p class="eyebrow">STUDENT LIFE • TRAVEL • LIFESTYLE</p>
+
+    <p class="eyebrow">
+      STUDENT LIFE • TRAVEL • LIFESTYLE
+    </p>
 
     <h1>
       Your next chapter<br>
@@ -42,12 +108,22 @@
     </p>
 
     <div class="hero-actions">
-      <a class="button primary" href="article.html">Start reading →</a>
-      <a class="button secondary" href="#categories">Explore topics</a>
+
+      <a class="button primary" href="article.html">
+        Start reading →
+      </a>
+
+      <a class="button secondary" href="#categories">
+        Explore topics
+      </a>
+
     </div>
+
   </div>
 
+
   <div class="hero-card">
+
     <div class="stamp">
       CAMPUS<br>
       DIARIES
@@ -63,6 +139,7 @@
       <span>✦</span>
       <span>your guide</span>
     </div>
+
   </div>
 
 </section>
@@ -70,10 +147,15 @@
 
 <!-- TICKER -->
 <div class="ticker">
-  <span>NEW ON THE BLOG</span>
+
+  <span>
+    NEW ON THE BLOG
+  </span>
+
   <a href="article2.html">
     How to compare European student cities →
   </a>
+
 </div>
 
 
@@ -81,34 +163,41 @@
 <section id="latest" class="section">
 
   <div class="section-heading">
+
     <div>
-      <p class="eyebrow">LATEST</p>
-      <h2>Stories worth saving.</h2>
+
+      <p class="eyebrow">
+        LATEST
+      </p>
+
+      <h2>
+        Stories worth saving.
+      </h2>
+
     </div>
 
     <p>
       Ideas for studying smarter, travelling further and enjoying the in-between.
     </p>
+
   </div>
 
 
   <div class="featured-grid">
 
-    <!-- FEATURED ARTICLE -->
+
+    <!-- ARTICLE 1 -->
     <a class="featured-post" href="article.html">
 
-      <div class="post-visual europe">
-        <span>EUROPE</span>
+      <div class="homepage-post-image">
 
-        <div class="visual-title">
-          Study +<br>
-          Weekend Travel
-        </div>
+        <img
+          src="images/article.jpg"
+          alt="Study in Central Europe and travel on weekends"
+        >
 
-        <div class="route">
-          PRAGUE → VIENNA → BUDAPEST
-        </div>
       </div>
+
 
       <div class="post-info">
 
@@ -133,8 +222,17 @@
     </a>
 
 
-    <!-- SECOND ARTICLE -->
+    <!-- ARTICLE 2 -->
     <a class="small-post" href="article2.html">
+
+      <div class="homepage-small-image">
+
+        <img
+          src="images/article2.jpg"
+          alt="How to compare European student cities"
+        >
+
+      </div>
 
       <div class="mini-icon">
         ✈
@@ -159,26 +257,40 @@
     </a>
 
 
-    <!-- COMING NEXT -->
-    <article class="small-post dark">
+    <!-- ARTICLE 3 -->
+    <a class="small-post dark" href="article3.html">
+
+      <div class="homepage-small-image">
+
+        <img
+          src="images/article3.jpg"
+          alt="Budgeting, saving money and side hustles for international students"
+        >
+
+      </div>
 
       <div class="mini-icon">
-        ✦
+        €
       </div>
 
       <p class="post-meta">
-        COMING NEXT
+        MONEY · STUDENT LIFE
       </p>
 
       <h3>
-        The student travel planning guide
+        Budgeting, Saving Money & Side Hustles for International Students
       </h3>
 
       <p>
-        How to turn a free weekend into a memorable trip without overcomplicating it.
+        A practical guide to managing your money, saving where you can and finding realistic ways to earn while studying.
       </p>
 
-    </article>
+      <span class="read-more">
+        Read story →
+      </span>
+
+    </a>
+
 
   </div>
 
@@ -191,8 +303,15 @@
   <div class="section-heading">
 
     <div>
-      <p class="eyebrow">EXPLORE</p>
-      <h2>Pick your mood.</h2>
+
+      <p class="eyebrow">
+        EXPLORE
+      </p>
+
+      <h2>
+        Pick your mood.
+      </h2>
+
     </div>
 
   </div>
@@ -200,64 +319,120 @@
 
   <div class="category-grid">
 
+
     <a href="study.html" class="category-card">
+
       <span>01</span>
-      <strong>Study</strong>
+
+      <strong>
+        Study
+      </strong>
+
       <p>
         Productivity, university life & study-abroad planning.
       </p>
-      <b>→</b>
+
+      <b>
+        →
+      </b>
+
     </a>
 
 
     <a href="travel.html" class="category-card">
+
       <span>02</span>
-      <strong>Travel</strong>
+
+      <strong>
+        Travel
+      </strong>
+
       <p>
         Student-friendly destinations, routes & travel ideas.
       </p>
-      <b>→</b>
+
+      <b>
+        →
+      </b>
+
     </a>
 
 
     <a href="lifestyle.html" class="category-card">
+
       <span>03</span>
-      <strong>Lifestyle</strong>
+
+      <strong>
+        Lifestyle
+      </strong>
+
       <p>
         Routines, style, self-care and everyday inspiration.
       </p>
-      <b>→</b>
+
+      <b>
+        →
+      </b>
+
     </a>
 
 
     <a href="money.html" class="category-card">
+
       <span>04</span>
-      <strong>Money</strong>
+
+      <strong>
+        Money
+      </strong>
+
       <p>
         Budgeting, saving and beginner-friendly side hustles.
       </p>
-      <b>→</b>
+
+      <b>
+        →
+      </b>
+
     </a>
 
 
     <a href="room.html" class="category-card">
+
       <span>05</span>
-      <strong>Room & Organization</strong>
+
+      <strong>
+        Room & Organization
+      </strong>
+
       <p>
         Make your space practical, calm and yours.
       </p>
-      <b>→</b>
+
+      <b>
+        →
+      </b>
+
     </a>
 
 
     <a href="ideas.html" class="category-card">
+
       <span>06</span>
-      <strong>Ideas</strong>
+
+      <strong>
+        Ideas
+      </strong>
+
       <p>
         Gift guides, lists, activities and things to try.
       </p>
-      <b>→</b>
+
+      <b>
+        →
+      </b>
+
     </a>
+
 
   </div>
 
@@ -347,6 +522,7 @@
 
 </section>
 
+
 </main>
 
 
@@ -379,6 +555,7 @@
   </div>
 
 </footer>
+
 
 </body>
 </html>
