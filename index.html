@@ -1,882 +1,542 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  >
+  <title>Campus Diaries — Study. Travel. Live a little.</title>
 
   <meta
     name="description"
-    content="Campus Diaries — student life, travel, study abroad and lifestyle ideas."
+    content="Campus Diaries — student life, study abroad, money, travel, lifestyle, rooms and ideas."
   >
 
-  <title>
-    Campus Diaries | Student Life & Travel
-  </title>
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
+  <link rel="stylesheet" href="style.css">
 
   <style>
+    /* ================================
+       LATEST STORIES — IMAGE CARDS
+       ================================ */
 
-    /* ---------------------------------
-       IMAGE LAYOUT
-       --------------------------------- */
-
-    .latest-image {
-      width: 100%;
-      height: 100%;
-      min-height: 280px;
-      object-fit: cover;
-      display: block;
+    .featured-post {
+      position: relative;
+      overflow: hidden;
     }
-
 
     .featured-post .post-visual {
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
     }
 
+    .featured-post .post-visual.has-image {
+      min-height: 460px;
+    }
 
+    .featured-post .latest-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* Dark overlay so the text stays readable */
     .featured-post .post-visual.has-image::after {
       content: "";
       position: absolute;
       inset: 0;
       background:
         linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.48),
-          rgba(0, 0, 0, 0.04) 65%
+          to bottom,
+          rgba(0, 0, 0, 0.18) 0%,
+          rgba(0, 0, 0, 0.35) 45%,
+          rgba(0, 0, 0, 0.78) 100%
         );
+      z-index: 1;
       pointer-events: none;
     }
 
-
-    .featured-post .post-visual.has-image > *:not(img) {
+    .featured-post .post-visual.has-image .visual-title,
+    .featured-post .post-visual.has-image .route {
       position: relative;
       z-index: 2;
+      color: #ffffff;
     }
 
-
-    .featured-post .post-visual.has-image img {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
+    .featured-post .post-visual.has-image .visual-title {
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     }
 
-
-    .small-post-image {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      display: block;
-      margin-bottom: 22px;
+    .featured-post .post-visual.has-image .route {
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
     }
 
-
-    .small-post.has-image {
-      padding: 0;
+    /* Small article images */
+    .small-post {
+      position: relative;
       overflow: hidden;
     }
 
-
-    .small-post.has-image > .small-post-content {
-      padding: 0 28px 28px;
+    .small-post-image {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
     }
-
 
     .small-post.has-image .mini-icon {
       display: none;
     }
 
-
+    /* Mobile */
     @media (max-width: 700px) {
-
-      .latest-image {
-        min-height: 220px;
+      .featured-post .post-visual.has-image {
+        min-height: 380px;
       }
 
       .small-post-image {
-        height: 180px;
+        height: 170px;
       }
-
-      .small-post.has-image > .small-post-content {
-        padding: 0 22px 24px;
-      }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
 
-<!-- ================================
-     HEADER
-     ================================= -->
-
-<header class="site-header">
-
-  <div class="nav-wrap">
-
-    <a
-      class="logo"
-      href="index.html"
-    >
-      Campus <span>Diaries</span>
-    </a>
-
-
-    <nav>
-
-      <a href="#latest">
-        Latest
+      <a href="index.html" class="logo">
+        Campus Diaries
       </a>
 
-      <a href="#categories">
-        Categories
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-    </nav>
-
-
-    <a
-      class="nav-button"
-      href="#latest"
-    >
-      Read the blog →
-    </a>
-
-  </div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- ================================
-     HERO
-     ================================= -->
-
-<section class="hero">
-
-  <div>
-
-    <p class="eyebrow">
-      STUDENT LIFE • TRAVEL • LIFESTYLE
-    </p>
-
-
-    <h1>
-      Your next chapter<br>
-      <em>starts here.</em>
-    </h1>
-
-
-    <p class="hero-text">
-      Practical guides, study-abroad inspiration, travel ideas
-      and little things that make student life better.
-    </p>
-
-
-    <div class="hero-actions">
-
-      <a
-        class="button primary"
-        href="#latest"
-      >
-        Start reading →
-      </a>
-
-
-      <a
-        class="button secondary"
-        href="#categories"
-      >
-        Explore topics
-      </a>
+      <nav>
+        <a href="#latest">Latest</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#latest" class="nav-button">Read the blog →</a>
+      </nav>
 
     </div>
+  </header>
 
-  </div>
 
+  <!-- HERO -->
+  <section class="hero">
 
+    <div class="hero-text">
 
-  <div class="hero-card">
-
-    <div class="stamp">
-      CAMPUS<br>
-      DIARIES
-    </div>
-
-
-    <div class="hero-card-main">
-      Make the most<br>
-      of where you are.
-    </div>
-
-
-    <div class="hero-card-bottom">
-
-      <span>
-        est. 2026
-      </span>
-
-      <span>
-        ✦
-      </span>
-
-      <span>
-        your guide
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ================================
-     TICKER
-     ================================= -->
-
-<div class="ticker">
-
-  <span>
-    NEW ON THE BLOG
-  </span>
-
-
-  <a
-    id="ticker-link"
-    href="#latest"
-  >
-    Loading latest article →
-  </a>
-
-</div>
-
-
-
-<!-- ================================
-     LATEST ARTICLES
-     ================================= -->
-
-<section
-  id="latest"
-  class="section"
->
-
-  <div class="section-heading">
-
-    <div>
-
-      <p class="eyebrow">
-        LATEST
-      </p>
-
-
-      <h2>
-        Stories worth saving.
-      </h2>
-
-    </div>
-
-
-    <p>
-      Ideas for studying smarter, travelling further
-      and enjoying the in-between.
-    </p>
-
-  </div>
-
-
-
-  <div
-    id="latest-grid"
-    class="featured-grid"
-  >
-
-    <!-- Articles are loaded automatically -->
-
-  </div>
-
-</section>
-
-
-
-<!-- ================================
-     CATEGORIES
-     ================================= -->
-
-<section
-  id="categories"
-  class="section"
->
-
-  <div class="section-heading">
-
-    <div>
-
-      <p class="eyebrow">
-        EXPLORE
-      </p>
-
-
-      <h2>
-        Pick your mood.
-      </h2>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="category-grid">
-
-
-    <a
-      href="study.html"
-      class="category-card"
-    >
-
-      <span>
-        01
-      </span>
-
-      <strong>
-        Study
-      </strong>
-
-      <p>
-        Productivity, university life & study-abroad planning.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a
-      href="travel.html"
-      class="category-card"
-    >
-
-      <span>
-        02
-      </span>
-
-      <strong>
-        Travel
-      </strong>
-
-      <p>
-        Student-friendly destinations, routes & travel ideas.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a
-      href="lifestyle.html"
-      class="category-card"
-    >
-
-      <span>
-        03
-      </span>
-
-      <strong>
-        Lifestyle
-      </strong>
-
-      <p>
-        Routines, style, self-care and everyday inspiration.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a
-      href="money.html"
-      class="category-card"
-    >
-
-      <span>
-        04
-      </span>
-
-      <strong>
-        Money
-      </strong>
-
-      <p>
-        Budgeting, saving and beginner-friendly side hustles.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a
-      href="room.html"
-      class="category-card"
-    >
-
-      <span>
-        05
-      </span>
-
-      <strong>
-        Room & Organization
-      </strong>
-
-      <p>
-        Make your space practical, calm and yours.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a
-      href="ideas.html"
-      class="category-card"
-    >
-
-      <span>
-        06
-      </span>
-
-      <strong>
-        Ideas
-      </strong>
-
-      <p>
-        Gift guides, lists, activities and things to try.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- ================================
-     ABOUT
-     ================================= -->
-
-<section
-  id="about"
-  class="about"
->
-
-  <div class="about-mark">
-    CD
-  </div>
-
-
-  <div>
-
-    <p class="eyebrow">
-      ABOUT CAMPUS DIARIES
-    </p>
-
-
-    <h2>
-      A little corner of the internet
-      for figuring things out.
-    </h2>
-
-
-    <p>
-      Campus Diaries is for students who want useful information
-      without the boring bits — from choosing a study destination
-      to planning your next weekend away.
-    </p>
-
-  </div>
-
-</section>
-
-
-
-<!-- ================================
-     NEWSLETTER
-     ================================= -->
-
-<section class="newsletter">
-
-  <div>
-
-    <p class="eyebrow">
-      THE DIARY NOTE
-    </p>
-
-
-    <h2>
-      Good ideas, occasionally delivered.
-    </h2>
-
-
-    <p>
-      New guides, travel inspiration and student-life ideas.
-      No inbox overload.
-    </p>
-
-  </div>
-
-
-
-  <form
-    action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
-    method="post"
-    class="embeddable-buttondown-form"
-  >
-
-    <label for="bd-email">
-      Enter your email
-    </label>
-
-
-    <input
-      type="email"
-      name="email"
-      id="bd-email"
-      placeholder="Your email address"
-      aria-label="Your email address"
-      required
-    >
-
-
-    <button type="submit">
-      Subscribe →
-    </button>
-
-
-    <p>
-      <a
-        href="https://buttondown.com/refer/campusdiaries"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by Buttondown.
-      </a>
-    </p>
-
-  </form>
-
-</section>
-
-
-</main>
-
-
-
-<!-- ================================
-     FOOTER
-     ================================= -->
-
-<footer>
-
-  <div class="footer-top">
-
-    <a
-      class="logo"
-      href="index.html"
-    >
-      Campus <span>Diaries</span>
-    </a>
-
-
-    <p>
-      Study. Travel. Live a little.
-    </p>
-
-  </div>
-
-
-
-  <div class="footer-bottom">
-
-    <span>
-      © 2026 Campus Diaries
-    </span>
-
-
-    <span>
-      Made for the next chapter.
-    </span>
-
-  </div>
-
-</footer>
-
-
-
-<!-- ================================
-     ARTICLE DATA
-     ================================= -->
-
-<script src="articles.js"></script>
-
-
-<script>
-
-  const latestGrid =
-    document.getElementById("latest-grid");
-
-  const tickerLink =
-    document.getElementById("ticker-link");
-
-
-  /*
-    The homepage always uses the first
-    three articles in articles.js.
-  */
-
-  const latestArticles =
-    articles.slice(0, 3);
-
-
-
-  /*
-    Update the ticker automatically.
-  */
-
-  if (latestArticles.length > 0) {
-
-    tickerLink.textContent =
-      latestArticles[0].title + " →";
-
-    tickerLink.href =
-      latestArticles[0].url;
-
-  }
-
-
-
-  /*
-    Create the featured article.
-  */
-
-  if (latestArticles.length > 0) {
-
-    const article =
-      latestArticles[0];
-
-
-    const articleNumber =
-      article.url
-        .replace(".html", "")
-        .replace("article", "");
-
-
-    const imagePath =
-      articleNumber
-        ? "images/article" + articleNumber + ".jpg"
-        : "images/article.jpg";
-
-
-    const featured =
-      document.createElement("a");
-
-
-    featured.className =
-      "featured-post";
-
-
-    featured.href =
-      article.url;
-
-
-    featured.innerHTML = `
-
-      <div class="post-visual europe has-image">
-
-        <img
-          class="latest-image"
-          src="${imagePath}"
-          alt="${article.title}"
-          onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');"
-        >
-
-        <span>
-          ${article.label}
-        </span>
-
-        <div class="visual-title">
-          ${article.title}
-        </div>
-
-        <div class="route">
-          ${article.route}
-        </div>
-
+      <div class="eyebrow">
+        FOR STUDENTS, BY STUDENTS
       </div>
 
+      <h1>
+        STUDY.<br>
+        TRAVEL.<br>
+        LIVE A LITTLE.
+      </h1>
 
-      <div class="post-info">
+      <p>
+        Practical guides, ideas and inspiration for making student life
+        a little more exciting.
+      </p>
 
-        <p class="post-meta">
-          ${article.category}
-        </p>
+      <div class="hero-actions">
+        <a href="#latest" class="button primary">
+          Explore the blog →
+        </a>
+
+        <a href="#categories" class="button secondary">
+          Browse topics
+        </a>
+      </div>
+
+    </div>
 
 
-        <h3>
-          ${article.title}
-        </h3>
+    <div class="hero-card">
 
+      <div class="stamp">
+        NEW
+      </div>
+
+      <div class="hero-card-main">
+        <span>THIS WEEK</span>
+
+        <strong>
+          Find your next<br>
+          favourite idea.
+        </strong>
+      </div>
+
+      <div class="hero-card-bottom">
+        <span>Campus Diaries</span>
+        <span>2026</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>JUST IN</span>
+      <a id="ticker-link" href="#">Loading latest story →</a>
+    </div>
+  </div>
+
+
+  <!-- LATEST -->
+  <section class="section" id="latest">
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">LATEST</span>
+        <h2>Stories worth saving.</h2>
+      </div>
+
+      <a href="#categories" class="read-more">
+        Browse all topics →
+      </a>
+    </div>
+
+
+    <div class="featured-grid" id="latest-grid">
+      <!-- Articles are loaded automatically from articles.js -->
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="section" id="categories">
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">EXPLORE</span>
+        <h2>Find your thing.</h2>
+      </div>
+    </div>
+
+
+    <div class="category-grid">
+
+      <a href="study.html" class="category-card">
+        <span>01</span>
+        <strong>Study</strong>
+        <small>Uni life, studying & applying</small>
+      </a>
+
+      <a href="travel.html" class="category-card">
+        <span>02</span>
+        <strong>Travel</strong>
+        <small>Trips, cities & study abroad</small>
+      </a>
+
+      <a href="lifestyle.html" class="category-card">
+        <span>03</span>
+        <strong>Lifestyle</strong>
+        <small>Routines, friendships & everyday life</small>
+      </a>
+
+      <a href="money.html" class="category-card">
+        <span>04</span>
+        <strong>Money</strong>
+        <small>Budgeting, saving & earning</small>
+      </a>
+
+      <a href="room.html" class="category-card">
+        <span>05</span>
+        <strong>Room & Organization</strong>
+        <small>Spaces, organization & resets</small>
+      </a>
+
+      <a href="ideas.html" class="category-card">
+        <span>06</span>
+        <strong>Ideas</strong>
+        <small>Things to do, try & explore</small>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+
+    <div class="about-mark">
+      CD
+    </div>
+
+    <div>
+
+      <span class="eyebrow">
+        ABOUT CAMPUS DIARIES
+      </span>
+
+      <h2>
+        A little corner of the internet
+        for figuring things out.
+      </h2>
+
+      <p>
+        Campus Diaries is for the parts of student life that don't always
+        make it into the brochure — where to go, how to save money,
+        what to do when you're bored, how to make your room feel like yours,
+        and how to actually enjoy the years you're in.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter section">
+
+    <div>
+
+      <span class="eyebrow">
+        STAY IN THE LOOP
+      </span>
+
+      <h2>
+        Get the good stuff.
+      </h2>
+
+      <p>
+        New guides, ideas and student-life inspiration.
+      </p>
+
+    </div>
+
+
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/campusdiaries', 'popupwindow')"
+      class="newsletter-form"
+    >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email address"
+        required
+      >
+
+      <button type="submit" class="button primary">
+        Subscribe →
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-top">
+
+      <div>
+        <div class="logo">
+          Campus Diaries
+        </div>
 
         <p>
-          ${article.description}
+          Study. Travel. Live a little.
         </p>
-
-
-        <span class="read-more">
-          Read story →
-        </span>
-
       </div>
 
-    `;
+
+      <div>
+        <span class="eyebrow">EXPLORE</span>
+
+        <a href="study.html">Study</a>
+        <a href="travel.html">Travel</a>
+        <a href="lifestyle.html">Lifestyle</a>
+        <a href="money.html">Money</a>
+        <a href="room.html">Room & Organization</a>
+        <a href="ideas.html">Ideas</a>
+      </div>
+
+    </div>
 
 
-    latestGrid.appendChild(featured);
+    <div class="footer-bottom">
+      <span>© 2026 Campus Diaries</span>
+      <span>Made for student life.</span>
+    </div>
 
-  }
+  </footer>
 
 
+  <!-- ARTICLE DATA -->
+  <script src="articles.js"></script>
 
-  /*
-    Create the second and third articles.
-  */
 
-  latestArticles
-    .slice(1, 3)
-    .forEach((article, index) => {
+  <!-- LATEST ARTICLE SYSTEM -->
+  <script>
+
+    const latestGrid = document.getElementById("latest-grid");
+    const tickerLink = document.getElementById("ticker-link");
+
+    const latestArticles = articles.slice(0, 3);
+
+
+    function getImagePath(article) {
 
       const articleNumber =
         article.url
           .replace(".html", "")
           .replace("article", "");
 
+      return articleNumber
+        ? "images/article" + articleNumber + ".jpg"
+        : "images/article.jpg";
 
-      const imagePath =
-        articleNumber
-          ? "images/article" + articleNumber + ".jpg"
-          : "images/article.jpg";
-
-
-      const card =
-        document.createElement("a");
+    }
 
 
-      card.className =
-        "small-post has-image";
+    /* TICKER */
+
+    if (latestArticles.length > 0) {
+
+      tickerLink.textContent =
+        latestArticles[0].title + " →";
+
+      tickerLink.href =
+        latestArticles[0].url;
+
+    }
 
 
-      card.href =
-        article.url;
+    /* LATEST STORIES */
+
+    if (latestArticles.length > 0) {
+
+      const featured = latestArticles[0];
+      const featuredImage = getImagePath(featured);
 
 
-      card.innerHTML = `
+      let html = `
 
-        <img
-          class="small-post-image"
-          src="${imagePath}"
-          alt="${article.title}"
-          onerror="this.style.display='none';"
-        >
+        <a href="${featured.url}" class="featured-post">
 
+          <div class="post-visual ${featuredImage ? "has-image" : ""}">
 
-        <div class="small-post-content">
+            <img
+              class="latest-image"
+              src="${featuredImage}"
+              alt="${featured.title}"
+              onerror="
+                this.style.display='none';
+                this.parentElement.classList.remove('has-image');
+              "
+            >
 
-          <div class="mini-icon">
-            ${article.icon}
+            <div class="visual-title">
+              ${featured.label}
+            </div>
+
+            <div class="route">
+              ${featured.route}
+            </div>
+
           </div>
 
 
-          <p class="post-meta">
-            ${index === 0 ? "NEW ARTICLE" : article.category}
-          </p>
+          <div class="post-info">
 
+            <div class="post-meta">
+              ${featured.category}
+            </div>
 
-          <h3>
-            ${article.title}
-          </h3>
+            <h3>
+              ${featured.title}
+            </h3>
 
+            <p>
+              ${featured.description}
+            </p>
 
-          <p>
-            ${article.description}
-          </p>
+            <span class="read-more">
+              Read article →
+            </span>
 
+          </div>
 
-          <span class="read-more">
-            Read story →
-          </span>
-
-        </div>
+        </a>
 
       `;
 
 
-      latestGrid.appendChild(card);
+      /* SMALL ARTICLES */
 
-    });
+      for (let i = 1; i < latestArticles.length; i++) {
+
+        const article = latestArticles[i];
+        const imagePath = getImagePath(article);
 
 
-</script>
+        html += `
 
+          <a href="${article.url}" class="small-post">
+
+            <img
+              class="small-post-image"
+              src="${imagePath}"
+              alt="${article.title}"
+              onerror="
+                this.style.display='none';
+              "
+            >
+
+
+            <div class="mini-icon">
+              ${article.icon}
+            </div>
+
+
+            <div class="post-info">
+
+              <div class="post-meta">
+                ${article.category}
+              </div>
+
+              <h3>
+                ${article.title}
+              </h3>
+
+              <p>
+                ${article.description}
+              </p>
+
+              <span class="read-more">
+                Read article →
+              </span>
+
+            </div>
+
+          </a>
+
+        `;
+
+      }
+
+
+      latestGrid.innerHTML = html;
+
+    }
+
+  </script>
 
 </body>
-
 </html>
