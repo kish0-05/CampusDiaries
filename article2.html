@@ -3,127 +3,427 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="How to compare European student cities before choosing where to study abroad.">
+
   <title>How to Compare European Student Cities | Campus Diaries</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-layout {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 70px 24px 100px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .article-main {
+      min-width: 0;
+    }
+
+    .article-main h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: .95;
+      margin: 12px 0 24px;
+      letter-spacing: -0.04em;
+    }
+
+    .article-intro {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      max-width: 760px;
+      margin-bottom: 35px;
+    }
+
+    .article-hero-image {
+      width: 100%;
+      margin: 35px 0 55px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .article-hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: cover;
+    }
+
+    .article-main h2 {
+      font-size: 1.8rem;
+      line-height: 1.15;
+      margin: 55px 0 18px;
+    }
+
+    .article-main p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0 0 20px;
+    }
+
+    .article-main ol {
+      padding-left: 25px;
+    }
+
+    .article-main li {
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    .article-sidebar {
+      position: sticky;
+      top: 30px;
+    }
+
+    .sidebar-card {
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 16px;
+    }
+
+    .sidebar-card.light {
+      background: #f3efe7;
+    }
+
+    .sidebar-card.dark {
+      background: #1f2420;
+      color: white;
+    }
+
+    .sidebar-card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .sidebar-card p {
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    .article-back {
+      display: inline-block;
+      margin-bottom: 25px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .article-category {
+      font-size: .78rem;
+      letter-spacing: .12em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .article-note,
+    .city-card,
+    .callout {
+      padding: 22px 24px;
+      margin: 30px 0;
+      border-radius: 16px;
+      background: #f3efe7;
+      line-height: 1.7;
+    }
+
+    .callout {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .callout > span {
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+
+    .last-note {
+      font-size: .95rem !important;
+      opacity: .75;
+      margin-top: 40px !important;
+    }
+
+    @media (max-width: 900px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 45px;
+      }
+
+      .article-sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .article-layout {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .article-main h1 {
+        font-size: 2.8rem;
+      }
+
+      .article-hero-image {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <header class="site-header">
   <div class="nav-wrap">
-    <a class="logo" href="index.html">Campus <span>Diaries</span></a>
+
+    <a href="index.html" class="logo">Campus Diaries</a>
+
     <nav>
-      <a href="index.html#latest">Latest</a>
+      <a href="index.html">Latest</a>
       <a href="index.html#categories">Categories</a>
       <a href="index.html#about">About</a>
+      <a href="index.html#latest" class="nav-button">Read the blog →</a>
     </nav>
-    <a class="nav-button" href="index.html">← Home</a>
+
   </div>
 </header>
 
-<main class="article-page">
-  <div class="article-hero">
-    <p class="eyebrow">STUDY ABROAD · CITY GUIDE</p>
+
+<main class="article-layout">
+
+  <article class="article-main">
+
+    <a href="study.html" class="article-back">← Back to Study</a>
+
+    <div class="article-category">
+      STUDY ABROAD · CITY GUIDE
+    </div>
+
     <h1>How to Compare European Student Cities Before You Apply</h1>
-    <p class="article-deck">The university matters, but so does the city around it. Here is a simple checklist for comparing your options before making a study-abroad decision.</p>
-    <div class="article-meta"><span>Campus Diaries</span><span>•</span><span>7 min read</span><span>•</span><span>2026</span></div>
-  </div>
 
-  <div class="article-layout">
-    <article class="article-content">
-      <div class="article-note"><strong>Quick idea:</strong> Don't compare cities using only one number, like tuition fees. Your real student experience is shaped by housing, transport, food, university quality, lifestyle and the practical rules that apply to you.</div>
+    <p class="article-intro">
+      The university matters, but so does the city around it. Here is a simple checklist for comparing your options before making a study-abroad decision.
+    </p>
 
-      <p>Choosing a city for university can feel overwhelming. There are dozens of European destinations, and every one seems to have a different combination of universities, prices, transport links and student culture.</p>
 
-      <p>The good news is that you don't need a complicated formula. A simple comparison checklist can help you narrow your choices and figure out which places deserve more research.</p>
+    <div class="article-hero-image">
+      <img
+        src="images/article2.jpg"
+        alt="How to compare European student cities before applying"
+      >
+    </div>
 
-      <h2>1. Start with the university, not Instagram</h2>
-      <p>A beautiful city is not enough if the university does not offer the course, teaching language, accreditation or academic environment you need.</p>
-      <p>Start by checking the exact programme at each university. Look at entry requirements, application deadlines, tuition structure, course length and what is included in the programme.</p>
 
-      <div class="city-card"><strong>Make a shortlist:</strong> Pick around 3–6 university programmes that genuinely fit what you want to study before comparing the cities around them.</div>
+    <div class="article-note">
+      <strong>Quick idea:</strong>
+      Don't compare cities using only one number, like tuition fees. Your real student experience is shaped by housing, transport, food, university quality, lifestyle and the practical rules that apply to you.
+    </div>
 
-      <h2>2. Compare the real cost of living</h2>
-      <p>Two cities can have similar tuition fees but very different everyday costs. Housing is often one of the biggest differences.</p>
-      <p>For each city, research monthly rent, utilities, groceries, public transport, phone plans and typical student expenses. If you plan to travel, create a separate travel budget rather than pretending it will cost nothing.</p>
 
-      <h2>3. Look at housing before falling in love with a city</h2>
-      <p>Student accommodation can vary from university residences to private rooms and shared apartments. Check how much accommodation actually costs, how competitive it is and how far it is from campus.</p>
-      <p>Also look at whether the advertised price includes utilities and what deposit or contract requirements apply.</p>
+    <p>
+      Choosing a city for university can feel overwhelming. There are dozens of European destinations, and every one seems to have a different combination of universities, prices, transport links and student culture.
+    </p>
 
-      <h2>4. Check public transport</h2>
-      <p>A city with a good public transport network can make everyday life much easier. Check metro, tram, bus and train options, plus student discounts where available.</p>
-      <p>Ask yourself: Could I get to university easily? Could I reach the main train station or airport without spending a fortune? Would I need a car?</p>
+    <p>
+      The good news is that you don't need a complicated formula. A simple comparison checklist can help you narrow your choices and figure out which places deserve more research.
+    </p>
 
-      <h2>5. If travel matters, compare the connections</h2>
-      <p>If one of your reasons for studying in Europe is exploring nearby countries, this deserves its own category.</p>
-      <p>Look at direct trains, long-distance coaches and flights from the city. A city can look geographically close to another destination but still be inconvenient to reach depending on the available routes.</p>
 
-      <div class="callout">
-        <span>✦</span>
-        <div><strong>Travel tip</strong><br>Compare the whole journey, not just the ticket price. A cheap ticket that requires several connections may be less useful for a short weekend than a slightly more expensive direct route.</div>
+    <h2>1. Start with the university, not Instagram</h2>
+
+    <p>
+      A beautiful city is not enough if the university does not offer the course, teaching language, accreditation or academic environment you need.
+    </p>
+
+    <p>
+      Start by checking the exact programme at each university. Look at entry requirements, application deadlines, tuition structure, course length and what is included in the programme.
+    </p>
+
+    <div class="city-card">
+      <strong>Make a shortlist:</strong>
+      Pick around 3–6 university programmes that genuinely fit what you want to study before comparing the cities around them.
+    </div>
+
+
+    <h2>2. Compare the real cost of living</h2>
+
+    <p>
+      Two cities can have similar tuition fees but very different everyday costs. Housing is often one of the biggest differences.
+    </p>
+
+    <p>
+      For each city, research monthly rent, utilities, groceries, public transport, phone plans and typical student expenses. If you plan to travel, create a separate travel budget rather than pretending it will cost nothing.
+    </p>
+
+
+    <h2>3. Look at housing before falling in love with a city</h2>
+
+    <p>
+      Student accommodation can vary from university residences to private rooms and shared apartments. Check how much accommodation actually costs, how competitive it is and how far it is from campus.
+    </p>
+
+    <p>
+      Also look at whether the advertised price includes utilities and what deposit or contract requirements apply.
+    </p>
+
+
+    <h2>4. Check public transport</h2>
+
+    <p>
+      A city with a good public transport network can make everyday life much easier. Check metro, tram, bus and train options, plus student discounts where available.
+    </p>
+
+    <p>
+      Ask yourself: Could I get to university easily? Could I reach the main train station or airport without spending a fortune? Would I need a car?
+    </p>
+
+
+    <h2>5. If travel matters, compare the connections</h2>
+
+    <p>
+      If one of your reasons for studying in Europe is exploring nearby countries, this deserves its own category.
+    </p>
+
+    <p>
+      Look at direct trains, long-distance coaches and flights from the city. A city can look geographically close to another destination but still be inconvenient to reach depending on the available routes.
+    </p>
+
+
+    <div class="callout">
+      <span>✦</span>
+
+      <div>
+        <strong>Travel tip</strong><br>
+        Compare the whole journey, not just the ticket price. A cheap ticket that requires several connections may be less useful for a short weekend than a slightly more expensive direct route.
       </div>
+    </div>
 
-      <h2>6. Think about everyday student life</h2>
-      <p>You are choosing somewhere to live, not just somewhere to visit. Research student organisations, libraries, sports, cafés, parks, cultural activities and the general atmosphere of the neighbourhoods where students live.</p>
-      <p>Think about what you personally enjoy. A huge capital city and a smaller university town can offer completely different experiences.</p>
 
-      <h2>7. Check the rules that apply to you</h2>
-      <p>Visa, residence-permit, healthcare and work rules depend on your nationality, destination and personal circumstances. These rules can also change.</p>
-      <p>Before applying or making financial commitments, use official government and university sources to check the requirements that apply to you. Don't rely on a social-media post or an old blog post for immigration information.</p>
+    <h2>6. Think about everyday student life</h2>
 
-      <h2>8. Make a simple comparison table</h2>
-      <p>Once you have researched your options, put the information in one place. You can use a spreadsheet or even a notebook.</p>
+    <p>
+      You are choosing somewhere to live, not just somewhere to visit. Research student organisations, libraries, sports, cafés, parks, cultural activities and the general atmosphere of the neighbourhoods where students live.
+    </p>
 
-      <ol>
-        <li><strong>University & course:</strong> Does the programme actually fit your goals?</li>
-        <li><strong>Tuition:</strong> What will you pay and when?</li>
-        <li><strong>Housing:</strong> What is a realistic monthly cost?</li>
-        <li><strong>Living expenses:</strong> Food, transport, phone and everyday spending.</li>
-        <li><strong>Transport:</strong> How easy is it to move around the city?</li>
-        <li><strong>Travel:</strong> What train, bus and flight connections are available?</li>
-        <li><strong>Student life:</strong> Would you enjoy living there for several years?</li>
-        <li><strong>Practical requirements:</strong> What visa, residence and university requirements apply?</li>
-      </ol>
+    <p>
+      Think about what you personally enjoy. A huge capital city and a smaller university town can offer completely different experiences.
+    </p>
 
-      <h2>My simple city-scorecard idea</h2>
-      <p>You can give each category a personal rating from 1–5 just for your own comparison. The point is not to create a universal “best city”; it is to see which options match <em>your</em> priorities.</p>
 
-      <div class="city-card"><strong>Example:</strong> If affordable housing matters most to you, give housing more weight. If weekend travel is a major priority, give transport and connections more weight. Your comparison should reflect the life you actually want.</div>
+    <h2>7. Check the rules that apply to you</h2>
 
-      <h2>Final checklist before choosing</h2>
-      <p>Before you decide, make sure you have checked current information from the university and relevant official authorities. Prices, admission requirements, visa rules and transport options can change.</p>
+    <p>
+      Visa, residence-permit, healthcare and work rules depend on your nationality, destination and personal circumstances. These rules can also change.
+    </p>
 
-      <p>Most importantly, don't choose a city only because it looks amazing in photos. Choose a university and city combination that makes sense for your education, budget, lifestyle and plans.</p>
+    <p>
+      Before applying or making financial commitments, use official government and university sources to check the requirements that apply to you. Don't rely on a social-media post or an old blog post for immigration information.
+    </p>
 
-      <p class="last-note">This article is for general planning and does not replace official university, immigration or government guidance. Always verify current requirements for your nationality and destination before applying.</p>
 
-      <a class="back-link" href="index.html">← Back to Campus Diaries</a>
-    </article>
+    <h2>8. Make a simple comparison table</h2>
 
-    <aside class="article-sidebar">
-      <div class="side-card">
-        <p class="eyebrow">SAVE THIS</p>
-        <h3>City comparison checklist</h3>
-        <p>University · Tuition · Housing · Living costs · Transport · Travel · Student life · Rules</p>
-      </div>
-      <div class="side-card dark">
-        <p class="eyebrow">MORE FROM THE SERIES</p>
-        <h3>Study in Central Europe + travel on weekends</h3>
-        <a href="article.html">Read the first guide →</a>
-      </div>
-    </aside>
-  </div>
+    <p>
+      Once you have researched your options, put the information in one place. You can use a spreadsheet or even a notebook.
+    </p>
+
+    <ol>
+      <li><strong>University & course:</strong> Does the programme actually fit your goals?</li>
+      <li><strong>Tuition:</strong> What will you pay and when?</li>
+      <li><strong>Housing:</strong> What is a realistic monthly cost?</li>
+      <li><strong>Living expenses:</strong> Food, transport, phone and everyday spending.</li>
+      <li><strong>Transport:</strong> How easy is it to move around the city?</li>
+      <li><strong>Travel:</strong> What train, bus and flight connections are available?</li>
+      <li><strong>Student life:</strong> Would you enjoy living there for several years?</li>
+      <li><strong>Practical requirements:</strong> What visa, residence and university requirements apply?</li>
+    </ol>
+
+
+    <h2>My simple city-scorecard idea</h2>
+
+    <p>
+      You can give each category a personal rating from 1–5 just for your own comparison. The point is not to create a universal “best city”; it is to see which options match <em>your</em> priorities.
+    </p>
+
+    <div class="city-card">
+      <strong>Example:</strong>
+      If affordable housing matters most to you, give housing more weight. If weekend travel is a major priority, give transport and connections more weight. Your comparison should reflect the life you actually want.
+    </div>
+
+
+    <h2>Final checklist before choosing</h2>
+
+    <p>
+      Before you decide, make sure you have checked current information from the university and relevant official authorities. Prices, admission requirements, visa rules and transport options can change.
+    </p>
+
+    <p>
+      Most importantly, don't choose a city only because it looks amazing in photos. Choose a university and city combination that makes sense for your education, budget, lifestyle and plans.
+    </p>
+
+    <p class="last-note">
+      This article is for general planning and does not replace official university, immigration or government guidance. Always verify current requirements for your nationality and destination before applying.
+    </p>
+
+  </article>
+
+
+  <aside class="article-sidebar">
+
+    <div class="sidebar-card light">
+      <h3>City comparison checklist</h3>
+
+      <p>
+        University · Tuition · Housing · Living costs · Transport · Travel · Student life · Rules
+      </p>
+    </div>
+
+
+    <div class="sidebar-card dark">
+
+      <h3>More from the series</h3>
+
+      <p>
+        Study in Central Europe and travel on weekends.
+      </p>
+
+      <p style="margin-top: 18px;">
+        <a
+          href="article.html"
+          style="color: inherit; font-weight: 700; text-decoration: none;"
+        >
+          Read the first guide →
+        </a>
+      </p>
+
+    </div>
+
+  </aside>
+
 </main>
 
+
 <footer>
+
   <div class="footer-top">
-    <a class="logo" href="index.html">Campus <span>Diaries</span></a>
-    <p>Study. Travel. Live a little.</p>
+
+    <div>
+      <div class="logo">Campus Diaries</div>
+      <p>Study. Travel. Live a little.</p>
+    </div>
+
   </div>
+
   <div class="footer-bottom">
-    <span>© 2026 Campus Diaries</span>
-    <span>Made for the next chapter.</span>
+    <p>© 2026 Campus Diaries</p>
   </div>
+
 </footer>
+
 </body>
 </html>
