@@ -1,830 +1,384 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Simple ideas for creating a student room that feels organized, comfortable and personal without spending too much."
-  >
-
-  <title>
-    How to Create a Student Room That Feels Calm, Practical & Yours — Campus Diaries
-  </title>
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-  <style>
-
-    .article-layout {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 70px 24px 100px;
-
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 60px;
-      align-items: start;
-    }
-
-
-    .article-main {
-      min-width: 0;
-    }
-
-
-    .article-main h1 {
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      line-height: .95;
-      margin: 12px 0 24px;
-      letter-spacing: -0.04em;
-    }
-
-
-    .article-intro {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      max-width: 760px;
-      margin-bottom: 35px;
-    }
-
-
-    .article-hero-image {
-      width: 100%;
-      margin: 35px 0 55px;
-      border-radius: 18px;
-      overflow: hidden;
-      background: #eee;
-    }
-
-
-    .article-hero-image img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 600px;
-      object-fit: cover;
-    }
-
-
-    .article-main h2 {
-      font-size: 1.8rem;
-      line-height: 1.15;
-      margin: 55px 0 18px;
-    }
-
-
-    .article-main h3 {
-      font-size: 1.35rem;
-      line-height: 1.2;
-      margin: 35px 0 12px;
-    }
-
-
-    .article-main p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin: 0 0 20px;
-    }
-
-
-    .article-main ul,
-    .article-main ol {
-      padding-left: 25px;
-      margin-bottom: 25px;
-    }
-
-
-    .article-main li {
-      margin-bottom: 12px;
-      line-height: 1.7;
-    }
-
-
-    .article-sidebar {
-      position: sticky;
-      top: 30px;
-    }
-
-
-    .sidebar-card {
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 16px;
-    }
-
-
-    .sidebar-card.light {
-      background: #f3efe7;
-    }
-
-
-    .sidebar-card.dark {
-      background: #1f2420;
-      color: white;
-    }
-
-
-    .sidebar-card h3 {
-      margin-top: 0;
-      font-size: 1.2rem;
-    }
-
-
-    .sidebar-card p {
-      line-height: 1.65;
-      margin-bottom: 0;
-    }
-
-
-    .sidebar-card ul {
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-
-    .sidebar-card li {
-      margin-bottom: 9px;
-      line-height: 1.5;
-      font-size: 15px;
-    }
-
-
-    .article-back {
-      display: inline-block;
-      margin-bottom: 25px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-
-    .article-category {
-      font-size: .78rem;
-      letter-spacing: .12em;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-
-    @media (max-width: 900px) {
-
-      .article-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding-top: 45px;
-      }
-
-
-      .article-sidebar {
-        position: static;
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-      .article-layout {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-
-      .article-main h1 {
-        font-size: 2.8rem;
-      }
-
-
-      .article-hero-image {
-        margin-bottom: 40px;
-      }
-
-    }
-
-  </style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Campus Diaries — student life, travel, study abroad and lifestyle ideas.">
+  <title>Campus Diaries | Student Life & Travel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
 <header class="site-header">
-
   <div class="nav-wrap">
+    <a class="logo" href="index.html">Campus <span>Diaries</span></a>
 
-    <a
-      href="index.html"
-      class="logo"
-    >
-      Campus Diaries
+    <nav>
+      <a href="#latest">Latest</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="nav-button" href="article.html">Read the blog →</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div>
+    <p class="eyebrow">STUDENT LIFE • TRAVEL • LIFESTYLE</p>
+
+    <h1>
+      Your next chapter<br>
+      <em>starts here.</em>
+    </h1>
+
+    <p class="hero-text">
+      Practical guides, study-abroad inspiration, travel ideas and little things that make student life better.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button primary" href="article.html">Start reading →</a>
+      <a class="button secondary" href="#categories">Explore topics</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="stamp">
+      CAMPUS<br>
+      DIARIES
+    </div>
+
+    <div class="hero-card-main">
+      Make the most<br>
+      of where you are.
+    </div>
+
+    <div class="hero-card-bottom">
+      <span>est. 2026</span>
+      <span>✦</span>
+      <span>your guide</span>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- TICKER -->
+<div class="ticker">
+  <span>NEW ON THE BLOG</span>
+  <a href="article2.html">
+    How to compare European student cities →
+  </a>
+</div>
+
+
+<!-- LATEST -->
+<section id="latest" class="section">
+
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">LATEST</p>
+      <h2>Stories worth saving.</h2>
+    </div>
+
+    <p>
+      Ideas for studying smarter, travelling further and enjoying the in-between.
+    </p>
+  </div>
+
+
+  <div class="featured-grid">
+
+    <!-- FEATURED ARTICLE -->
+    <a class="featured-post" href="article.html">
+
+      <div class="post-visual europe">
+        <span>EUROPE</span>
+
+        <div class="visual-title">
+          Study +<br>
+          Weekend Travel
+        </div>
+
+        <div class="route">
+          PRAGUE → VIENNA → BUDAPEST
+        </div>
+      </div>
+
+      <div class="post-info">
+
+        <p class="post-meta">
+          STUDY ABROAD · 8 MIN READ
+        </p>
+
+        <h3>
+          Study in Central Europe: Where You Can Study and Travel on Weekends
+        </h3>
+
+        <p>
+          Compare student cities, transport connections and the things to think about before choosing where to study.
+        </p>
+
+        <span class="read-more">
+          Read story →
+        </span>
+
+      </div>
+
     </a>
 
 
-    <nav>
+    <!-- SECOND ARTICLE -->
+    <a class="small-post" href="article2.html">
 
-      <a href="index.html">
-        Latest
-      </a>
+      <div class="mini-icon">
+        ✈
+      </div>
 
-      <a href="index.html#categories">
-        Categories
-      </a>
+      <p class="post-meta">
+        NEW ARTICLE
+      </p>
 
-      <a href="index.html#about">
-        About
-      </a>
+      <h3>
+        How to compare European student cities
+      </h3>
 
-      <a
-        href="index.html#latest"
-        class="nav-button"
-      >
-        Read the blog →
-      </a>
+      <p>
+        Cost, university options, transport and everyday student life — all in one checklist.
+      </p>
 
-    </nav>
+      <span class="read-more">
+        Read story →
+      </span>
+
+    </a>
+
+
+    <!-- COMING NEXT -->
+    <article class="small-post dark">
+
+      <div class="mini-icon">
+        ✦
+      </div>
+
+      <p class="post-meta">
+        COMING NEXT
+      </p>
+
+      <h3>
+        The student travel planning guide
+      </h3>
+
+      <p>
+        How to turn a free weekend into a memorable trip without overcomplicating it.
+      </p>
+
+    </article>
 
   </div>
 
-</header>
+</section>
 
 
+<!-- CATEGORIES -->
+<section id="categories" class="section">
 
-<main class="article-layout">
+  <div class="section-heading">
+
+    <div>
+      <p class="eyebrow">EXPLORE</p>
+      <h2>Pick your mood.</h2>
+    </div>
+
+  </div>
 
 
-  <!-- MAIN ARTICLE -->
+  <div class="category-grid">
 
-  <article class="article-main">
-
-
-    <a
-      href="room.html"
-      class="article-back"
-    >
-      ← Back to Room & Organization
+    <a href="study.html" class="category-card">
+      <span>01</span>
+      <strong>Study</strong>
+      <p>
+        Productivity, university life & study-abroad planning.
+      </p>
+      <b>→</b>
     </a>
 
 
-    <div class="article-category">
-      ROOM & ORGANIZATION · STUDENT LIFE
-    </div>
-
-
-    <h1>
-      How to Create a Student Room That Feels Calm, Practical & Yours
-    </h1>
-
-
-    <p class="article-intro">
-      Your room doesn't need to look like a perfectly styled
-      Pinterest board. It just needs to work for you — somewhere
-      you can study, rest, get ready and actually feel comfortable.
-    </p>
-
-
-
-    <div class="article-hero-image">
-
-      <img
-        src="images/article5.jpg"
-        alt="How to create a calm and practical student room"
-      >
-
-    </div>
-
-
-
-    <p>
-      Student rooms can be small, temporary and sometimes a little
-      random. You might have limited storage, shared furniture or
-      a desk that somehow becomes a place for everything.
-    </p>
-
-
-    <p>
-      But you don't need a huge budget or a completely new room
-      to make your space feel better. A few thoughtful changes can
-      make everyday student life much easier.
-    </p>
-
-
-
-    <h2>
-      Start With How You Actually Use Your Room
-    </h2>
-
-
-    <p>
-      Before buying storage boxes, decorations or organizers,
-      spend a few days noticing how you naturally use the space.
-    </p>
-
-
-    <p>
-      Where do you normally drop your bag? Where do your clothes
-      end up? Do you study at your desk or somewhere else? Where
-      do you keep chargers, books and everyday essentials?
-    </p>
-
-
-    <p>
-      The goal isn't to force yourself into a perfect organization
-      system. The best system is one that makes sense for your
-      actual habits.
-    </p>
-
-
-
-    <h2>
-      Give Everything a Home
-    </h2>
-
-
-    <p>
-      One of the easiest ways to make a room feel less chaotic is
-      to give frequently used things a consistent place.
-    </p>
-
-
-    <ul>
-
-      <li>
-        Keep everyday stationery together.
-      </li>
-
-      <li>
-        Have one place for chargers and cables.
-      </li>
-
-      <li>
-        Keep university documents in one folder.
-      </li>
-
-      <li>
-        Give shoes, bags and jackets their own area.
-      </li>
-
-      <li>
-        Keep small personal items together instead of spreading
-        them around the room.
-      </li>
-
-    </ul>
-
-
-    <p>
-      You don't need expensive organizers for this. Small boxes,
-      baskets and containers you already have can work perfectly.
-    </p>
-
-
-
-    <h2>
-      Create a Study Corner
-    </h2>
-
-
-    <p>
-      Your desk doesn't have to be an elaborate productivity setup.
-      It just needs to make studying easier.
-    </p>
-
-
-    <p>
-      Try keeping the surface relatively clear and leaving only
-      the things you use regularly within reach.
-    </p>
-
-
-    <p>
-      A simple setup could include your laptop, a notebook,
-      stationery, a water bottle and a small lamp.
-    </p>
-
-
-    <p>
-      Everything else can live somewhere else.
-    </p>
-
-
-
-    <h2>
-      Use Vertical Space
-    </h2>
-
-
-    <p>
-      When floor space is limited, look upwards.
-    </p>
-
-
-    <p>
-      Shelves, hooks and small wall organizers can give you useful
-      storage without taking up much room.
-    </p>
-
-
-    <p>
-      Even the back of a door can become useful storage for bags,
-      accessories or everyday essentials.
-    </p>
-
-
-    <p>
-      If you're renting or living in university accommodation,
-      check the rules before attaching anything permanently to
-      walls.
-    </p>
-
-
-
-    <h2>
-      Make Your Bed Area Comfortable
-    </h2>
-
-
-    <p>
-      Your bed is probably one of the largest parts of the room,
-      so making it comfortable can change the entire feeling of
-      the space.
-    </p>
-
-
-    <p>
-      You don't need lots of decorative pillows or expensive
-      bedding. A comfortable blanket, clean sheets and one or two
-      things you genuinely like can be enough.
-    </p>
-
-
-    <p>
-      Think of the bed as your reset zone — somewhere you can
-      properly switch off after a long day.
-    </p>
-
-
-
-    <h2>
-      Don't Underestimate Lighting
-    </h2>
-
-
-    <p>
-      Lighting can completely change how a room feels.
-    </p>
-
-
-    <p>
-      During the day, make use of natural light where possible.
-      In the evening, softer lighting can make the room feel much
-      more relaxed than relying on one bright overhead light.
-    </p>
-
-
-    <p>
-      A small desk lamp or warm bedside light can make your room
-      feel more comfortable without requiring a major redesign.
-    </p>
-
-
-
-    <h2>
-      Keep Decoration Personal
-    </h2>
-
-
-    <p>
-      Your room should feel like somewhere you actually live,
-      not a showroom.
-    </p>
-
-
-    <p>
-      Add things that mean something to you — photos, postcards,
-      books, souvenirs, artwork or small objects from places you've
-      visited.
-    </p>
-
-
-    <p>
-      A few personal things can make a temporary student room
-      feel much more like home.
-    </p>
-
-
-
-    <h2>
-      Use the One-Minute Reset
-    </h2>
-
-
-    <p>
-      Instead of waiting until your room becomes completely messy,
-      create tiny reset habits.
-    </p>
-
-
-    <p>
-      Before leaving your room, put your clothes where they belong,
-      return your stationery to its place and take any rubbish with
-      you.
-    </p>
-
-
-    <p>
-      These tiny actions take almost no time, but they stop clutter
-      from becoming a huge weekend project.
-    </p>
-
-
-
-    <h2>
-      Don't Buy Organization Just Because It Looks Good
-    </h2>
-
-
-    <p>
-      This is especially important when you're scrolling through
-      room inspiration online.
-    </p>
-
-
-    <p>
-      Something can look beautiful in a photo without actually
-      being useful for your life.
-    </p>
-
-
-    <p>
-      Before buying an organizer, ask yourself:
-    </p>
-
-
-    <ul>
-
-      <li>
-        What problem will this solve?
-      </li>
-
-      <li>
-        Where will it go?
-      </li>
-
-      <li>
-        Will I actually use it?
-      </li>
-
-      <li>
-        Could I organize the same thing with something I already own?
-      </li>
-
-    </ul>
-
-
-
-    <h2>
-      Make a Small Budget
-    </h2>
-
-
-    <p>
-      You don't have to redecorate your entire room at once.
-    </p>
-
-
-    <p>
-      Set a small budget and decide what would genuinely make the
-      biggest difference.
-    </p>
-
-
-    <p>
-      You might choose one useful storage item, better lighting or
-      a few personal decorations instead of buying ten things at
-      once.
-    </p>
-
-
-
-    <h2>
-      Do a Weekly Room Reset
-    </h2>
-
-
-    <p>
-      Once a week, give yourself around fifteen minutes to reset
-      the room.
-    </p>
-
-
-    <ul>
-
-      <li>
-        Clear your desk.
-      </li>
-
-      <li>
-        Put clothes away.
-      </li>
-
-      <li>
-        Empty rubbish.
-      </li>
-
-      <li>
-        Return books and stationery to their places.
-      </li>
-
-      <li>
-        Refill anything you use regularly.
-      </li>
-
-      <li>
-        Open the curtains and let some fresh air in.
-      </li>
-
-    </ul>
-
-
-    <p>
-      It doesn't need to become a deep-cleaning session. Think of
-      it as pressing reset before another week begins.
-    </p>
-
-
-
-    <h2>
-      Your Simple Student Room Checklist
-    </h2>
-
-
-    <ul>
-
-      <li>
-        Everything you use regularly has a home.
-      </li>
-
-      <li>
-        Your desk is clear enough to study comfortably.
-      </li>
-
-      <li>
-        Chargers and cables are easy to find.
-      </li>
-
-      <li>
-        Your clothes have a simple system.
-      </li>
-
-      <li>
-        Your lighting works for both studying and relaxing.
-      </li>
-
-      <li>
-        You have a few personal things around you.
-      </li>
-
-      <li>
-        Your room can be reset in around fifteen minutes.
-      </li>
-
-    </ul>
-
-
-
-    <h2>
-      Final Thought
-    </h2>
-
-
-    <p>
-      A good student room isn't about having the perfect furniture,
-      the biggest space or the most aesthetic decorations.
-    </p>
-
-
-    <p>
-      It's about creating an environment that supports the life
-      you're actually living.
-    </p>
-
-
-    <p>
-      Keep the things you use close, give everything else a place,
-      make the space personal and don't be afraid to keep it simple.
-    </p>
-
-
-    <p>
-      Your room doesn't have to be perfect.
-      It just has to feel like yours.
-    </p>
-
-
-  </article>
-
-
-
-  <!-- SIDEBAR -->
-
-  <aside class="article-sidebar">
-
-
-    <div class="sidebar-card light">
-
-      <h3>
-        In this guide
-      </h3>
-
-
-      <ul>
-
-        <li>
-          Organizing your everyday essentials
-        </li>
-
-        <li>
-          Creating a study corner
-        </li>
-
-        <li>
-          Using small spaces
-        </li>
-
-        <li>
-          Lighting and atmosphere
-        </li>
-
-        <li>
-          Decorating on a budget
-        </li>
-
-        <li>
-          Weekly room resets
-        </li>
-
-      </ul>
-
-    </div>
-
-
-
-    <div class="sidebar-card dark">
-
-      <h3>
-        The goal
-      </h3>
-
-
+    <a href="travel.html" class="category-card">
+      <span>02</span>
+      <strong>Travel</strong>
       <p>
-        Create a room that makes studying easier,
-        resting better and everyday life a little
-        more enjoyable.
+        Student-friendly destinations, routes & travel ideas.
       </p>
+      <b>→</b>
+    </a>
 
-    </div>
+
+    <a href="lifestyle.html" class="category-card">
+      <span>03</span>
+      <strong>Lifestyle</strong>
+      <p>
+        Routines, style, self-care and everyday inspiration.
+      </p>
+      <b>→</b>
+    </a>
 
 
-  </aside>
+    <a href="money.html" class="category-card">
+      <span>04</span>
+      <strong>Money</strong>
+      <p>
+        Budgeting, saving and beginner-friendly side hustles.
+      </p>
+      <b>→</b>
+    </a>
 
+
+    <a href="room.html" class="category-card">
+      <span>05</span>
+      <strong>Room & Organization</strong>
+      <p>
+        Make your space practical, calm and yours.
+      </p>
+      <b>→</b>
+    </a>
+
+
+    <a href="ideas.html" class="category-card">
+      <span>06</span>
+      <strong>Ideas</strong>
+      <p>
+        Gift guides, lists, activities and things to try.
+      </p>
+      <b>→</b>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+
+  <div class="about-mark">
+    CD
+  </div>
+
+  <div>
+
+    <p class="eyebrow">
+      ABOUT CAMPUS DIARIES
+    </p>
+
+    <h2>
+      A little corner of the internet for figuring things out.
+    </h2>
+
+    <p>
+      Campus Diaries is for students who want useful information without the boring bits — from choosing a study destination to planning your next weekend away.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+
+  <div>
+
+    <p class="eyebrow">
+      THE DIARY NOTE
+    </p>
+
+    <h2>
+      Good ideas, occasionally delivered.
+    </h2>
+
+    <p>
+      New guides, travel inspiration and student-life ideas. No inbox overload.
+    </p>
+
+  </div>
+
+
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
+    method="post"
+    class="embeddable-buttondown-form"
+  >
+
+    <label for="bd-email">
+      Enter your email
+    </label>
+
+    <input
+      type="email"
+      name="email"
+      id="bd-email"
+      placeholder="Your email address"
+      aria-label="Your email address"
+      required
+    >
+
+    <button type="submit">
+      Subscribe →
+    </button>
+
+    <p>
+      <a
+        href="https://buttondown.com/refer/campusdiaries"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Powered by Buttondown.
+      </a>
+    </p>
+
+  </form>
+
+</section>
 
 </main>
 
 
-
+<!-- FOOTER -->
 <footer>
 
   <div class="footer-top">
 
-    <div>
-      <div class="logo">Campus Diaries</div>
-      <p>Study. Travel. Live a little.</p>
-    </div>
+    <a class="logo" href="index.html">
+      Campus <span>Diaries</span>
+    </a>
+
+    <p>
+      Study. Travel. Live a little.
+    </p>
 
   </div>
 
 
   <div class="footer-bottom">
 
-    <p>
+    <span>
       © 2026 Campus Diaries
-    </p>
+    </span>
+
+    <span>
+      Made for the next chapter.
+    </span>
 
   </div>
 
 </footer>
-
 
 </body>
 </html>
