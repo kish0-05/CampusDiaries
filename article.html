@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="Study in Central Europe and discover how students can combine university life with affordable weekend travel."
-  >
 
   <title>Study in Central Europe | Campus Diaries</title>
 
@@ -30,36 +24,55 @@
     }
 
     .article-main h1 {
-      margin-bottom: 24px;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: .95;
+      margin: 12px 0 24px;
+      letter-spacing: -.04em;
     }
 
     .article-intro {
       font-size: 1.15rem;
-      line-height: 1.8;
+      line-height: 1.7;
+      max-width: 760px;
       margin-bottom: 35px;
     }
 
-    .article-image {
+    .article-hero-image {
       width: 100%;
+      margin: 35px 0 55px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .article-hero-image img {
       display: block;
-      margin: 0 0 45px;
-      border-radius: 4px;
+      width: 100%;
+      height: auto;
+      max-height: 600px;
       object-fit: cover;
-      max-height: 520px;
     }
 
     .article-main h2 {
-      margin-top: 45px;
-      margin-bottom: 16px;
+      font-size: 1.8rem;
+      line-height: 1.15;
+      margin: 55px 0 18px;
     }
 
     .article-main p {
+      font-size: 1.05rem;
       line-height: 1.8;
+      margin: 0 0 20px;
     }
 
     .article-main ul {
-      line-height: 1.9;
-      padding-left: 24px;
+      padding-left: 25px;
+      margin-bottom: 25px;
+    }
+
+    .article-main li {
+      margin-bottom: 12px;
+      line-height: 1.7;
     }
 
     .article-sidebar {
@@ -68,31 +81,42 @@
     }
 
     .sidebar-card {
-      padding: 28px;
+      padding: 25px;
       margin-bottom: 20px;
+      border-radius: 16px;
     }
 
     .sidebar-card.light {
-      background: #f3eee5;
+      background: #f3efe7;
     }
 
     .sidebar-card.dark {
-      background: #20201e;
+      background: #1f2420;
       color: white;
     }
 
     .sidebar-card h3 {
       margin-top: 0;
-      margin-bottom: 12px;
+      font-size: 1.2rem;
     }
 
     .sidebar-card p {
-      line-height: 1.7;
+      line-height: 1.65;
       margin-bottom: 0;
     }
 
     .article-back {
-      margin-top: 45px;
+      display: inline-block;
+      margin-bottom: 25px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .article-category {
+      font-size: .78rem;
+      letter-spacing: .12em;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     @media (max-width: 900px) {
@@ -113,53 +137,56 @@
         padding-right: 20px;
       }
 
-      .article-image {
-        max-height: 360px;
+      .article-main h1 {
+        font-size: 2.8rem;
+      }
+
+      .article-hero-image {
+        margin-bottom: 40px;
       }
     }
   </style>
-
 </head>
 
 <body>
 
-<header class="site-header">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
 
-  <div class="nav-wrap">
-
-    <a href="index.html" class="logo">
-      Campus Diaries
-    </a>
-
-    <nav>
-      <a href="index.html">Latest</a>
-      <a href="study.html">Categories</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#newsletter" class="nav-button">
-        Read the blog →
+      <a href="index.html" class="logo">
+        Campus Diaries
       </a>
-    </nav>
 
-  </div>
+      <nav>
+        <a href="index.html">Latest</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#latest" class="nav-button">
+          Read the blog →
+        </a>
+      </nav>
 
-</header>
+    </div>
+  </header>
 
 
-<main>
-
-  <div class="article-layout">
-
+  <!-- ARTICLE -->
+  <main class="article-layout">
 
     <article class="article-main">
 
-      <p class="eyebrow">
+      <a href="travel.html" class="article-back">
+        ← Back to Travel
+      </a>
+
+      <div class="article-category">
         TRAVEL · STUDENT LIFE
-      </p>
+      </div>
 
       <h1>
         Study in Central Europe: Where You Can Study and Travel on Weekends
       </h1>
-
 
       <p class="article-intro">
         Imagine going to university in one European city and being able to
@@ -169,13 +196,13 @@
       </p>
 
 
-      <!-- ARTICLE 1 IMAGE -->
-
-      <img
-        src="images/article.jpg"
-        alt="Central European city and student travel"
-        class="article-image"
-      >
+      <!-- HERO IMAGE -->
+      <div class="article-hero-image">
+        <img
+          src="images/article.jpg"
+          alt="Study in Central Europe and travel on weekends"
+        >
+      </div>
 
 
       <p>
@@ -186,14 +213,11 @@
       </p>
 
 
-      <h2>
-        🇨🇿 Czechia — Prague
-      </h2>
+      <h2>🇨🇿 Czechia — Prague</h2>
 
       <p>
-        Prague is one of Europe's most recognizable student cities.
-        Its central location makes it a useful base for exploring nearby
-        countries.
+        Prague is one of Europe's most recognizable student cities. Its
+        central location makes it a useful base for exploring nearby countries.
       </p>
 
       <p>
@@ -207,9 +231,7 @@
       </p>
 
 
-      <h2>
-        🇦🇹 Austria — Vienna
-      </h2>
+      <h2>🇦🇹 Austria — Vienna</h2>
 
       <p>
         Vienna combines a major European city with excellent connections
@@ -228,9 +250,7 @@
       </p>
 
 
-      <h2>
-        🇭🇺 Hungary — Budapest
-      </h2>
+      <h2>🇭🇺 Hungary — Budapest</h2>
 
       <p>
         Budapest is another major student destination with a central
@@ -249,14 +269,12 @@
       </p>
 
 
-      <h2>
-        🇵🇱 Poland — Kraków or Warsaw
-      </h2>
+      <h2>🇵🇱 Poland — Kraków or Warsaw</h2>
 
       <p>
-        Poland is a large country with several university cities.
-        Kraków is particularly attractive for students who want a historic
-        city with access to other destinations in the region.
+        Poland is a large country with several university cities. Kraków
+        is particularly attractive for students who want a historic city
+        with access to other destinations in the region.
       </p>
 
       <p>
@@ -265,9 +283,7 @@
       </p>
 
 
-      <h2>
-        🇸🇰 Slovakia — Bratislava
-      </h2>
+      <h2>🇸🇰 Slovakia — Bratislava</h2>
 
       <p>
         Bratislava has a particularly interesting location because it sits
@@ -280,20 +296,18 @@
       </p>
 
       <p>
-        For a student who wants to maximize the number of countries they
-        can visit, its location is one of the biggest advantages.
+        For a student who wants to maximize the number of countries they can
+        visit, its location is one of the biggest advantages.
       </p>
 
 
-      <h2>
-        🌍 How many countries could you visit?
-      </h2>
+      <h2>🌍 How many countries could you visit?</h2>
 
       <p>
-        It depends on your university location, budget, visa/residence
-        status and how much free time you have. But Central Europe makes
-        multi-country travel unusually practical because several borders
-        are relatively close together.
+        It depends on your university location, budget, visa/residence status
+        and how much free time you have. But Central Europe makes multi-country
+        travel unusually practical because several borders are relatively close
+        together.
       </p>
 
       <p>
@@ -303,9 +317,7 @@
       </p>
 
 
-      <h2>
-        🚆 Train or plane?
-      </h2>
+      <h2>🚆 Train or plane?</h2>
 
       <p>
         For nearby destinations, trains and long-distance buses can be much
@@ -315,24 +327,36 @@
       </p>
 
 
-      <h2>
-        💸 How to keep student travel affordable
-      </h2>
+      <h2>💸 How to keep student travel affordable</h2>
 
       <ul>
-        <li>Plan trips around your university timetable rather than missing classes.</li>
-        <li>Compare trains, buses and flights instead of automatically choosing one.</li>
-        <li>Travel outside the busiest periods when possible.</li>
-        <li>Book accommodation early for popular weekends.</li>
-        <li>Travel with friends and split accommodation where appropriate.</li>
-        <li>Use student discounts whenever they are available.</li>
-        <li>Set a separate monthly travel budget.</li>
+        <li>
+          Plan trips around your university timetable rather than missing
+          classes.
+        </li>
+        <li>
+          Compare trains, buses and flights instead of automatically
+          choosing one.
+        </li>
+        <li>
+          Travel outside the busiest periods when possible.
+        </li>
+        <li>
+          Book accommodation early for popular weekends.
+        </li>
+        <li>
+          Travel with friends and split accommodation where appropriate.
+        </li>
+        <li>
+          Use student discounts whenever they are available.
+        </li>
+        <li>
+          Set a separate monthly travel budget.
+        </li>
       </ul>
 
 
-      <h2>
-        🛂 Don't forget visas and residence rules
-      </h2>
+      <h2>🛂 Don't forget visas and residence rules</h2>
 
       <p>
         Before planning international trips, check the rules that apply to
@@ -342,9 +366,7 @@
       </p>
 
 
-      <h2>
-        So, where should you study?
-      </h2>
+      <h2>So, where should you study?</h2>
 
       <p>
         There isn't one perfect Central European city for everyone. Think
@@ -353,20 +375,18 @@
       </p>
 
       <p>
-        If travel is one of your biggest priorities, a university with
-        strong transport connections can make exploring Europe much easier.
-        But remember: you're choosing a university first and a travel base second.
+        If travel is one of your biggest priorities, a university with strong
+        transport connections can make exploring Europe much easier. But
+        remember: you're choosing a university first and a travel base second.
       </p>
 
 
-      <h2>
-        ✈️ The Campus Diaries idea
-      </h2>
+      <h2>✈️ The Campus Diaries idea</h2>
 
       <p>
-        One of the best parts of studying abroad can be discovering that
-        your university city is only the beginning. Your weekends, holidays
-        and semester breaks can become opportunities to explore places you've
+        One of the best parts of studying abroad can be discovering that your
+        university city is only the beginning. Your weekends, holidays and
+        semester breaks can become opportunities to explore places you've
         only seen online.
       </p>
 
@@ -376,27 +396,32 @@
         cost of living, travel connections and student lifestyle.
       </p>
 
-
-      <p class="article-back">
-        <a class="button" href="index.html">
-          ← Back to Campus Diaries
-        </a>
-      </p>
-
     </article>
 
 
+    <!-- SIDEBAR -->
     <aside class="article-sidebar">
 
       <div class="sidebar-card light">
 
-        <h3>
-          Plan your weekend
-        </h3>
+        <h3>Before you choose a city</h3>
 
         <p>
-          Pick a nearby city, compare your transport options and check
-          your student budget before you book.
+          <strong>University</strong><br>
+          Look at the university and the course before making travel
+          connections your main priority.
+        </p>
+
+        <p style="margin-top: 16px;">
+          <strong>Budget</strong><br>
+          Consider tuition, accommodation, food, transport and your
+          travel budget together.
+        </p>
+
+        <p style="margin-top: 16px;">
+          <strong>Location</strong><br>
+          A central location can make weekend travel easier, but your
+          everyday student life matters too.
         </p>
 
       </div>
@@ -404,49 +429,45 @@
 
       <div class="sidebar-card dark">
 
-        <h3>
-          Campus Diaries
-        </h3>
+        <h3>Remember</h3>
 
         <p>
-          Study abroad, travel ideas and practical guides for making the
-          most of student life.
+          You're choosing a university first and a travel base second.
+          The best city for you depends on more than how many countries
+          you can visit.
         </p>
 
       </div>
 
     </aside>
 
-
-  </div>
-
-</main>
+  </main>
 
 
-<footer>
+  <!-- FOOTER -->
+  <footer>
 
-  <div class="footer-top">
+    <div class="footer-top">
 
-    <h2>
-      Study. Travel. Live a little.
-    </h2>
+      <div>
+        <div class="logo">
+          Campus Diaries
+        </div>
 
-  </div>
+        <p>
+          Study. Travel. Live a little.
+        </p>
+      </div>
 
-  <div class="footer-bottom">
+    </div>
 
-    <p>
-      © 2026 Campus Diaries
-    </p>
+    <div class="footer-bottom">
+      <p>
+        © 2026 Campus Diaries
+      </p>
+    </div>
 
-    <p>
-      Made for curious students.
-    </p>
-
-  </div>
-
-</footer>
-
+  </footer>
 
 </body>
 </html>
