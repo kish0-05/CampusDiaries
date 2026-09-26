@@ -1,542 +1,384 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Campus Diaries — Study. Travel. Live a little.</title>
-
-  <meta
-    name="description"
-    content="Campus Diaries — student life, study abroad, money, travel, lifestyle, rooms and ideas."
-  >
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Campus Diaries — student life, travel, study abroad and lifestyle ideas.">
+  <title>Campus Diaries | Student Life & Travel</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ================================
-       LATEST STORIES — IMAGE CARDS
-       ================================ */
-
-    .featured-post {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-post .post-visual {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-post .post-visual.has-image {
-      min-height: 460px;
-    }
-
-    .featured-post .latest-image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    /* Dark overlay so the text stays readable */
-    .featured-post .post-visual.has-image::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.18) 0%,
-          rgba(0, 0, 0, 0.35) 45%,
-          rgba(0, 0, 0, 0.78) 100%
-        );
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .featured-post .post-visual.has-image .visual-title,
-    .featured-post .post-visual.has-image .route {
-      position: relative;
-      z-index: 2;
-      color: #ffffff;
-    }
-
-    .featured-post .post-visual.has-image .visual-title {
-      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .featured-post .post-visual.has-image .route {
-      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-    }
-
-    /* Small article images */
-    .small-post {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .small-post-image {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .small-post.has-image .mini-icon {
-      display: none;
-    }
-
-    /* Mobile */
-    @media (max-width: 700px) {
-      .featured-post .post-visual.has-image {
-        min-height: 380px;
-      }
-
-      .small-post-image {
-        height: 170px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="nav-wrap">
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">Campus <span>Diaries</span></a>
 
-      <a href="index.html" class="logo">
-        Campus Diaries
-      </a>
+    <nav>
+      <a href="#latest">Latest</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
 
-      <nav>
-        <a href="#latest">Latest</a>
-        <a href="#categories">Categories</a>
-        <a href="#about">About</a>
-        <a href="#latest" class="nav-button">Read the blog →</a>
-      </nav>
+    <a class="nav-button" href="article.html">Read the blog →</a>
+  </div>
+</header>
 
-    </div>
-  </header>
+<main>
 
+<!-- HERO -->
+<section class="hero">
 
-  <!-- HERO -->
-  <section class="hero">
+  <div>
+    <p class="eyebrow">STUDENT LIFE • TRAVEL • LIFESTYLE</p>
 
-    <div class="hero-text">
+    <h1>
+      Your next chapter<br>
+      <em>starts here.</em>
+    </h1>
 
-      <div class="eyebrow">
-        FOR STUDENTS, BY STUDENTS
-      </div>
+    <p class="hero-text">
+      Practical guides, study-abroad inspiration, travel ideas and little things that make student life better.
+    </p>
 
-      <h1>
-        STUDY.<br>
-        TRAVEL.<br>
-        LIVE A LITTLE.
-      </h1>
-
-      <p>
-        Practical guides, ideas and inspiration for making student life
-        a little more exciting.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#latest" class="button primary">
-          Explore the blog →
-        </a>
-
-        <a href="#categories" class="button secondary">
-          Browse topics
-        </a>
-      </div>
-
-    </div>
-
-
-    <div class="hero-card">
-
-      <div class="stamp">
-        NEW
-      </div>
-
-      <div class="hero-card-main">
-        <span>THIS WEEK</span>
-
-        <strong>
-          Find your next<br>
-          favourite idea.
-        </strong>
-      </div>
-
-      <div class="hero-card-bottom">
-        <span>Campus Diaries</span>
-        <span>2026</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- TICKER -->
-  <div class="ticker">
-    <div class="ticker-inner">
-      <span>JUST IN</span>
-      <a id="ticker-link" href="#">Loading latest story →</a>
+    <div class="hero-actions">
+      <a class="button primary" href="article.html">Start reading →</a>
+      <a class="button secondary" href="#categories">Explore topics</a>
     </div>
   </div>
 
-
-  <!-- LATEST -->
-  <section class="section" id="latest">
-
-    <div class="section-heading">
-      <div>
-        <span class="eyebrow">LATEST</span>
-        <h2>Stories worth saving.</h2>
-      </div>
-
-      <a href="#categories" class="read-more">
-        Browse all topics →
-      </a>
+  <div class="hero-card">
+    <div class="stamp">
+      CAMPUS<br>
+      DIARIES
     </div>
 
-
-    <div class="featured-grid" id="latest-grid">
-      <!-- Articles are loaded automatically from articles.js -->
+    <div class="hero-card-main">
+      Make the most<br>
+      of where you are.
     </div>
 
-  </section>
-
-
-  <!-- CATEGORIES -->
-  <section class="section" id="categories">
-
-    <div class="section-heading">
-      <div>
-        <span class="eyebrow">EXPLORE</span>
-        <h2>Find your thing.</h2>
-      </div>
+    <div class="hero-card-bottom">
+      <span>est. 2026</span>
+      <span>✦</span>
+      <span>your guide</span>
     </div>
+  </div>
+
+</section>
 
 
-    <div class="category-grid">
-
-      <a href="study.html" class="category-card">
-        <span>01</span>
-        <strong>Study</strong>
-        <small>Uni life, studying & applying</small>
-      </a>
-
-      <a href="travel.html" class="category-card">
-        <span>02</span>
-        <strong>Travel</strong>
-        <small>Trips, cities & study abroad</small>
-      </a>
-
-      <a href="lifestyle.html" class="category-card">
-        <span>03</span>
-        <strong>Lifestyle</strong>
-        <small>Routines, friendships & everyday life</small>
-      </a>
-
-      <a href="money.html" class="category-card">
-        <span>04</span>
-        <strong>Money</strong>
-        <small>Budgeting, saving & earning</small>
-      </a>
-
-      <a href="room.html" class="category-card">
-        <span>05</span>
-        <strong>Room & Organization</strong>
-        <small>Spaces, organization & resets</small>
-      </a>
-
-      <a href="ideas.html" class="category-card">
-        <span>06</span>
-        <strong>Ideas</strong>
-        <small>Things to do, try & explore</small>
-      </a>
-
-    </div>
-
-  </section>
+<!-- TICKER -->
+<div class="ticker">
+  <span>NEW ON THE BLOG</span>
+  <a href="article2.html">
+    How to compare European student cities →
+  </a>
+</div>
 
 
-  <!-- ABOUT -->
-  <section class="about section" id="about">
+<!-- LATEST -->
+<section id="latest" class="section">
 
-    <div class="about-mark">
-      CD
-    </div>
-
+  <div class="section-heading">
     <div>
-
-      <span class="eyebrow">
-        ABOUT CAMPUS DIARIES
-      </span>
-
-      <h2>
-        A little corner of the internet
-        for figuring things out.
-      </h2>
-
-      <p>
-        Campus Diaries is for the parts of student life that don't always
-        make it into the brochure — where to go, how to save money,
-        what to do when you're bored, how to make your room feel like yours,
-        and how to actually enjoy the years you're in.
-      </p>
-
+      <p class="eyebrow">LATEST</p>
+      <h2>Stories worth saving.</h2>
     </div>
 
-  </section>
+    <p>
+      Ideas for studying smarter, travelling further and enjoying the in-between.
+    </p>
+  </div>
 
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter section">
+  <div class="featured-grid">
 
-    <div>
+    <!-- FEATURED ARTICLE -->
+    <a class="featured-post" href="article.html">
 
-      <span class="eyebrow">
-        STAY IN THE LOOP
-      </span>
+      <div class="post-visual europe">
+        <span>EUROPE</span>
 
-      <h2>
-        Get the good stuff.
-      </h2>
-
-      <p>
-        New guides, ideas and student-life inspiration.
-      </p>
-
-    </div>
-
-
-    <form
-      action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.com/campusdiaries', 'popupwindow')"
-      class="newsletter-form"
-    >
-
-      <input
-        type="email"
-        name="email"
-        placeholder="Your email address"
-        required
-      >
-
-      <button type="submit" class="button primary">
-        Subscribe →
-      </button>
-
-    </form>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="footer-top">
-
-      <div>
-        <div class="logo">
-          Campus Diaries
+        <div class="visual-title">
+          Study +<br>
+          Weekend Travel
         </div>
 
-        <p>
-          Study. Travel. Live a little.
+        <div class="route">
+          PRAGUE → VIENNA → BUDAPEST
+        </div>
+      </div>
+
+      <div class="post-info">
+
+        <p class="post-meta">
+          STUDY ABROAD · 8 MIN READ
         </p>
+
+        <h3>
+          Study in Central Europe: Where You Can Study and Travel on Weekends
+        </h3>
+
+        <p>
+          Compare student cities, transport connections and the things to think about before choosing where to study.
+        </p>
+
+        <span class="read-more">
+          Read story →
+        </span>
+
       </div>
 
+    </a>
 
-      <div>
-        <span class="eyebrow">EXPLORE</span>
 
-        <a href="study.html">Study</a>
-        <a href="travel.html">Travel</a>
-        <a href="lifestyle.html">Lifestyle</a>
-        <a href="money.html">Money</a>
-        <a href="room.html">Room & Organization</a>
-        <a href="ideas.html">Ideas</a>
+    <!-- SECOND ARTICLE -->
+    <a class="small-post" href="article2.html">
+
+      <div class="mini-icon">
+        ✈
       </div>
 
+      <p class="post-meta">
+        NEW ARTICLE
+      </p>
+
+      <h3>
+        How to compare European student cities
+      </h3>
+
+      <p>
+        Cost, university options, transport and everyday student life — all in one checklist.
+      </p>
+
+      <span class="read-more">
+        Read story →
+      </span>
+
+    </a>
+
+
+    <!-- COMING NEXT -->
+    <article class="small-post dark">
+
+      <div class="mini-icon">
+        ✦
+      </div>
+
+      <p class="post-meta">
+        COMING NEXT
+      </p>
+
+      <h3>
+        The student travel planning guide
+      </h3>
+
+      <p>
+        How to turn a free weekend into a memorable trip without overcomplicating it.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section id="categories" class="section">
+
+  <div class="section-heading">
+
+    <div>
+      <p class="eyebrow">EXPLORE</p>
+      <h2>Pick your mood.</h2>
     </div>
 
+  </div>
 
-    <div class="footer-bottom">
-      <span>© 2026 Campus Diaries</span>
-      <span>Made for student life.</span>
-    </div>
 
-  </footer>
+  <div class="category-grid">
 
+    <a href="study.html" class="category-card">
+      <span>01</span>
+      <strong>Study</strong>
+      <p>
+        Productivity, university life & study-abroad planning.
+      </p>
+      <b>→</b>
+    </a>
 
-  <!-- ARTICLE DATA -->
-  <script src="articles.js"></script>
 
+    <a href="travel.html" class="category-card">
+      <span>02</span>
+      <strong>Travel</strong>
+      <p>
+        Student-friendly destinations, routes & travel ideas.
+      </p>
+      <b>→</b>
+    </a>
 
-  <!-- LATEST ARTICLE SYSTEM -->
-  <script>
 
-    const latestGrid = document.getElementById("latest-grid");
-    const tickerLink = document.getElementById("ticker-link");
+    <a href="lifestyle.html" class="category-card">
+      <span>03</span>
+      <strong>Lifestyle</strong>
+      <p>
+        Routines, style, self-care and everyday inspiration.
+      </p>
+      <b>→</b>
+    </a>
 
-    const latestArticles = articles.slice(0, 3);
 
+    <a href="money.html" class="category-card">
+      <span>04</span>
+      <strong>Money</strong>
+      <p>
+        Budgeting, saving and beginner-friendly side hustles.
+      </p>
+      <b>→</b>
+    </a>
 
-    function getImagePath(article) {
 
-      const articleNumber =
-        article.url
-          .replace(".html", "")
-          .replace("article", "");
+    <a href="room.html" class="category-card">
+      <span>05</span>
+      <strong>Room & Organization</strong>
+      <p>
+        Make your space practical, calm and yours.
+      </p>
+      <b>→</b>
+    </a>
 
-      return articleNumber
-        ? "images/article" + articleNumber + ".jpg"
-        : "images/article.jpg";
 
-    }
+    <a href="ideas.html" class="category-card">
+      <span>06</span>
+      <strong>Ideas</strong>
+      <p>
+        Gift guides, lists, activities and things to try.
+      </p>
+      <b>→</b>
+    </a>
 
+  </div>
 
-    /* TICKER */
+</section>
 
-    if (latestArticles.length > 0) {
 
-      tickerLink.textContent =
-        latestArticles[0].title + " →";
+<!-- ABOUT -->
+<section id="about" class="about">
 
-      tickerLink.href =
-        latestArticles[0].url;
+  <div class="about-mark">
+    CD
+  </div>
 
-    }
+  <div>
 
+    <p class="eyebrow">
+      ABOUT CAMPUS DIARIES
+    </p>
 
-    /* LATEST STORIES */
+    <h2>
+      A little corner of the internet for figuring things out.
+    </h2>
 
-    if (latestArticles.length > 0) {
+    <p>
+      Campus Diaries is for students who want useful information without the boring bits — from choosing a study destination to planning your next weekend away.
+    </p>
 
-      const featured = latestArticles[0];
-      const featuredImage = getImagePath(featured);
+  </div>
 
+</section>
 
-      let html = `
 
-        <a href="${featured.url}" class="featured-post">
+<!-- NEWSLETTER -->
+<section class="newsletter">
 
-          <div class="post-visual ${featuredImage ? "has-image" : ""}">
+  <div>
 
-            <img
-              class="latest-image"
-              src="${featuredImage}"
-              alt="${featured.title}"
-              onerror="
-                this.style.display='none';
-                this.parentElement.classList.remove('has-image');
-              "
-            >
+    <p class="eyebrow">
+      THE DIARY NOTE
+    </p>
 
-            <div class="visual-title">
-              ${featured.label}
-            </div>
+    <h2>
+      Good ideas, occasionally delivered.
+    </h2>
 
-            <div class="route">
-              ${featured.route}
-            </div>
+    <p>
+      New guides, travel inspiration and student-life ideas. No inbox overload.
+    </p>
 
-          </div>
+  </div>
 
 
-          <div class="post-info">
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
+    method="post"
+    class="embeddable-buttondown-form"
+  >
 
-            <div class="post-meta">
-              ${featured.category}
-            </div>
+    <label for="bd-email">
+      Enter your email
+    </label>
 
-            <h3>
-              ${featured.title}
-            </h3>
+    <input
+      type="email"
+      name="email"
+      id="bd-email"
+      placeholder="Your email address"
+      aria-label="Your email address"
+      required
+    >
 
-            <p>
-              ${featured.description}
-            </p>
+    <button type="submit">
+      Subscribe →
+    </button>
 
-            <span class="read-more">
-              Read article →
-            </span>
+    <p>
+      <a
+        href="https://buttondown.com/refer/campusdiaries"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Powered by Buttondown.
+      </a>
+    </p>
 
-          </div>
+  </form>
 
-        </a>
+</section>
 
-      `;
+</main>
 
 
-      /* SMALL ARTICLES */
+<!-- FOOTER -->
+<footer>
 
-      for (let i = 1; i < latestArticles.length; i++) {
+  <div class="footer-top">
 
-        const article = latestArticles[i];
-        const imagePath = getImagePath(article);
+    <a class="logo" href="index.html">
+      Campus <span>Diaries</span>
+    </a>
 
+    <p>
+      Study. Travel. Live a little.
+    </p>
 
-        html += `
+  </div>
 
-          <a href="${article.url}" class="small-post">
 
-            <img
-              class="small-post-image"
-              src="${imagePath}"
-              alt="${article.title}"
-              onerror="
-                this.style.display='none';
-              "
-            >
+  <div class="footer-bottom">
 
+    <span>
+      © 2026 Campus Diaries
+    </span>
 
-            <div class="mini-icon">
-              ${article.icon}
-            </div>
+    <span>
+      Made for the next chapter.
+    </span>
 
+  </div>
 
-            <div class="post-info">
-
-              <div class="post-meta">
-                ${article.category}
-              </div>
-
-              <h3>
-                ${article.title}
-              </h3>
-
-              <p>
-                ${article.description}
-              </p>
-
-              <span class="read-more">
-                Read article →
-              </span>
-
-            </div>
-
-          </a>
-
-        `;
-
-      }
-
-
-      latestGrid.innerHTML = html;
-
-    }
-
-  </script>
+</footer>
 
 </body>
 </html>
