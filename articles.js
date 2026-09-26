@@ -1,4 +1,17 @@
 const articles = [
+
+  {
+    title: "How to Create a Student Room That Feels Calm, Practical & Yours",
+    description:
+      "Your room doesn't need to look like a perfectly styled Pinterest board. It just needs to work for you — somewhere you can study, rest, get ready and actually feel comfortable.",
+    category: "ROOM & ORGANIZATION · STUDENT LIFE",
+    label: "ROOM & ORGANIZATION",
+    route: "ORGANIZE → RESET → RELAX",
+    url: "article5.html",
+    icon: "⌂"
+  },
+
+
   {
     title: "How to Build a Life You Actually Enjoy as a Student",
     description:
@@ -9,6 +22,7 @@ const articles = [
     url: "article4.html",
     icon: "✦"
   },
+
 
   {
     title: "Budgeting, Saving Money & Side Hustles for International Students",
@@ -21,6 +35,7 @@ const articles = [
     icon: "€"
   },
 
+
   {
     title: "How to Compare European Student Cities Before You Apply",
     description:
@@ -32,6 +47,7 @@ const articles = [
     icon: "✈"
   },
 
+
   {
     title: "Study in Central Europe: Where You Can Study and Travel on Weekends",
     description:
@@ -42,4 +58,5 @@ const articles = [
     url: "article.html",
     icon: "✦"
   }
+
 ];
