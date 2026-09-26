@@ -24,11 +24,107 @@
     href="style.css"
   >
 
+
+  <style>
+
+    /* ---------------------------------
+       IMAGE LAYOUT
+       --------------------------------- */
+
+    .latest-image {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    .featured-post .post-visual {
+      overflow: hidden;
+      position: relative;
+    }
+
+
+    .featured-post .post-visual.has-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.48),
+          rgba(0, 0, 0, 0.04) 65%
+        );
+      pointer-events: none;
+    }
+
+
+    .featured-post .post-visual.has-image > *:not(img) {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    .featured-post .post-visual.has-image img {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+
+    .small-post-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 22px;
+    }
+
+
+    .small-post.has-image {
+      padding: 0;
+      overflow: hidden;
+    }
+
+
+    .small-post.has-image > .small-post-content {
+      padding: 0 28px 28px;
+    }
+
+
+    .small-post.has-image .mini-icon {
+      display: none;
+    }
+
+
+    @media (max-width: 700px) {
+
+      .latest-image {
+        min-height: 220px;
+      }
+
+      .small-post-image {
+        height: 180px;
+      }
+
+      .small-post.has-image > .small-post-content {
+        padding: 0 22px 24px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
 
+
+<!-- ================================
+     HEADER
+     ================================= -->
 
 <header class="site-header">
 
@@ -75,7 +171,9 @@
 <main>
 
 
-<!-- HERO -->
+<!-- ================================
+     HERO
+     ================================= -->
 
 <section class="hero">
 
@@ -93,8 +191,8 @@
 
 
     <p class="hero-text">
-      Practical guides, study-abroad inspiration, travel ideas and
-      little things that make student life better.
+      Practical guides, study-abroad inspiration, travel ideas
+      and little things that make student life better.
     </p>
 
 
@@ -157,7 +255,9 @@
 
 
 
-<!-- TICKER -->
+<!-- ================================
+     TICKER
+     ================================= -->
 
 <div class="ticker">
 
@@ -177,7 +277,9 @@
 
 
 
-<!-- LATEST -->
+<!-- ================================
+     LATEST ARTICLES
+     ================================= -->
 
 <section
   id="latest"
@@ -192,6 +294,7 @@
         LATEST
       </p>
 
+
       <h2>
         Stories worth saving.
       </h2>
@@ -200,8 +303,8 @@
 
 
     <p>
-      Ideas for studying smarter, travelling further and enjoying
-      the in-between.
+      Ideas for studying smarter, travelling further
+      and enjoying the in-between.
     </p>
 
   </div>
@@ -209,11 +312,11 @@
 
 
   <div
+    id="latest-grid"
     class="featured-grid"
-    id="latest-articles"
   >
 
-    <!-- Articles will be loaded automatically from articles.js -->
+    <!-- Articles are loaded automatically -->
 
   </div>
 
@@ -221,7 +324,9 @@
 
 
 
-<!-- CATEGORIES -->
+<!-- ================================
+     CATEGORIES
+     ================================= -->
 
 <section
   id="categories"
@@ -235,6 +340,7 @@
       <p class="eyebrow">
         EXPLORE
       </p>
+
 
       <h2>
         Pick your mood.
@@ -404,7 +510,9 @@
 
 
 
-<!-- ABOUT -->
+<!-- ================================
+     ABOUT
+     ================================= -->
 
 <section
   id="about"
@@ -424,7 +532,8 @@
 
 
     <h2>
-      A little corner of the internet for figuring things out.
+      A little corner of the internet
+      for figuring things out.
     </h2>
 
 
@@ -440,7 +549,9 @@
 
 
 
-<!-- NEWSLETTER -->
+<!-- ================================
+     NEWSLETTER
+     ================================= -->
 
 <section class="newsletter">
 
@@ -487,13 +598,19 @@
 
 
     <button type="submit">
-      Join →
+      Subscribe →
     </button>
 
 
-    <small>
-      Occasional guides, travel ideas and student-life inspiration.
-    </small>
+    <p>
+      <a
+        href="https://buttondown.com/refer/campusdiaries"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Powered by Buttondown.
+      </a>
+    </p>
 
   </form>
 
@@ -504,7 +621,9 @@
 
 
 
-<!-- FOOTER -->
+<!-- ================================
+     FOOTER
+     ================================= -->
 
 <footer>
 
@@ -543,36 +662,35 @@
 
 
 
-<!-- ARTICLE DATA -->
+<!-- ================================
+     ARTICLE DATA
+     ================================= -->
 
 <script src="articles.js"></script>
 
 
-<!-- LATEST ARTICLES SCRIPT -->
-
 <script>
 
-  const latestContainer =
-    document.getElementById("latest-articles");
-
+  const latestGrid =
+    document.getElementById("latest-grid");
 
   const tickerLink =
     document.getElementById("ticker-link");
 
 
   /*
-    The first three articles in articles.js
-    are automatically displayed here.
-
-    Article #1 = large featured article
-    Article #2 = small article
-    Article #3 = small article
+    The homepage always uses the first
+    three articles in articles.js.
   */
-
 
   const latestArticles =
     articles.slice(0, 3);
 
+
+
+  /*
+    Update the ticker automatically.
+  */
 
   if (latestArticles.length > 0) {
 
@@ -585,16 +703,126 @@
   }
 
 
-  latestArticles.forEach((article, index) => {
+
+  /*
+    Create the featured article.
+  */
+
+  if (latestArticles.length > 0) {
+
+    const article =
+      latestArticles[0];
 
 
-    if (index === 0) {
+    const articleNumber =
+      article.url
+        .replace(".html", "")
+        .replace("article", "");
+
+
+    const imagePath =
+      articleNumber
+        ? "images/article" + articleNumber + ".jpg"
+        : "images/article.jpg";
+
+
+    const featured =
+      document.createElement("a");
+
+
+    featured.className =
+      "featured-post";
+
+
+    featured.href =
+      article.url;
+
+
+    featured.innerHTML = `
+
+      <div class="post-visual europe has-image">
+
+        <img
+          class="latest-image"
+          src="${imagePath}"
+          alt="${article.title}"
+          onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');"
+        >
+
+        <span>
+          ${article.label}
+        </span>
+
+        <div class="visual-title">
+          ${article.title}
+        </div>
+
+        <div class="route">
+          ${article.route}
+        </div>
+
+      </div>
+
+
+      <div class="post-info">
+
+        <p class="post-meta">
+          ${article.category}
+        </p>
+
+
+        <h3>
+          ${article.title}
+        </h3>
+
+
+        <p>
+          ${article.description}
+        </p>
+
+
+        <span class="read-more">
+          Read story →
+        </span>
+
+      </div>
+
+    `;
+
+
+    latestGrid.appendChild(featured);
+
+  }
+
+
+
+  /*
+    Create the second and third articles.
+  */
+
+  latestArticles
+    .slice(1, 3)
+    .forEach((article, index) => {
+
+      const articleNumber =
+        article.url
+          .replace(".html", "")
+          .replace("article", "");
+
+
+      const imagePath =
+        articleNumber
+          ? "images/article" + articleNumber + ".jpg"
+          : "images/article.jpg";
+
 
       const card =
         document.createElement("a");
 
+
       card.className =
-        "featured-post";
+        "small-post has-image";
+
 
       card.href =
         article.url;
@@ -602,36 +830,35 @@
 
       card.innerHTML = `
 
-        <div class="post-visual europe">
+        <img
+          class="small-post-image"
+          src="${imagePath}"
+          alt="${article.title}"
+          onerror="this.style.display='none';"
+        >
 
-          <span>
-            ${article.label}
-          </span>
 
-          <div class="visual-title">
-            ${article.title}
+        <div class="small-post-content">
+
+          <div class="mini-icon">
+            ${article.icon}
           </div>
 
-          <div class="route">
-            ${article.route}
-          </div>
-
-        </div>
-
-
-        <div class="post-info">
 
           <p class="post-meta">
-            ${article.category}
+            ${index === 0 ? "NEW ARTICLE" : article.category}
           </p>
+
 
           <h3>
             ${article.title}
           </h3>
 
+
           <p>
             ${article.description}
           </p>
+
 
           <span class="read-more">
             Read story →
@@ -642,56 +869,14 @@
       `;
 
 
-      latestContainer.appendChild(card);
+      latestGrid.appendChild(card);
 
-    }
+    });
 
-
-    else {
-
-      const card =
-        document.createElement("a");
-
-      card.className =
-        "small-post";
-
-      card.href =
-        article.url;
-
-
-      card.innerHTML = `
-
-        <div class="mini-icon">
-          ${article.icon}
-        </div>
-
-        <p class="post-meta">
-          ${article.category}
-        </p>
-
-        <h3>
-          ${article.title}
-        </h3>
-
-        <p>
-          ${article.description}
-        </p>
-
-        <span class="read-more">
-          Read story →
-        </span>
-
-      `;
-
-
-      latestContainer.appendChild(card);
-
-    }
-
-  });
 
 </script>
 
 
 </body>
+
 </html>
