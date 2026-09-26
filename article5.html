@@ -10,24 +10,21 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    How to Create a Student Room That Feels Calm, Practical & Yours — Campus Diaries
-  </title>
-
   <meta
     name="description"
     content="Simple ideas for creating a student room that feels organized, comfortable and personal without spending too much."
   >
+
+  <title>
+    How to Create a Student Room That Feels Calm, Practical & Yours — Campus Diaries
+  </title>
 
   <link
     rel="stylesheet"
     href="style.css"
   >
 
-
   <style>
-
-    /* ARTICLE LAYOUT */
 
     .article-layout {
       max-width: 1140px;
@@ -46,150 +43,71 @@
     }
 
 
-    .article-header {
-      margin-bottom: 50px;
-    }
-
-
-    .article-header .post-meta {
-      margin-bottom: 18px;
-    }
-
-
-    .article-header h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 0.98;
-      margin: 0 0 28px;
-      max-width: 850px;
+    .article-main h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: .95;
+      margin: 12px 0 24px;
+      letter-spacing: -0.04em;
     }
 
 
     .article-intro {
-      font-size: 21px;
-      line-height: 1.65;
+      font-size: 1.15rem;
+      line-height: 1.7;
       max-width: 760px;
+      margin-bottom: 35px;
     }
 
 
-    .article-content {
-      max-width: 760px;
+    .article-hero-image {
+      width: 100%;
+      margin: 35px 0 55px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eee;
     }
 
 
-    .article-content h2 {
-      font-size: 30px;
+    .article-hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: cover;
+    }
+
+
+    .article-main h2 {
+      font-size: 1.8rem;
       line-height: 1.15;
       margin: 55px 0 18px;
     }
 
 
-    .article-content h3 {
-      font-size: 23px;
+    .article-main h3 {
+      font-size: 1.35rem;
+      line-height: 1.2;
       margin: 35px 0 12px;
     }
 
 
-    .article-content p {
-      font-size: 17px;
+    .article-main p {
+      font-size: 1.05rem;
       line-height: 1.8;
-      margin: 0 0 22px;
+      margin: 0 0 20px;
     }
 
 
-    .article-content ul {
-      padding-left: 24px;
-      margin: 0 0 28px;
+    .article-main ul,
+    .article-main ol {
+      padding-left: 25px;
+      margin-bottom: 25px;
     }
 
 
-    .article-content li {
-      font-size: 17px;
-      line-height: 1.75;
-      margin-bottom: 10px;
-    }
-
-
-    .article-content strong {
-      font-weight: 700;
-    }
-
-
-    .article-hero {
-      min-height: 380px;
-      margin-bottom: 55px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      padding: 34px;
-
-      background: #e8dfd2;
-      position: relative;
-      overflow: hidden;
-    }
-
-
-    .article-hero::before {
-      content: "";
-      position: absolute;
-
-      width: 220px;
-      height: 220px;
-
-      border-radius: 50%;
-
-      background: rgba(255,255,255,0.45);
-
-      top: -70px;
-      right: -40px;
-    }
-
-
-    .article-hero::after {
-      content: "";
-      position: absolute;
-
-      width: 160px;
-      height: 160px;
-
-      border-radius: 50%;
-
-      background: rgba(255,255,255,0.3);
-
-      bottom: -70px;
-      left: -30px;
-    }
-
-
-    .room-label {
-      position: relative;
-      z-index: 1;
-
-      font-size: 13px;
-      letter-spacing: 0.16em;
-      font-weight: 700;
-    }
-
-
-    .room-title {
-      position: relative;
-      z-index: 1;
-
-      font-size: clamp(48px, 8vw, 88px);
-      line-height: 0.85;
-      font-weight: 700;
-      max-width: 620px;
-    }
-
-
-    .room-route {
-      position: relative;
-      z-index: 1;
-
-      font-size: 12px;
-      letter-spacing: 0.13em;
-      font-weight: 700;
+    .article-main li {
+      margin-bottom: 12px;
+      line-height: 1.7;
     }
 
 
@@ -200,38 +118,38 @@
 
 
     .sidebar-card {
-      padding: 26px;
+      padding: 25px;
       margin-bottom: 20px;
+      border-radius: 16px;
     }
 
 
     .sidebar-card.light {
-      background: #f1ede6;
+      background: #f3efe7;
     }
 
 
     .sidebar-card.dark {
-      background: #1f211e;
+      background: #1f2420;
       color: white;
     }
 
 
     .sidebar-card h3 {
-      margin: 0 0 15px;
-      font-size: 22px;
+      margin-top: 0;
+      font-size: 1.2rem;
     }
 
 
     .sidebar-card p {
-      margin: 0;
       line-height: 1.65;
-      font-size: 15px;
+      margin-bottom: 0;
     }
 
 
     .sidebar-card ul {
       padding-left: 20px;
-      margin: 0;
+      margin-bottom: 0;
     }
 
 
@@ -244,11 +162,17 @@
 
     .article-back {
       display: inline-block;
-      margin-bottom: 30px;
-
-      font-size: 14px;
-      font-weight: 700;
+      margin-bottom: 25px;
       text-decoration: none;
+      font-weight: 600;
+    }
+
+
+    .article-category {
+      font-size: .78rem;
+      letter-spacing: .12em;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
 
@@ -256,7 +180,8 @@
 
       .article-layout {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
+        padding-top: 45px;
       }
 
 
@@ -270,28 +195,18 @@
     @media (max-width: 600px) {
 
       .article-layout {
-        padding: 45px 20px 70px;
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
 
-      .article-hero {
-        min-height: 300px;
-        padding: 25px;
+      .article-main h1 {
+        font-size: 2.8rem;
       }
 
 
-      .article-header h1 {
-        font-size: 43px;
-      }
-
-
-      .article-intro {
-        font-size: 18px;
-      }
-
-
-      .article-content h2 {
-        font-size: 27px;
+      .article-hero-image {
+        margin-bottom: 40px;
       }
 
     }
@@ -303,8 +218,6 @@
 
 <body>
 
-
-<!-- HEADER -->
 
 <header class="site-header">
 
@@ -324,7 +237,7 @@
         Latest
       </a>
 
-      <a href="study.html">
+      <a href="index.html#categories">
         Categories
       </a>
 
@@ -333,7 +246,7 @@
       </a>
 
       <a
-        href="index.html#newsletter"
+        href="index.html#latest"
         class="nav-button"
       >
         Read the blog →
@@ -347,10 +260,7 @@
 
 
 
-<main>
-
-
-<div class="article-layout">
+<main class="article-layout">
 
 
   <!-- MAIN ARTICLE -->
@@ -362,489 +272,465 @@
       href="room.html"
       class="article-back"
     >
-      ← Room & Organization
+      ← Back to Room & Organization
     </a>
 
 
-    <header class="article-header">
-
-      <p class="post-meta">
-        ROOM & ORGANIZATION · STUDENT LIFE
-      </p>
+    <div class="article-category">
+      ROOM & ORGANIZATION · STUDENT LIFE
+    </div>
 
 
-      <h1>
-        How to Create a Student Room That Feels Calm, Practical & Yours
-      </h1>
+    <h1>
+      How to Create a Student Room That Feels Calm, Practical & Yours
+    </h1>
 
 
-      <p class="article-intro">
-        Your room doesn't need to look like a perfectly styled
-        Pinterest board. It just needs to work for you — somewhere
-        you can study, rest, get ready and actually feel comfortable.
-      </p>
-
-    </header>
+    <p class="article-intro">
+      Your room doesn't need to look like a perfectly styled
+      Pinterest board. It just needs to work for you — somewhere
+      you can study, rest, get ready and actually feel comfortable.
+    </p>
 
 
 
-    <!-- ARTICLE HERO -->
+    <div class="article-hero-image">
 
-    <div class="article-hero">
-
-      <span class="room-label">
-        ROOM & ORGANIZATION
-      </span>
-
-
-      <div class="room-title">
-        MAKE<br>
-        SPACE<br>
-        YOURS.
-      </div>
-
-
-      <span class="room-route">
-        ORGANIZE → RESET → RELAX
-      </span>
+      <img
+        src="images/article5.jpg"
+        alt="How to create a calm and practical student room"
+      >
 
     </div>
 
 
 
-    <!-- ARTICLE CONTENT -->
+    <p>
+      Student rooms can be small, temporary and sometimes a little
+      random. You might have limited storage, shared furniture or
+      a desk that somehow becomes a place for everything.
+    </p>
 
-    <div class="article-content">
 
+    <p>
+      But you don't need a huge budget or a completely new room
+      to make your space feel better. A few thoughtful changes can
+      make everyday student life much easier.
+    </p>
 
-      <p>
-        Student rooms can be small, temporary and sometimes a little
-        random. You might have limited storage, shared furniture or
-        a desk that somehow becomes a place for everything.
-      </p>
 
 
-      <p>
-        But you don't need a huge budget or a completely new room
-        to make your space feel better. A few thoughtful changes can
-        make everyday student life much easier.
-      </p>
+    <h2>
+      Start With How You Actually Use Your Room
+    </h2>
 
 
+    <p>
+      Before buying storage boxes, decorations or organizers,
+      spend a few days noticing how you naturally use the space.
+    </p>
 
-      <h2>
-        Start With How You Actually Use Your Room
-      </h2>
 
+    <p>
+      Where do you normally drop your bag? Where do your clothes
+      end up? Do you study at your desk or somewhere else? Where
+      do you keep chargers, books and everyday essentials?
+    </p>
 
-      <p>
-        Before buying storage boxes, decorations or organizers,
-        spend a few days noticing how you naturally use the space.
-      </p>
 
+    <p>
+      The goal isn't to force yourself into a perfect organization
+      system. The best system is one that makes sense for your
+      actual habits.
+    </p>
 
-      <p>
-        Where do you normally drop your bag? Where do your clothes
-        end up? Do you study at your desk or somewhere else? Where
-        do you keep chargers, books and everyday essentials?
-      </p>
 
 
-      <p>
-        The goal isn't to force yourself into a perfect organization
-        system. The best system is one that makes sense for your
-        actual habits.
-      </p>
+    <h2>
+      Give Everything a Home
+    </h2>
 
 
+    <p>
+      One of the easiest ways to make a room feel less chaotic is
+      to give frequently used things a consistent place.
+    </p>
 
-      <h2>
-        Give Everything a Home
-      </h2>
 
+    <ul>
 
-      <p>
-        One of the easiest ways to make a room feel less chaotic is
-        to give frequently used things a consistent place.
-      </p>
+      <li>
+        Keep everyday stationery together.
+      </li>
 
+      <li>
+        Have one place for chargers and cables.
+      </li>
 
-      <ul>
+      <li>
+        Keep university documents in one folder.
+      </li>
 
-        <li>
-          Keep everyday stationery together.
-        </li>
+      <li>
+        Give shoes, bags and jackets their own area.
+      </li>
 
-        <li>
-          Have one place for chargers and cables.
-        </li>
+      <li>
+        Keep small personal items together instead of spreading
+        them around the room.
+      </li>
 
-        <li>
-          Keep university documents in one folder.
-        </li>
+    </ul>
 
-        <li>
-          Give shoes, bags and jackets their own area.
-        </li>
 
-        <li>
-          Keep small personal items together instead of spreading
-          them around the room.
-        </li>
+    <p>
+      You don't need expensive organizers for this. Small boxes,
+      baskets and containers you already have can work perfectly.
+    </p>
 
-      </ul>
 
 
-      <p>
-        You don't need expensive organizers for this. Small boxes,
-        baskets and containers you already have can work perfectly.
-      </p>
+    <h2>
+      Create a Study Corner
+    </h2>
 
 
+    <p>
+      Your desk doesn't have to be an elaborate productivity setup.
+      It just needs to make studying easier.
+    </p>
 
-      <h2>
-        Create a Study Corner
-      </h2>
 
+    <p>
+      Try keeping the surface relatively clear and leaving only
+      the things you use regularly within reach.
+    </p>
 
-      <p>
-        Your desk doesn't have to be an elaborate productivity setup.
-        It just needs to make studying easier.
-      </p>
 
+    <p>
+      A simple setup could include your laptop, a notebook,
+      stationery, a water bottle and a small lamp.
+    </p>
 
-      <p>
-        Try keeping the surface relatively clear and leaving only
-        the things you use regularly within reach.
-      </p>
 
+    <p>
+      Everything else can live somewhere else.
+    </p>
 
-      <p>
-        A simple setup could include your laptop, a notebook,
-        stationery, a water bottle and a small lamp.
-      </p>
 
 
-      <p>
-        Everything else can live somewhere else.
-      </p>
+    <h2>
+      Use Vertical Space
+    </h2>
 
 
+    <p>
+      When floor space is limited, look upwards.
+    </p>
 
-      <h2>
-        Use Vertical Space
-      </h2>
 
+    <p>
+      Shelves, hooks and small wall organizers can give you useful
+      storage without taking up much room.
+    </p>
 
-      <p>
-        When floor space is limited, look upwards.
-      </p>
 
+    <p>
+      Even the back of a door can become useful storage for bags,
+      accessories or everyday essentials.
+    </p>
 
-      <p>
-        Shelves, hooks and small wall organizers can give you useful
-        storage without taking up much room.
-      </p>
 
+    <p>
+      If you're renting or living in university accommodation,
+      check the rules before attaching anything permanently to
+      walls.
+    </p>
 
-      <p>
-        Even the back of a door can become useful storage for bags,
-        accessories or everyday essentials.
-      </p>
 
 
-      <p>
-        If you're renting or living in university accommodation,
-        check the rules before attaching anything permanently to
-        walls.
-      </p>
+    <h2>
+      Make Your Bed Area Comfortable
+    </h2>
 
 
+    <p>
+      Your bed is probably one of the largest parts of the room,
+      so making it comfortable can change the entire feeling of
+      the space.
+    </p>
 
-      <h2>
-        Make Your Bed Area Comfortable
-      </h2>
 
+    <p>
+      You don't need lots of decorative pillows or expensive
+      bedding. A comfortable blanket, clean sheets and one or two
+      things you genuinely like can be enough.
+    </p>
 
-      <p>
-        Your bed is probably one of the largest parts of the room,
-        so making it comfortable can change the entire feeling of
-        the space.
-      </p>
 
+    <p>
+      Think of the bed as your reset zone — somewhere you can
+      properly switch off after a long day.
+    </p>
 
-      <p>
-        You don't need lots of decorative pillows or expensive
-        bedding. A comfortable blanket, clean sheets and one or two
-        things you genuinely like can be enough.
-      </p>
 
 
-      <p>
-        Think of the bed as your reset zone — somewhere you can
-        properly switch off after a long day.
-      </p>
+    <h2>
+      Don't Underestimate Lighting
+    </h2>
 
 
+    <p>
+      Lighting can completely change how a room feels.
+    </p>
 
-      <h2>
-        Don't Underestimate Lighting
-      </h2>
 
+    <p>
+      During the day, make use of natural light where possible.
+      In the evening, softer lighting can make the room feel much
+      more relaxed than relying on one bright overhead light.
+    </p>
 
-      <p>
-        Lighting can completely change how a room feels.
-      </p>
 
+    <p>
+      A small desk lamp or warm bedside light can make your room
+      feel more comfortable without requiring a major redesign.
+    </p>
 
-      <p>
-        During the day, make use of natural light where possible.
-        In the evening, softer lighting can make the room feel much
-        more relaxed than relying on one bright overhead light.
-      </p>
 
 
-      <p>
-        A small desk lamp or warm bedside light can make your room
-        feel more comfortable without requiring a major redesign.
-      </p>
+    <h2>
+      Keep Decoration Personal
+    </h2>
 
 
+    <p>
+      Your room should feel like somewhere you actually live,
+      not a showroom.
+    </p>
 
-      <h2>
-        Keep Decoration Personal
-      </h2>
 
+    <p>
+      Add things that mean something to you — photos, postcards,
+      books, souvenirs, artwork or small objects from places you've
+      visited.
+    </p>
 
-      <p>
-        Your room should feel like somewhere you actually live,
-        not a showroom.
-      </p>
 
+    <p>
+      A few personal things can make a temporary student room
+      feel much more like home.
+    </p>
 
-      <p>
-        Add things that mean something to you — photos, postcards,
-        books, souvenirs, artwork or small objects from places you've
-        visited.
-      </p>
 
 
-      <p>
-        A few personal things can make a temporary student room
-        feel much more like home.
-      </p>
+    <h2>
+      Use the One-Minute Reset
+    </h2>
 
 
+    <p>
+      Instead of waiting until your room becomes completely messy,
+      create tiny reset habits.
+    </p>
 
-      <h2>
-        Use the One-Minute Reset
-      </h2>
 
+    <p>
+      Before leaving your room, put your clothes where they belong,
+      return your stationery to its place and take any rubbish with
+      you.
+    </p>
 
-      <p>
-        Instead of waiting until your room becomes completely messy,
-        create tiny reset habits.
-      </p>
 
+    <p>
+      These tiny actions take almost no time, but they stop clutter
+      from becoming a huge weekend project.
+    </p>
 
-      <p>
-        Before leaving your room, put your clothes where they belong,
-        return your stationery to its place and take any rubbish with
-        you.
-      </p>
 
 
-      <p>
-        These tiny actions take almost no time, but they stop clutter
-        from becoming a huge weekend project.
-      </p>
+    <h2>
+      Don't Buy Organization Just Because It Looks Good
+    </h2>
 
 
+    <p>
+      This is especially important when you're scrolling through
+      room inspiration online.
+    </p>
 
-      <h2>
-        Don't Buy Organization Just Because It Looks Good
-      </h2>
 
+    <p>
+      Something can look beautiful in a photo without actually
+      being useful for your life.
+    </p>
 
-      <p>
-        This is especially important when you're scrolling through
-        room inspiration online.
-      </p>
 
+    <p>
+      Before buying an organizer, ask yourself:
+    </p>
 
-      <p>
-        Something can look beautiful in a photo without actually
-        being useful for your life.
-      </p>
 
+    <ul>
 
-      <p>
-        Before buying an organizer, ask yourself:
-      </p>
+      <li>
+        What problem will this solve?
+      </li>
 
+      <li>
+        Where will it go?
+      </li>
 
-      <ul>
+      <li>
+        Will I actually use it?
+      </li>
 
-        <li>
-          What problem will this solve?
-        </li>
+      <li>
+        Could I organize the same thing with something I already own?
+      </li>
 
-        <li>
-          Where will it go?
-        </li>
+    </ul>
 
-        <li>
-          Will I actually use it?
-        </li>
 
-        <li>
-          Could I organize the same thing with something I already own?
-        </li>
 
-      </ul>
+    <h2>
+      Make a Small Budget
+    </h2>
 
 
+    <p>
+      You don't have to redecorate your entire room at once.
+    </p>
 
-      <h2>
-        Make a Small Budget
-      </h2>
 
+    <p>
+      Set a small budget and decide what would genuinely make the
+      biggest difference.
+    </p>
 
-      <p>
-        You don't have to redecorate your entire room at once.
-      </p>
 
+    <p>
+      You might choose one useful storage item, better lighting or
+      a few personal decorations instead of buying ten things at
+      once.
+    </p>
 
-      <p>
-        Set a small budget and decide what would genuinely make the
-        biggest difference.
-      </p>
 
 
-      <p>
-        You might choose one useful storage item, better lighting or
-        a few personal decorations instead of buying ten things at
-        once.
-      </p>
+    <h2>
+      Do a Weekly Room Reset
+    </h2>
 
 
+    <p>
+      Once a week, give yourself around fifteen minutes to reset
+      the room.
+    </p>
 
-      <h2>
-        Do a Weekly Room Reset
-      </h2>
 
+    <ul>
 
-      <p>
-        Once a week, give yourself around fifteen minutes to reset
-        the room.
-      </p>
+      <li>
+        Clear your desk.
+      </li>
 
+      <li>
+        Put clothes away.
+      </li>
 
-      <ul>
+      <li>
+        Empty rubbish.
+      </li>
 
-        <li>
-          Clear your desk.
-        </li>
+      <li>
+        Return books and stationery to their places.
+      </li>
 
-        <li>
-          Put clothes away.
-        </li>
+      <li>
+        Refill anything you use regularly.
+      </li>
 
-        <li>
-          Empty rubbish.
-        </li>
+      <li>
+        Open the curtains and let some fresh air in.
+      </li>
 
-        <li>
-          Return books and stationery to their places.
-        </li>
+    </ul>
 
-        <li>
-          Refill anything you use regularly.
-        </li>
 
-        <li>
-          Open the curtains and let some fresh air in.
-        </li>
+    <p>
+      It doesn't need to become a deep-cleaning session. Think of
+      it as pressing reset before another week begins.
+    </p>
 
-      </ul>
 
 
-      <p>
-        It doesn't need to become a deep-cleaning session. Think of
-        it as pressing reset before another week begins.
-      </p>
+    <h2>
+      Your Simple Student Room Checklist
+    </h2>
 
 
+    <ul>
 
-      <h2>
-        Your Simple Student Room Checklist
-      </h2>
+      <li>
+        Everything you use regularly has a home.
+      </li>
 
+      <li>
+        Your desk is clear enough to study comfortably.
+      </li>
 
-      <ul>
+      <li>
+        Chargers and cables are easy to find.
+      </li>
 
-        <li>
-          Everything you use regularly has a home.
-        </li>
+      <li>
+        Your clothes have a simple system.
+      </li>
 
-        <li>
-          Your desk is clear enough to study comfortably.
-        </li>
+      <li>
+        Your lighting works for both studying and relaxing.
+      </li>
 
-        <li>
-          Chargers and cables are easy to find.
-        </li>
+      <li>
+        You have a few personal things around you.
+      </li>
 
-        <li>
-          Your clothes have a simple system.
-        </li>
+      <li>
+        Your room can be reset in around fifteen minutes.
+      </li>
 
-        <li>
-          Your lighting works for both studying and relaxing.
-        </li>
+    </ul>
 
-        <li>
-          You have a few personal things around you.
-        </li>
 
-        <li>
-          Your room can be reset in around fifteen minutes.
-        </li>
 
-      </ul>
+    <h2>
+      Final Thought
+    </h2>
 
 
+    <p>
+      A good student room isn't about having the perfect furniture,
+      the biggest space or the most aesthetic decorations.
+    </p>
 
-      <h2>
-        Final Thought
-      </h2>
 
+    <p>
+      It's about creating an environment that supports the life
+      you're actually living.
+    </p>
 
-      <p>
-        A good student room isn't about having the perfect furniture,
-        the biggest space or the most aesthetic decorations.
-      </p>
 
+    <p>
+      Keep the things you use close, give everything else a place,
+      make the space personal and don't be afraid to keep it simple.
+    </p>
 
-      <p>
-        It's about creating an environment that supports the life
-        you're actually living.
-      </p>
 
+    <p>
+      Your room doesn't have to be perfect.
+      It just has to feel like yours.
+    </p>
 
-      <p>
-        Keep the things you use close, give everything else a place,
-        make the space personal and don't be afraid to keep it simple.
-      </p>
-
-
-      <p>
-        Your room doesn't have to be perfect.
-        It just has to feel like yours.
-      </p>
-
-
-    </div>
 
   </article>
 
@@ -913,29 +799,18 @@
   </aside>
 
 
-</div>
-
 </main>
 
 
-
-<!-- FOOTER -->
 
 <footer>
 
   <div class="footer-top">
 
-    <a
-      href="index.html"
-      class="logo"
-    >
-      Campus Diaries
-    </a>
-
-
-    <p>
-      Study. Travel. Live a little.
-    </p>
+    <div>
+      <div class="logo">Campus Diaries</div>
+      <p>Study. Travel. Live a little.</p>
+    </div>
 
   </div>
 
@@ -943,12 +818,7 @@
   <div class="footer-bottom">
 
     <p>
-      © Campus Diaries
-    </p>
-
-
-    <p>
-      Made for curious students.
+      © 2026 Campus Diaries
     </p>
 
   </div>
