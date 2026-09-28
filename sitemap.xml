@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/</loc>
+  </url>
+
+  <!-- Category Pages -->
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/study.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/travel.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/lifestyle.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/money.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/room.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/ideas.html</loc>
+  </url>
+
+  <!-- Articles -->
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/article.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/article2.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/article3.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/article4.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/article5.html</loc>
+  </url>
+
+  <url>
+    <loc>https://kish0-05.github.io/CampusDiaries/article6.html</loc>
+  </url>
+
+</urlset>
