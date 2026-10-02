@@ -1,1004 +1,1616 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="campus-diaries-favicon.png">
+  <title>Campus Diaries | Student Life & Travel</title>
 
-  <meta
-    name="p:domain_verify"
-    content="7775eac2969a9a91d9b9cd3c4037f13a"
-  />
+  <meta name="description" content="Campus Diaries — student life, travel, study abroad, money, lifestyle and ideas for your next chapter.">
 
-  <meta
-    name="google-site-verification"
-    content="f1ZL2vGZkzwktl_oyscnMZSMOK5ChUUh6BvQsu1QQtI"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  >
-
-  <meta
-    name="description"
-    content="Campus Diaries — student life, travel, study abroad and lifestyle ideas."
-  >
-
-  <title>
-    Campus Diaries | Student Life & Travel
-  </title>
-
-  <link rel="stylesheet" href="style.css">
-
+  <!-- Editorial serif + clean modern sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
-
-    /* =====================================================
-       HOMEPAGE ARTICLE IMAGES
-       ===================================================== */
-
-    .homepage-post-image {
-      width: 100%;
-      height: 260px;
-      overflow: hidden;
-      background: #eee;
+    :root {
+      --cream: #f7f4ee;
+      --paper: #fbfaf7;
+      --ink: #171717;
+      --muted: #77736c;
+      --line: #d9d4ca;
+      --accent: #7d6654;
+      --white: #ffffff;
     }
 
-    .homepage-post-image img {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
       width: 100%;
-      height: 100%;
       display: block;
       object-fit: cover;
     }
 
-    .homepage-small-image {
-      width: 100%;
-      height: 190px;
-      overflow: hidden;
-      background: #eee;
-      margin-bottom: 22px;
-      border-radius: 14px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .homepage-small-image img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
+    button,
+    input {
+      font: inherit;
     }
 
+    /* =========================
+       GLOBAL
+    ========================= */
 
-    /* =====================================================
-       DYNAMIC HOMEPAGE POSTS
-       ===================================================== */
+    .container {
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto;
+    }
 
-    .homepage-post-placeholder {
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .serif {
+      font-family: "Playfair Display", serif;
+    }
+
+    .section {
+      padding: 115px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 5vw, 70px);
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    .section-heading p {
+      max-width: 350px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .line {
+      height: 1px;
+      background: var(--line);
       width: 100%;
-      height: 260px;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: relative;
+      z-index: 20;
+      background: var(--cream);
+    }
+
+    .top-strip {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .top-strip p {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .navbar {
+      height: 92px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-left,
+    .nav-right {
       display: flex;
       align-items: center;
-      justify-content: center;
-      background: #f3efe7;
-      font-size: 3rem;
+      gap: 28px;
     }
 
+    .nav-right {
+      justify-content: flex-end;
+    }
 
-    .homepage-loading {
-      padding: 40px;
+    .nav-link {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .brand {
       text-align: center;
-      opacity: .6;
+      line-height: 0.85;
     }
 
-
-    @media (max-width: 700px) {
-
-      .homepage-post-image {
-        height: 220px;
-      }
-
-      .homepage-small-image {
-        height: 210px;
-      }
-
-      .homepage-post-placeholder {
-        height: 220px;
-      }
-
+    .brand-campus {
+      display: block;
+      font-family: "DM Sans", sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
     }
 
+    .brand-diaries {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 400;
+      margin-top: 3px;
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 70px 0 100px;
+    }
+
+    .hero-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 55px;
+    }
+
+    .hero-kicker {
+      max-width: 220px;
+    }
+
+    .hero-kicker p {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(65px, 10vw, 145px);
+      font-weight: 400;
+      letter-spacing: -0.065em;
+      line-height: 0.83;
+    }
+
+    .hero-title em {
+      font-style: italic;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      height: min(68vh, 720px);
+      min-height: 480px;
+      object-position: center;
+      transition: transform 1s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .hero-image-wrap:hover .hero-image {
+      transform: scale(1.025);
+    }
+
+    .hero-caption {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 13px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .hero-statement {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+    }
+
+    .hero-statement-label {
+      color: var(--muted);
+    }
+
+    .hero-statement-text {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(27px, 3.3vw, 46px);
+      line-height: 1.2;
+      max-width: 850px;
+    }
+
+    /* =========================
+       FEATURED ARTICLES
+    ========================= */
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 0.85fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .featured-main-image {
+      height: 570px;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .article-meta span + span::before {
+      content: "·";
+      margin-right: 15px;
+    }
+
+    .featured-main h3 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 1.03;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    .featured-main p {
+      max-width: 600px;
+      color: var(--muted);
+      margin-top: 17px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 23px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+    }
+
+    .read-more::after {
+      content: "→";
+      font-size: 17px;
+      transition: transform 0.25s ease;
+    }
+
+    .read-more:hover::after {
+      transform: translateX(6px);
+    }
+
+    .side-stories {
+      border-top: 1px solid var(--line);
+    }
+
+    .side-story {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      gap: 22px;
+    }
+
+    .side-story-image {
+      height: 135px;
+    }
+
+    .side-story h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      line-height: 1.12;
+      font-weight: 400;
+    }
+
+    .side-story p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 9px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       MARQUEE
+    ========================= */
+
+    .marquee {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      padding: 18px 0;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee 25s linear infinite;
+    }
+
+    .marquee-item {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      font-style: italic;
+      margin-right: 55px;
+    }
+
+    .marquee-item::after {
+      content: "✦";
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      margin-left: 55px;
+      font-style: normal;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* =========================
+       CATEGORIES
+    ========================= */
+
+    .categories {
+      background: var(--paper);
+    }
+
+    .category-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .category {
+      display: grid;
+      grid-template-columns: 100px 1fr 300px 40px;
+      align-items: center;
+      gap: 30px;
+      min-height: 125px;
+      border-bottom: 1px solid var(--line);
+      transition: padding 0.35s ease, background 0.35s ease;
+    }
+
+    .category:hover {
+      padding-left: 18px;
+      padding-right: 18px;
+      background: #f3efe7;
+    }
+
+    .category-number {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    .category-name {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .category-description {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .category-arrow {
+      font-size: 25px;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+    }
+
+    .category:hover .category-arrow {
+      transform: translateX(8px);
+    }
+
+    /* =========================
+       ARTICLE GRID
+    ========================= */
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 45px 28px;
+    }
+
+    .journal-card {
+      cursor: pointer;
+    }
+
+    .journal-image-wrap {
+      overflow: hidden;
+      background: #e8e4dc;
+    }
+
+    .journal-image {
+      height: 380px;
+      transition: transform 0.7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .journal-card:hover .journal-image {
+      transform: scale(1.035);
+    }
+
+    .journal-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      line-height: 1.12;
+      font-weight: 400;
+    }
+
+    .journal-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-top: 9px;
+    }
+
+    /* =========================
+       EDITORIAL QUOTE
+    ========================= */
+
+    .quote-section {
+      background: #20201d;
+      color: #f7f4ee;
+      padding: 125px 0;
+    }
+
+    .quote-layout {
+      display: grid;
+      grid-template-columns: 0.7fr 2fr;
+      gap: 70px;
+    }
+
+    .quote-label {
+      color: #aaa69d;
+    }
+
+    .quote {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      font-weight: 400;
+    }
+
+    .quote em {
+      font-style: italic;
+    }
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter {
+      padding: 120px 0;
+    }
+
+    .newsletter-box {
+      border: 1px solid var(--line);
+      padding: 75px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      background: var(--paper);
+    }
+
+    .newsletter-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(45px, 5vw, 72px);
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+    }
+
+    .newsletter-title em {
+      font-style: italic;
+    }
+
+    .newsletter-copy {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+      margin-top: 20px;
+      max-width: 500px;
+    }
+
+    .newsletter-form {
+      margin-top: 25px;
+    }
+
+    .newsletter-form input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid var(--ink);
+      background: transparent;
+      padding: 15px 0;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .newsletter-form button {
+      margin-top: 18px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+    }
+
+    .newsletter-form button:hover {
+      opacity: 0.75;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 70px 0 30px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 70px;
+      padding-bottom: 70px;
+    }
+
+    .footer-brand {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(50px, 7vw, 95px);
+      line-height: 0.85;
+    }
+
+    .footer-brand em {
+      font-style: italic;
+    }
+
+    .footer-column-title {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      color: #99968f;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      transition: opacity 0.25s ease;
+    }
+
+    .footer-links a:hover {
+      opacity: 0.55;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #393936;
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #99968f;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .container {
+        width: min(100% - 34px, 700px);
+      }
+
+      .navbar {
+        height: 78px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-left,
+      .nav-right {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .brand-campus {
+        font-size: 19px;
+      }
+
+      .brand-diaries {
+        font-size: 23px;
+      }
+
+      .hero {
+        padding: 50px 0 75px;
+      }
+
+      .hero-intro,
+      .hero-statement {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .hero-title {
+        font-size: clamp(60px, 18vw, 105px);
+      }
+
+      .hero-image {
+        height: 65vh;
+        min-height: 420px;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .featured-main-image {
+        height: 480px;
+      }
+
+      .category {
+        grid-template-columns: 45px 1fr 25px;
+        gap: 12px;
+      }
+
+      .category-description {
+        display: none;
+      }
+
+      .journal-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .journal-image {
+        height: 500px;
+      }
+
+      .quote-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .newsletter-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 45px 30px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .hero-title {
+        font-size: 60px;
+      }
+
+      .hero-image {
+        height: 480px;
+      }
+
+      .featured-main-image {
+        height: 390px;
+      }
+
+      .side-story {
+        grid-template-columns: 95px 1fr;
+      }
+
+      .side-story-image {
+        height: 105px;
+      }
+
+      .side-story h4 {
+        font-size: 21px;
+      }
+
+      .journal-image {
+        height: 420px;
+      }
+    }
   </style>
-
 </head>
-
-
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
+  <header>
 
-<header class="site-header">
-
-  <div class="nav-wrap">
-
-    <a class="logo" href="index.html">
-      Campus <span>Diaries</span>
-    </a>
-
-
-    <nav>
-
-      <a href="#latest">
-        Latest
-      </a>
-
-      <a href="#categories">
-        Categories
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a class="nav-button" href="#latest">
-        Read the blog →
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- =====================================================
-     HERO
-     ===================================================== -->
-
-<section class="hero">
-
-  <div>
-
-    <p class="eyebrow">
-      STUDENT LIFE • TRAVEL • LIFESTYLE
-    </p>
-
-
-    <h1>
-
-      Your next chapter<br>
-
-      <em>
-        starts here.
-      </em>
-
-    </h1>
-
-
-    <p class="hero-text">
-
-      Practical guides, study-abroad inspiration, travel ideas and
-      little things that make student life better.
-
-    </p>
-
-
-    <div class="hero-actions">
-
-      <a class="button primary" href="#latest">
-        Start reading →
-      </a>
-
-      <a class="button secondary" href="#categories">
-        Explore topics
-      </a>
-
+    <div class="top-strip">
+      <div class="container">
+        <p>Student life · travel · lifestyle · your next chapter</p>
+      </div>
     </div>
 
-  </div>
+    <div class="container">
+      <nav class="navbar">
 
+        <div class="nav-left">
+          <a href="#journal" class="nav-link">Journal</a>
+          <a href="#categories" class="nav-link">Explore</a>
+        </div>
 
+        <a href="index.html" class="brand" aria-label="Campus Diaries home">
+          <span class="brand-campus">Campus</span>
+          <span class="brand-diaries">Diaries</span>
+        </a>
 
-  <div class="hero-card">
+        <div class="nav-right">
+          <a href="#newsletter" class="nav-link">Newsletter</a>
+          <a href="#about" class="nav-link">About</a>
+        </div>
 
-    <div class="stamp">
-      CAMPUS<br>
-      DIARIES
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+
+      </nav>
     </div>
 
+  </header>
 
-    <div class="hero-card-main">
 
-      Make the most<br>
-      of where you are.
+  <main>
 
-    </div>
+    <!-- =========================
+         HERO
+    ========================= -->
 
+    <section class="hero">
 
-    <div class="hero-card-bottom">
+      <div class="container">
 
-      <span>
-        est. 2026
-      </span>
+        <div class="hero-intro">
 
-      <span>
-        ✦
-      </span>
+          <div class="hero-kicker">
+            <div class="eyebrow">
+              Student life · Travel · Lifestyle
+            </div>
 
-      <span>
-        your guide
-      </span>
+            <p>
+              A little corner of the internet for figuring things out,
+              going somewhere new and making the most of where you are now.
+            </p>
+          </div>
 
-    </div>
+          <h1 class="hero-title">
+            your next<br>
+            <em>chapter</em><br>
+            starts here
+          </h1>
 
-  </div>
+        </div>
 
-</section>
 
+        <!--
+          HERO IMAGE
+          Replace hero.jpg with your preferred homepage image.
+          You can also use one of your existing article images here.
+        -->
 
-
-<!-- =====================================================
-     DYNAMIC TICKER
-     ===================================================== -->
-
-<div class="ticker">
-
-  <span>
-    NEW ON THE BLOG
-  </span>
-
-
-  <a id="newArticleLink" href="article7.html">
-
-    Study Abroad Essentials: The Ultimate University Moving Checklist →
-
-  </a>
-
-</div>
-
-
-
-<!-- =====================================================
-     LATEST
-     ===================================================== -->
-
-<section id="latest" class="section">
-
-
-  <div class="section-heading">
-
-    <div>
-
-      <p class="eyebrow">
-        LATEST
-      </p>
-
-
-      <h2>
-        Stories worth saving.
-      </h2>
-
-    </div>
-
-
-    <p>
-
-      Ideas for studying smarter, travelling further and enjoying
-      the in-between.
-
-    </p>
-
-  </div>
-
-
-
-  <!--
-
-    JavaScript will automatically insert
-    the newest articles here.
-
-  -->
-
-  <div
-    class="featured-grid"
-    id="latestArticles"
-  >
-
-    <div class="homepage-loading">
-      Loading the latest stories...
-    </div>
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     CATEGORIES
-     ===================================================== -->
-
-<section id="categories" class="section">
-
-
-  <div class="section-heading">
-
-    <div>
-
-      <p class="eyebrow">
-        EXPLORE
-      </p>
-
-
-      <h2>
-        Pick your mood.
-      </h2>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="category-grid">
-
-
-    <a href="study.html" class="category-card">
-
-      <span>
-        01
-      </span>
-
-      <strong>
-        Study
-      </strong>
-
-      <p>
-        Productivity, university life & study-abroad planning.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a href="travel.html" class="category-card">
-
-      <span>
-        02
-      </span>
-
-      <strong>
-        Travel
-      </strong>
-
-      <p>
-        Student-friendly destinations, routes & travel ideas.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a href="lifestyle.html" class="category-card">
-
-      <span>
-        03
-      </span>
-
-      <strong>
-        Lifestyle
-      </strong>
-
-      <p>
-        Routines, style, self-care and everyday inspiration.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a href="money.html" class="category-card">
-
-      <span>
-        04
-      </span>
-
-      <strong>
-        Money
-      </strong>
-
-      <p>
-        Budgeting, saving and beginner-friendly side hustles.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a href="room.html" class="category-card">
-
-      <span>
-        05
-      </span>
-
-      <strong>
-        Room & Organization
-      </strong>
-
-      <p>
-        Make your space practical, calm and yours.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-
-    <a href="ideas.html" class="category-card">
-
-      <span>
-        06
-      </span>
-
-      <strong>
-        Ideas
-      </strong>
-
-      <p>
-        Gift guides, lists, activities and things to try.
-      </p>
-
-      <b>
-        →
-      </b>
-
-    </a>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ABOUT
-     ===================================================== -->
-
-<section id="about" class="about">
-
-
-  <div class="about-mark">
-    CD
-  </div>
-
-
-  <div>
-
-    <p class="eyebrow">
-      ABOUT CAMPUS DIARIES
-    </p>
-
-
-    <h2>
-      A little corner of the internet for figuring things out.
-    </h2>
-
-
-    <p>
-
-      Campus Diaries is for students who want useful information
-      without the boring bits — from choosing a study destination
-      to planning your next weekend away.
-
-    </p>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     NEWSLETTER
-     ===================================================== -->
-
-<section id="newsletter" class="newsletter">
-
-
-  <div>
-
-    <p class="eyebrow">
-      THE DIARY NOTE
-    </p>
-
-
-    <h2>
-      Good ideas, occasionally delivered.
-    </h2>
-
-
-    <p>
-
-      New guides, travel inspiration and student-life ideas.
-      No inbox overload.
-
-    </p>
-
-  </div>
-
-
-
-  <form
-    action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
-    method="post"
-    class="embeddable-buttondown-form"
-  >
-
-
-    <label for="bd-email">
-      Enter your email
-    </label>
-
-
-    <input
-      type="email"
-      name="email"
-      id="bd-email"
-      placeholder="Your email address"
-      aria-label="Your email address"
-      required
-    >
-
-
-    <button type="submit">
-      Subscribe →
-    </button>
-
-
-    <p>
-
-      <a
-        href="https://buttondown.com/refer/campusdiaries"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by Buttondown.
-      </a>
-
-    </p>
-
-
-  </form>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer>
-
-
-  <div class="footer-top">
-
-    <a class="logo" href="index.html">
-      Campus <span>Diaries</span>
-    </a>
-
-
-    <p>
-      Study. Travel. Live a little.
-    </p>
-
-  </div>
-
-
-
-  <div class="footer-bottom">
-
-    <span>
-      © 2026 Campus Diaries
-    </span>
-
-
-    <span>
-      Made for the next chapter.
-    </span>
-
-  </div>
-
-</footer>
-
-
-
-<!-- =====================================================
-     ARTICLES DATA
-     ===================================================== -->
-
-<script src="articles.js"></script>
-
-
-
-<!-- =====================================================
-     HOMEPAGE ARTICLE SYSTEM
-     ===================================================== -->
-
-<script>
-
-  /*
-   * Campus Diaries Homepage
-   *
-   * articles.js contains the article information.
-   * The newest article is the first item in the array.
-   */
-
-
-  const latestContainer =
-    document.getElementById("latestArticles");
-
-
-  const newArticleLink =
-    document.getElementById("newArticleLink");
-
-
-  /*
-   * Image mapping
-   *
-   * The article filenames don't all follow
-   * the exact same naming pattern, so we map them here.
-   */
-
-  const articleImages = {
-
-    "article.html": "images/article.jpg",
-
-    "article2.html": "images/article2.jpg",
-
-    "article3.html": "images/article3.jpg",
-
-    "article4.html": "images/article4.jpg",
-
-    "article5.html": "images/article5.jpg",
-
-    "article6.html": "images/article6.jpg",
-
-    "article7.html": "images/article7.jpg"
-
-  };
-
-
-  /*
-   * Get image for an article
-   */
-
-  function getArticleImage(article) {
-
-    return articleImages[article.url] || null;
-
-  }
-
-
-  /*
-   * Create the featured newest article.
-   */
-
-  function createFeaturedArticle(article) {
-
-    const link =
-      document.createElement("a");
-
-    link.className =
-      "featured-post";
-
-    link.href =
-      article.url;
-
-
-    const image =
-      getArticleImage(article);
-
-
-    let visualHTML = "";
-
-
-    if (image) {
-
-      visualHTML = `
-
-        <div class="homepage-post-image">
+        <div class="hero-image-wrap">
 
           <img
-            src="${image}"
-            alt="${article.title}"
+            src="hero.jpg"
+            alt="Student lifestyle and travel"
+            class="hero-image"
+            onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
           >
 
-        </div>
-
-      `;
-
-    } else {
-
-      visualHTML = `
-
-        <div class="homepage-post-placeholder">
-
-          ${article.icon || "✦"}
+          <div class="hero-caption">
+            <span>Campus Diaries</span>
+            <span>Make the most of where you are now</span>
+          </div>
 
         </div>
 
-      `;
 
-    }
+        <div class="hero-statement">
 
+          <div class="hero-statement-label eyebrow">
+            The idea behind Campus Diaries
+          </div>
 
-    link.innerHTML = `
+          <div class="hero-statement-text">
+            For the places you're going, the things you're learning
+            and all the little moments in between.
+          </div>
 
-      ${visualHTML}
-
-      <div class="post-info">
-
-        <p class="post-meta">
-          ${article.category}
-        </p>
-
-        <h3>
-          ${article.title}
-        </h3>
-
-        <p>
-          ${article.description}
-        </p>
-
-        <span class="read-more">
-          Read story →
-        </span>
+        </div>
 
       </div>
 
-    `;
+    </section>
 
 
-    return link;
+    <!-- =========================
+         FEATURED / NEW ON BLOG
+    ========================= -->
 
-  }
+    <section class="section" id="journal">
 
+      <div class="container">
 
+        <div class="section-heading">
 
-  /*
-   * Create the smaller article cards.
-   */
+          <h2>New on<br><em class="serif">the blog</em></h2>
 
-  function createSmallArticle(article, index) {
-
-    const link =
-      document.createElement("a");
-
-    link.className =
-      "small-post";
-
-
-    /*
-     * Keep the darker visual treatment
-     * for alternating cards.
-     */
-
-    if (index % 2 === 1) {
-
-      link.classList.add("dark");
-
-    }
-
-
-    link.href =
-      article.url;
-
-
-    const image =
-      getArticleImage(article);
-
-
-    let visualHTML = "";
-
-
-    if (image) {
-
-      visualHTML = `
-
-        <div class="homepage-small-image">
-
-          <img
-            src="${image}"
-            alt="${article.title}"
-          >
+          <p>
+            Guides, ideas and stories for student life —
+            from studying abroad to finding your favourite
+            places in a new city.
+          </p>
 
         </div>
 
-      `;
 
-    } else {
+        <div class="featured-grid">
 
-      visualHTML = `
+          <!-- MAIN FEATURE -->
 
-        <div class="homepage-small-image">
+          <article class="featured-main" id="featuredArticle">
 
-          <div class="homepage-post-placeholder">
+            <a href="article1.html">
 
-            ${article.icon || "✦"}
+              <div class="journal-image-wrap">
+
+                <img
+                  src="article1.jpg"
+                  alt="Study in Central Europe"
+                  class="featured-main-image"
+                  onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
+                >
+
+              </div>
+
+              <div class="article-meta">
+                <span>Study Abroad</span>
+                <span>Featured</span>
+              </div>
+
+              <h3>Study in Central Europe</h3>
+
+              <p>
+                Thinking about studying somewhere new?
+                Explore what makes Central Europe such an
+                interesting option for students who want
+                university life and travel in the same chapter.
+              </p>
+
+              <span class="read-more">Read story</span>
+
+            </a>
+
+          </article>
+
+
+          <!-- SIDE STORIES -->
+
+          <div class="side-stories">
+
+            <article class="side-story">
+
+              <a href="article2.html">
+
+                <img
+                  src="article2.jpg"
+                  alt="European student cities"
+                  class="side-story-image"
+                  onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
+                >
+
+              </a>
+
+              <div>
+
+                <div class="article-meta">
+                  <span>Study Abroad</span>
+                </div>
+
+                <h4>
+                  How to Compare European Student Cities Before You Apply
+                </h4>
+
+                <p>
+                  What to look at beyond rankings.
+                </p>
+
+                <a href="article2.html" class="read-more">
+                  Read
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <article class="side-story">
+
+              <a href="article3.html">
+
+                <img
+                  src="article3.jpg"
+                  alt="Student money and budgeting"
+                  class="side-story-image"
+                  onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
+                >
+
+              </a>
+
+              <div>
+
+                <div class="article-meta">
+                  <span>Money</span>
+                </div>
+
+                <h4>
+                  Budgeting, Saving & Making Money as a Student
+                </h4>
+
+                <p>
+                  Small changes that can make student life easier.
+                </p>
+
+                <a href="article3.html" class="read-more">
+                  Read
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <article class="side-story">
+
+              <a href="article4.html">
+
+                <img
+                  src="article4.jpg"
+                  alt="Student lifestyle"
+                  class="side-story-image"
+                  onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
+                >
+
+              </a>
+
+              <div>
+
+                <div class="article-meta">
+                  <span>Lifestyle</span>
+                </div>
+
+                <h4>
+                  Everyday Ideas for Your New Chapter
+                </h4>
+
+                <p>
+                  Routines, spaces and little things that make life better.
+                </p>
+
+                <a href="article4.html" class="read-more">
+                  Read
+                </a>
+
+              </div>
+
+            </article>
 
           </div>
 
         </div>
 
-      `;
-
-    }
-
-
-    link.innerHTML = `
-
-      ${visualHTML}
-
-      <div class="mini-icon">
-        ${article.icon || "✦"}
       </div>
 
-      <p class="post-meta">
-        ${article.category}
-      </p>
-
-      <h3>
-        ${article.title}
-      </h3>
-
-      <p>
-        ${article.description}
-      </p>
-
-      <span class="read-more">
-        Read story →
-      </span>
-
-    `;
+    </section>
 
 
-    return link;
+    <!-- =========================
+         MARQUEE
+    ========================= -->
 
-  }
+    <div class="marquee">
+
+      <div class="marquee-track">
+
+        <span class="marquee-item">study somewhere new</span>
+        <span class="marquee-item">go somewhere you've never been</span>
+        <span class="marquee-item">make the most of now</span>
+        <span class="marquee-item">study somewhere new</span>
+        <span class="marquee-item">go somewhere you've never been</span>
+        <span class="marquee-item">make the most of now</span>
+
+      </div>
+
+    </div>
 
 
+    <!-- =========================
+         CATEGORIES
+    ========================= -->
 
-  /*
-   * Build the homepage.
-   */
+    <section class="section categories" id="categories">
 
-  function buildHomepage() {
+      <div class="container">
 
+        <div class="section-heading">
 
-    /*
-     * Make sure articles.js loaded correctly.
-     */
+          <h2>Explore<br><em>Campus Diaries</em></h2>
 
-    if (
-      typeof articles === "undefined" ||
-      !Array.isArray(articles) ||
-      articles.length === 0
-    ) {
-
-      latestContainer.innerHTML = `
-
-        <div class="homepage-loading">
-
-          No articles found yet.
+          <p>
+            Pick a chapter. Stay for the ideas.
+          </p>
 
         </div>
 
-      `;
 
-      return;
+        <div class="category-list">
+
+          <a href="study.html" class="category">
+
+            <span class="category-number">01</span>
+
+            <span class="category-name">
+              Study
+            </span>
+
+            <span class="category-description">
+              Productivity, university life and study-abroad planning.
+            </span>
+
+            <span class="category-arrow">→</span>
+
+          </a>
+
+
+          <a href="travel.html" class="category">
+
+            <span class="category-number">02</span>
+
+            <span class="category-name">
+              Travel
+            </span>
+
+            <span class="category-description">
+              Student-friendly destinations, routes and travel ideas.
+            </span>
+
+            <span class="category-arrow">→</span>
+
+          </a>
+
+
+          <a href="lifestyle.html" class="category">
+
+            <span class="category-number">03</span>
+
+            <span class="category-name">
+              Lifestyle
+            </span>
+
+            <span class="category-description">
+              Routines, style, self-care and everyday inspiration.
+            </span>
+
+            <span class="category-arrow">→</span>
+
+          </a>
+
+
+          <a href="money.html" class="category">
+
+            <span class="category-number">04</span>
+
+            <span class="category-name">
+              Money
+            </span>
+
+            <span class="category-description">
+              Budgeting, saving and beginner-friendly side hustles.
+            </span>
+
+            <span class="category-arrow">→</span>
+
+          </a>
+
+
+          <a href="ideas.html" class="category">
+
+            <span class="category-number">05</span>
+
+            <span class="category-name">
+              Ideas
+            </span>
+
+            <span class="category-description">
+              Things worth trying, making, planning and discovering.
+            </span>
+
+            <span class="category-arrow">→</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MORE JOURNAL
+    ========================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>A few more<br><em>things</em></h2>
+
+          <p>
+            Because sometimes the best ideas are the ones
+            you weren't looking for.
+          </p>
+
+        </div>
+
+
+        <div class="journal-grid">
+
+
+          <article class="journal-card">
+
+            <a href="article5.html">
+
+              <div class="journal-image-wrap">
+
+                <img
+                  src="article5.jpg"
+                  alt="Student room and organisation"
+                  class="journal-image"
+                  onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
+                >
+
+              </div>
+
+              <div class="article-meta">
+                <span>Ideas</span>
+              </div>
+
+              <h3>
+                Make Your Room Feel Like Yours
+              </h3>
+
+              <p>
+                Simple ideas for creating a space that
+                actually feels like home.
+              </p>
+
+            </a>
+
+          </article>
+
+
+          <article class="journal-card">
+
+            <a href="article6.html">
+
+              <div class="journal-image-wrap">
+
+                <img
+                  src="article6.jpg"
+                  alt="Student travel and lifestyle"
+                  class="journal-image"
+                  onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
+                >
+
+              </div>
+
+              <div class="article-meta">
+                <span>Travel</span>
+              </div>
+
+              <h3>
+                Your Next Place Might Be Closer Than You Think
+              </h3>
+
+              <p>
+                A little inspiration for getting out,
+                exploring and making memories.
+              </p>
+
+            </a>
+
+          </article>
+
+
+          <article class="journal-card">
+
+            <a href="article.html">
+
+              <div class="journal-image-wrap">
+
+                <img
+                  src="article.jpg"
+                  alt="Campus Diaries article"
+                  class="journal-image"
+                  onerror="this.style.display='none'; this.parentElement.style.background='#ddd8cf';"
+                >
+
+              </div>
+
+              <div class="article-meta">
+                <span>Campus Diaries</span>
+              </div>
+
+              <h3>
+                Start Somewhere
+              </h3>
+
+              <p>
+                Your next chapter doesn't have to be
+                perfectly planned.
+              </p>
+
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUOTE
+    ========================= -->
+
+    <section class="quote-section">
+
+      <div class="container">
+
+        <div class="quote-layout">
+
+          <div class="quote-label eyebrow">
+            A little reminder
+          </div>
+
+          <div class="quote">
+            You don't need to have your whole life figured out.
+            <em>You just need somewhere to start.</em>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NEWSLETTER
+    ========================= -->
+
+    <section class="newsletter" id="newsletter">
+
+      <div class="container">
+
+        <div class="newsletter-box">
+
+          <div>
+
+            <div class="eyebrow">
+              The Campus Diaries newsletter
+            </div>
+
+            <h2 class="newsletter-title">
+              Come along<br>
+              <em>for the ride.</em>
+            </h2>
+
+          </div>
+
+
+          <div>
+
+            <p class="newsletter-copy">
+              New articles, ideas, travel inspiration and
+              student-life things — delivered occasionally,
+              never overwhelmingly.
+            </p>
+
+
+            <form
+              class="newsletter-form"
+              action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
+              method="post"
+              target="popupwindow"
+              onsubmit="window.open('https://buttondown.com/campusdiaries', 'popupwindow')"
+            >
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              >
+
+              <button type="submit">
+                Join the newsletter
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer id="about">
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div>
+
+          <div class="footer-brand">
+            Campus<br>
+            <em>Diaries</em>
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-column-title">
+            Explore
+          </div>
+
+          <div class="footer-links">
+
+            <a href="study.html">Study</a>
+            <a href="travel.html">Travel</a>
+            <a href="lifestyle.html">Lifestyle</a>
+            <a href="money.html">Money</a>
+            <a href="ideas.html">Ideas</a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-column-title">
+            Campus Diaries
+          </div>
+
+          <div class="footer-links">
+
+            <a href="#journal">Journal</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#about">About</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Campus Diaries
+        </span>
+
+        <span>
+          Student life · Travel · Lifestyle
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+    ========================= -->
+
+  <script src="articles.js"></script>
+
+  <script>
+
+    /*
+      Small mobile menu.
+      Desktop navigation remains visible on larger screens.
+    */
+
+    function toggleMenu() {
+
+      const navLeft = document.querySelector(".nav-left");
+      const navRight = document.querySelector(".nav-right");
+
+      const visible =
+        navLeft.style.display === "flex";
+
+      if (visible) {
+
+        navLeft.style.display = "none";
+        navRight.style.display = "none";
+
+      } else {
+
+        navLeft.style.display = "flex";
+        navRight.style.display = "flex";
+
+        navLeft.style.position = "absolute";
+        navRight.style.position = "absolute";
+
+        navLeft.style.top = "78px";
+        navRight.style.top = "78px";
+
+        navLeft.style.left = "17px";
+        navRight.style.right = "17px";
+
+        navLeft.style.background = "#f7f4ee";
+        navRight.style.background = "#f7f4ee";
+
+        navLeft.style.padding = "20px";
+        navRight.style.padding = "20px";
+
+        navLeft.style.flexDirection = "column";
+        navRight.style.flexDirection = "column";
+
+        navLeft.style.alignItems = "flex-start";
+        navRight.style.alignItems = "flex-end";
+
+      }
 
     }
 
-
-    /*
-     * The first article in articles.js
-     * is automatically treated as newest.
-     */
-
-    const newestArticle =
-      articles[0];
-
-
-    /*
-     * Update NEW ON THE BLOG.
-     */
-
-    newArticleLink.href =
-      newestArticle.url;
-
-
-    newArticleLink.textContent =
-      newestArticle.title + " →";
-
-
-    /*
-     * Clear the loading message.
-     */
-
-    latestContainer.innerHTML = "";
-
-
-    /*
-     * Newest article becomes the large feature.
-     */
-
-    const featured =
-      createFeaturedArticle(newestArticle);
-
-
-    latestContainer.appendChild(featured);
-
-
-    /*
-     * Add the next two articles as smaller cards.
-     */
-
-    articles
-      .slice(1, 3)
-      .forEach((article, index) => {
-
-        const small =
-          createSmallArticle(article, index);
-
-        latestContainer.appendChild(small);
-
-      });
-
-  }
-
-
-  /*
-   * Start.
-   */
-
-  buildHomepage();
-
-</script>
-
+  </script>
 
 </body>
 </html>
+```
