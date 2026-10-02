@@ -2,23 +2,44 @@
 <html lang="en">
 
 <head>
+
   <link rel="icon" type="image/png" href="campus-diaries-favicon.png">
-  <meta name="p:domain_verify" content="7775eac2969a9a91d9b9cd3c4037f13a"/>
-  <meta name="google-site-verification" content="f1ZL2vGZkzwktl_oyscnMZSMOK5ChUUh6BvQsu1QQtI" />
+
+  <meta
+    name="p:domain_verify"
+    content="7775eac2969a9a91d9b9cd3c4037f13a"
+  />
+
+  <meta
+    name="google-site-verification"
+    content="f1ZL2vGZkzwktl_oyscnMZSMOK5ChUUh6BvQsu1QQtI"
+  />
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
 
   <meta
     name="description"
     content="Campus Diaries — student life, travel, study abroad and lifestyle ideas."
   >
 
-  <title>Campus Diaries | Student Life & Travel</title>
+  <title>
+    Campus Diaries | Student Life & Travel
+  </title>
 
   <link rel="stylesheet" href="style.css">
 
+
   <style>
-    /* Homepage article images */
+
+    /* =====================================================
+       HOMEPAGE ARTICLE IMAGES
+       ===================================================== */
+
     .homepage-post-image {
       width: 100%;
       height: 260px;
@@ -49,7 +70,31 @@
       object-fit: cover;
     }
 
+
+    /* =====================================================
+       DYNAMIC HOMEPAGE POSTS
+       ===================================================== */
+
+    .homepage-post-placeholder {
+      width: 100%;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3efe7;
+      font-size: 3rem;
+    }
+
+
+    .homepage-loading {
+      padding: 40px;
+      text-align: center;
+      opacity: .6;
+    }
+
+
     @media (max-width: 700px) {
+
       .homepage-post-image {
         height: 220px;
       }
@@ -57,15 +102,26 @@
       .homepage-small-image {
         height: 210px;
       }
+
+      .homepage-post-placeholder {
+        height: 220px;
+      }
+
     }
+
   </style>
 
 </head>
 
+
+
 <body>
 
 
-<!-- HEADER -->
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
 <header class="site-header">
 
   <div class="nav-wrap">
@@ -74,25 +130,40 @@
       Campus <span>Diaries</span>
     </a>
 
-    <nav>
-      <a href="#latest">Latest</a>
-      <a href="#categories">Categories</a>
-      <a href="#about">About</a>
-    </nav>
 
-    <a class="nav-button" href="article.html">
-      Read the blog →
-    </a>
+    <nav>
+
+      <a href="#latest">
+        Latest
+      </a>
+
+      <a href="#categories">
+        Categories
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a class="nav-button" href="#latest">
+        Read the blog →
+      </a>
+
+    </nav>
 
   </div>
 
 </header>
 
 
+
 <main>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
 <section class="hero">
 
   <div>
@@ -101,18 +172,29 @@
       STUDENT LIFE • TRAVEL • LIFESTYLE
     </p>
 
+
     <h1>
+
       Your next chapter<br>
-      <em>starts here.</em>
+
+      <em>
+        starts here.
+      </em>
+
     </h1>
 
+
     <p class="hero-text">
-      Practical guides, study-abroad inspiration, travel ideas and little things that make student life better.
+
+      Practical guides, study-abroad inspiration, travel ideas and
+      little things that make student life better.
+
     </p>
+
 
     <div class="hero-actions">
 
-      <a class="button primary" href="article.html">
+      <a class="button primary" href="#latest">
         Start reading →
       </a>
 
@@ -125,6 +207,7 @@
   </div>
 
 
+
   <div class="hero-card">
 
     <div class="stamp">
@@ -132,15 +215,29 @@
       DIARIES
     </div>
 
+
     <div class="hero-card-main">
+
       Make the most<br>
       of where you are.
+
     </div>
 
+
     <div class="hero-card-bottom">
-      <span>est. 2026</span>
-      <span>✦</span>
-      <span>your guide</span>
+
+      <span>
+        est. 2026
+      </span>
+
+      <span>
+        ✦
+      </span>
+
+      <span>
+        your guide
+      </span>
+
     </div>
 
   </div>
@@ -148,22 +245,34 @@
 </section>
 
 
-<!-- TICKER -->
+
+<!-- =====================================================
+     DYNAMIC TICKER
+     ===================================================== -->
+
 <div class="ticker">
 
   <span>
     NEW ON THE BLOG
   </span>
 
-  <a href="article2.html">
-    How to compare European student cities →
+
+  <a id="newArticleLink" href="article7.html">
+
+    Study Abroad Essentials: The Ultimate University Moving Checklist →
+
   </a>
 
 </div>
 
 
-<!-- LATEST -->
+
+<!-- =====================================================
+     LATEST
+     ===================================================== -->
+
 <section id="latest" class="section">
+
 
   <div class="section-heading">
 
@@ -173,135 +282,54 @@
         LATEST
       </p>
 
+
       <h2>
         Stories worth saving.
       </h2>
 
     </div>
 
+
     <p>
-      Ideas for studying smarter, travelling further and enjoying the in-between.
+
+      Ideas for studying smarter, travelling further and enjoying
+      the in-between.
+
     </p>
 
   </div>
 
 
-  <div class="featured-grid">
 
+  <!--
 
-    <!-- ARTICLE 1 -->
-    <a class="featured-post" href="article.html">
+    JavaScript will automatically insert
+    the newest articles here.
 
-      <div class="homepage-post-image">
+  -->
 
-        <img
-          src="images/article.jpg"
-          alt="Study in Central Europe and travel on weekends"
-        >
+  <div
+    class="featured-grid"
+    id="latestArticles"
+  >
 
-      </div>
-
-
-      <div class="post-info">
-
-        <p class="post-meta">
-          STUDY ABROAD · 8 MIN READ
-        </p>
-
-        <h3>
-          Study in Central Europe: Where You Can Study and Travel on Weekends
-        </h3>
-
-        <p>
-          Compare student cities, transport connections and the things to think about before choosing where to study.
-        </p>
-
-        <span class="read-more">
-          Read story →
-        </span>
-
-      </div>
-
-    </a>
-
-
-    <!-- ARTICLE 2 -->
-    <a class="small-post" href="article2.html">
-
-      <div class="homepage-small-image">
-
-        <img
-          src="images/article2.jpg"
-          alt="How to compare European student cities"
-        >
-
-      </div>
-
-      <div class="mini-icon">
-        ✈
-      </div>
-
-      <p class="post-meta">
-        NEW ARTICLE
-      </p>
-
-      <h3>
-        How to compare European student cities
-      </h3>
-
-      <p>
-        Cost, university options, transport and everyday student life — all in one checklist.
-      </p>
-
-      <span class="read-more">
-        Read story →
-      </span>
-
-    </a>
-
-
-    <!-- ARTICLE 3 -->
-    <a class="small-post dark" href="article3.html">
-
-      <div class="homepage-small-image">
-
-        <img
-          src="images/article3.jpg"
-          alt="Budgeting, saving money and side hustles for international students"
-        >
-
-      </div>
-
-      <div class="mini-icon">
-        €
-      </div>
-
-      <p class="post-meta">
-        MONEY · STUDENT LIFE
-      </p>
-
-      <h3>
-        Budgeting, Saving Money & Side Hustles for International Students
-      </h3>
-
-      <p>
-        A practical guide to managing your money, saving where you can and finding realistic ways to earn while studying.
-      </p>
-
-      <span class="read-more">
-        Read story →
-      </span>
-
-    </a>
-
+    <div class="homepage-loading">
+      Loading the latest stories...
+    </div>
 
   </div>
+
 
 </section>
 
 
-<!-- CATEGORIES -->
+
+<!-- =====================================================
+     CATEGORIES
+     ===================================================== -->
+
 <section id="categories" class="section">
+
 
   <div class="section-heading">
 
@@ -310,6 +338,7 @@
       <p class="eyebrow">
         EXPLORE
       </p>
+
 
       <h2>
         Pick your mood.
@@ -320,12 +349,15 @@
   </div>
 
 
+
   <div class="category-grid">
 
 
     <a href="study.html" class="category-card">
 
-      <span>01</span>
+      <span>
+        01
+      </span>
 
       <strong>
         Study
@@ -342,9 +374,12 @@
     </a>
 
 
+
     <a href="travel.html" class="category-card">
 
-      <span>02</span>
+      <span>
+        02
+      </span>
 
       <strong>
         Travel
@@ -361,9 +396,12 @@
     </a>
 
 
+
     <a href="lifestyle.html" class="category-card">
 
-      <span>03</span>
+      <span>
+        03
+      </span>
 
       <strong>
         Lifestyle
@@ -380,9 +418,12 @@
     </a>
 
 
+
     <a href="money.html" class="category-card">
 
-      <span>04</span>
+      <span>
+        04
+      </span>
 
       <strong>
         Money
@@ -399,9 +440,12 @@
     </a>
 
 
+
     <a href="room.html" class="category-card">
 
-      <span>05</span>
+      <span>
+        05
+      </span>
 
       <strong>
         Room & Organization
@@ -418,9 +462,12 @@
     </a>
 
 
+
     <a href="ideas.html" class="category-card">
 
-      <span>06</span>
+      <span>
+        06
+      </span>
 
       <strong>
         Ideas
@@ -442,12 +489,18 @@
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
+
 <section id="about" class="about">
+
 
   <div class="about-mark">
     CD
   </div>
+
 
   <div>
 
@@ -455,12 +508,18 @@
       ABOUT CAMPUS DIARIES
     </p>
 
+
     <h2>
       A little corner of the internet for figuring things out.
     </h2>
 
+
     <p>
-      Campus Diaries is for students who want useful information without the boring bits — from choosing a study destination to planning your next weekend away.
+
+      Campus Diaries is for students who want useful information
+      without the boring bits — from choosing a study destination
+      to planning your next weekend away.
+
     </p>
 
   </div>
@@ -468,8 +527,13 @@
 </section>
 
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
+
+<!-- =====================================================
+     NEWSLETTER
+     ===================================================== -->
+
+<section id="newsletter" class="newsletter">
+
 
   <div>
 
@@ -477,15 +541,21 @@
       THE DIARY NOTE
     </p>
 
+
     <h2>
       Good ideas, occasionally delivered.
     </h2>
 
+
     <p>
-      New guides, travel inspiration and student-life ideas. No inbox overload.
+
+      New guides, travel inspiration and student-life ideas.
+      No inbox overload.
+
     </p>
 
   </div>
+
 
 
   <form
@@ -494,9 +564,11 @@
     class="embeddable-buttondown-form"
   >
 
+
     <label for="bd-email">
       Enter your email
     </label>
+
 
     <input
       type="email"
@@ -507,11 +579,14 @@
       required
     >
 
+
     <button type="submit">
       Subscribe →
     </button>
 
+
     <p>
+
       <a
         href="https://buttondown.com/refer/campusdiaries"
         target="_blank"
@@ -519,7 +594,9 @@
       >
         Powered by Buttondown.
       </a>
+
     </p>
+
 
   </form>
 
@@ -529,14 +606,20 @@
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
 <footer>
+
 
   <div class="footer-top">
 
     <a class="logo" href="index.html">
       Campus <span>Diaries</span>
     </a>
+
 
     <p>
       Study. Travel. Live a little.
@@ -545,11 +628,13 @@
   </div>
 
 
+
   <div class="footer-bottom">
 
     <span>
       © 2026 Campus Diaries
     </span>
+
 
     <span>
       Made for the next chapter.
@@ -558,6 +643,361 @@
   </div>
 
 </footer>
+
+
+
+<!-- =====================================================
+     ARTICLES DATA
+     ===================================================== -->
+
+<script src="articles.js"></script>
+
+
+
+<!-- =====================================================
+     HOMEPAGE ARTICLE SYSTEM
+     ===================================================== -->
+
+<script>
+
+  /*
+   * Campus Diaries Homepage
+   *
+   * articles.js contains the article information.
+   * The newest article is the first item in the array.
+   */
+
+
+  const latestContainer =
+    document.getElementById("latestArticles");
+
+
+  const newArticleLink =
+    document.getElementById("newArticleLink");
+
+
+  /*
+   * Image mapping
+   *
+   * The article filenames don't all follow
+   * the exact same naming pattern, so we map them here.
+   */
+
+  const articleImages = {
+
+    "article.html": "images/article.jpg",
+
+    "article2.html": "images/article2.jpg",
+
+    "article3.html": "images/article3.jpg",
+
+    "article4.html": "images/article4.jpg",
+
+    "article5.html": "images/article5.jpg",
+
+    "article6.html": "images/article6.jpg",
+
+    "article7.html": "images/article7.jpg"
+
+  };
+
+
+  /*
+   * Get image for an article
+   */
+
+  function getArticleImage(article) {
+
+    return articleImages[article.url] || null;
+
+  }
+
+
+  /*
+   * Create the featured newest article.
+   */
+
+  function createFeaturedArticle(article) {
+
+    const link =
+      document.createElement("a");
+
+    link.className =
+      "featured-post";
+
+    link.href =
+      article.url;
+
+
+    const image =
+      getArticleImage(article);
+
+
+    let visualHTML = "";
+
+
+    if (image) {
+
+      visualHTML = `
+
+        <div class="homepage-post-image">
+
+          <img
+            src="${image}"
+            alt="${article.title}"
+          >
+
+        </div>
+
+      `;
+
+    } else {
+
+      visualHTML = `
+
+        <div class="homepage-post-placeholder">
+
+          ${article.icon || "✦"}
+
+        </div>
+
+      `;
+
+    }
+
+
+    link.innerHTML = `
+
+      ${visualHTML}
+
+      <div class="post-info">
+
+        <p class="post-meta">
+          ${article.category}
+        </p>
+
+        <h3>
+          ${article.title}
+        </h3>
+
+        <p>
+          ${article.description}
+        </p>
+
+        <span class="read-more">
+          Read story →
+        </span>
+
+      </div>
+
+    `;
+
+
+    return link;
+
+  }
+
+
+
+  /*
+   * Create the smaller article cards.
+   */
+
+  function createSmallArticle(article, index) {
+
+    const link =
+      document.createElement("a");
+
+    link.className =
+      "small-post";
+
+
+    /*
+     * Keep the darker visual treatment
+     * for alternating cards.
+     */
+
+    if (index % 2 === 1) {
+
+      link.classList.add("dark");
+
+    }
+
+
+    link.href =
+      article.url;
+
+
+    const image =
+      getArticleImage(article);
+
+
+    let visualHTML = "";
+
+
+    if (image) {
+
+      visualHTML = `
+
+        <div class="homepage-small-image">
+
+          <img
+            src="${image}"
+            alt="${article.title}"
+          >
+
+        </div>
+
+      `;
+
+    } else {
+
+      visualHTML = `
+
+        <div class="homepage-small-image">
+
+          <div class="homepage-post-placeholder">
+
+            ${article.icon || "✦"}
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+
+
+    link.innerHTML = `
+
+      ${visualHTML}
+
+      <div class="mini-icon">
+        ${article.icon || "✦"}
+      </div>
+
+      <p class="post-meta">
+        ${article.category}
+      </p>
+
+      <h3>
+        ${article.title}
+      </h3>
+
+      <p>
+        ${article.description}
+      </p>
+
+      <span class="read-more">
+        Read story →
+      </span>
+
+    `;
+
+
+    return link;
+
+  }
+
+
+
+  /*
+   * Build the homepage.
+   */
+
+  function buildHomepage() {
+
+
+    /*
+     * Make sure articles.js loaded correctly.
+     */
+
+    if (
+      typeof articles === "undefined" ||
+      !Array.isArray(articles) ||
+      articles.length === 0
+    ) {
+
+      latestContainer.innerHTML = `
+
+        <div class="homepage-loading">
+
+          No articles found yet.
+
+        </div>
+
+      `;
+
+      return;
+
+    }
+
+
+    /*
+     * The first article in articles.js
+     * is automatically treated as newest.
+     */
+
+    const newestArticle =
+      articles[0];
+
+
+    /*
+     * Update NEW ON THE BLOG.
+     */
+
+    newArticleLink.href =
+      newestArticle.url;
+
+
+    newArticleLink.textContent =
+      newestArticle.title + " →";
+
+
+    /*
+     * Clear the loading message.
+     */
+
+    latestContainer.innerHTML = "";
+
+
+    /*
+     * Newest article becomes the large feature.
+     */
+
+    const featured =
+      createFeaturedArticle(newestArticle);
+
+
+    latestContainer.appendChild(featured);
+
+
+    /*
+     * Add the next two articles as smaller cards.
+     */
+
+    articles
+      .slice(1, 3)
+      .forEach((article, index) => {
+
+        const small =
+          createSmallArticle(article, index);
+
+        latestContainer.appendChild(small);
+
+      });
+
+  }
+
+
+  /*
+   * Start.
+   */
+
+  buildHomepage();
+
+</script>
 
 
 </body>
