@@ -1,6 +1,18 @@
 const articles = [
 
   {
+    title: "Study Abroad Essentials: The Ultimate University Moving Checklist",
+    description:
+      "Moving abroad for university? Use this practical checklist to organize your documents, luggage, clothes, technology, money, toiletries and first-week essentials before you leave.",
+    category: "STUDY ABROAD · TRAVEL",
+    label: "STUDY ABROAD",
+    route: "PACK → PREPARE → GO",
+    url: "article7.html",
+    icon: "✈"
+  },
+
+
+  {
     title: "25 Things to Do When You're Bored as a Student",
     description:
       "Sometimes you have a completely free afternoon and absolutely no idea what to do with it. Here are 25 simple ideas for having fun, trying something new, getting things done or making an ordinary day a little more interesting.",
