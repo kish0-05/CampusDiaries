@@ -1,82 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Travel — Campus Diaries</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Travel page article images */
+    .travel-post-image {
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .travel-post-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 700px) {
+      .travel-post-image {
+        height: 220px;
+      }
+    }
+  </style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header class="site-header">
+
   <div class="nav-wrap">
-    <a href="index.html" class="logo">Campus Diaries</a>
+
+    <a href="index.html" class="logo">
+      Campus Diaries
+    </a>
 
     <nav>
-      <a href="index.html">Latest</a>
-      <a href="study.html">Categories</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#newsletter" class="nav-button">Read the blog →</a>
+
+      <a href="index.html">
+        Latest
+      </a>
+
+      <a href="study.html">
+        Categories
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="index.html#newsletter" class="nav-button">
+        Read the blog →
+      </a>
+
     </nav>
+
   </div>
+
 </header>
+
+
 
 <main>
 
+
+<!-- TRAVEL CATEGORY -->
+
 <section class="section">
 
+
   <div class="section-heading">
+
     <div>
-      <p class="eyebrow">CATEGORY</p>
-      <h1>Travel</h1>
+
+      <p class="eyebrow">
+        CATEGORY
+      </p>
+
+      <h1>
+        Travel
+      </h1>
+
     </div>
+
   </div>
+
 
   <p class="section-intro">
     Travel ideas, weekend adventures and ways to explore while studying abroad.
   </p>
 
+
+
   <div class="featured-grid">
 
+
+    <!-- ARTICLE 1 -->
+
     <article class="featured-post">
-      <div class="post-visual europe">
-        <span class="visual-title">CENTRAL EUROPE</span>
-        <span class="route">STUDY → TRAVEL</span>
+
+      <div class="travel-post-image">
+
+        <img
+          src="images/article.jpg"
+          alt="Study in Central Europe and travel on weekends"
+        >
+
       </div>
 
-      <div class="post-info">
-        <p class="post-meta">TRAVEL · CENTRAL EUROPE</p>
 
-        <h2>Study in Central Europe: Where You Can Study and Travel on Weekends</h2>
+      <div class="post-info">
+
+        <p class="post-meta">
+          TRAVEL · CENTRAL EUROPE
+        </p>
+
+
+        <h2>
+          Study in Central Europe: Where You Can Study and Travel on Weekends
+        </h2>
+
 
         <p>
           Explore Central European study destinations and the possibilities
           for easy weekend travel.
         </p>
 
+
         <a href="article.html" class="read-more">
           Read article →
         </a>
+
       </div>
+
     </article>
 
+
+
+    <!-- ARTICLE 7 -->
+
+    <article class="featured-post">
+
+      <div class="travel-post-image">
+
+        <img
+          src="images/article7.jpg"
+          alt="Study abroad essentials university moving checklist"
+        >
+
+      </div>
+
+
+      <div class="post-info">
+
+        <p class="post-meta">
+          NEW · STUDY ABROAD
+        </p>
+
+
+        <h2>
+          Study Abroad Essentials: The Ultimate University Moving Checklist
+        </h2>
+
+
+        <p>
+          Moving abroad for university? Use this practical checklist to
+          organize your documents, luggage, clothes, technology, money,
+          toiletries and first-week essentials before you leave.
+        </p>
+
+
+        <a href="article7.html" class="read-more">
+          Read article →
+        </a>
+
+      </div>
+
+    </article>
+
+
   </div>
+
 
 </section>
 
+
 </main>
 
+
+
+<!-- FOOTER -->
+
 <footer>
+
   <div class="footer-top">
-    <h2>Study. Travel. Live a little.</h2>
+
+    <h2>
+      Study. Travel. Live a little.
+    </h2>
+
   </div>
+
 
   <div class="footer-bottom">
-    <p>© Campus Diaries</p>
-    <p>Made for curious students.</p>
+
+    <p>
+      © Campus Diaries
+    </p>
+
+    <p>
+      Made for curious students.
+    </p>
+
   </div>
+
 </footer>
 
+
 </body>
+
 </html>
