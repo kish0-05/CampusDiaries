@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Study Abroad Essentials: The Ultimate University Moving Checklist | Campus Diaries</title>
+  <title>Study Abroad Essentials: The Ultimate University Moving Checklist — Campus Diaries</title>
 
-  <meta name="description" content="Moving abroad for university? Use this complete study abroad essentials checklist covering documents, luggage, shoes, bags, technology, room essentials, money and everything you need before you leave.">
+  <meta
+    name="description"
+    content="Moving abroad for university? Use this practical study abroad checklist to organize your documents, luggage, clothes, technology, money, toiletries and first-week essentials."
+  >
 
-  <link rel="icon" type="image/png" href="campus-diaries-favicon.png">
+  <link rel="stylesheet" href="style.css">
+
 
   <style>
+
+    /* =====================================================
+       ARTICLE 6 STYLE — ARTICLE 7
+       ===================================================== */
+
     .article-layout {
       max-width: 1140px;
       margin: 0 auto;
       padding: 70px 24px 100px;
       display: grid;
-      grid-template-columns: minmax(0,1fr) 280px;
+      grid-template-columns: minmax(0, 1fr) 280px;
       gap: 60px;
       align-items: start;
     }
@@ -29,7 +40,7 @@
       font-size: clamp(2.5rem, 6vw, 5rem);
       line-height: .95;
       margin: 12px 0 24px;
-      letter-spacing: -0.04em;
+      letter-spacing: -.04em;
     }
 
     .article-intro {
@@ -67,21 +78,6 @@
       margin: 0 0 20px;
     }
 
-    .article-main ul,
-    .article-main ol {
-      padding-left: 25px;
-      margin-bottom: 25px;
-    }
-
-    .article-main li {
-      margin-bottom: 12px;
-      line-height: 1.7;
-    }
-
-    .article-main strong {
-      font-weight: 700;
-    }
-
     .article-sidebar {
       position: sticky;
       top: 30px;
@@ -112,16 +108,6 @@
       margin-bottom: 0;
     }
 
-    .sidebar-card ul {
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .sidebar-card li {
-      margin-bottom: 9px;
-      line-height: 1.5;
-    }
-
     .article-back {
       display: inline-block;
       margin-bottom: 25px;
@@ -136,96 +122,127 @@
       text-transform: uppercase;
     }
 
-    .affiliate-disclosure {
-      background: #f3efe7;
-      border-left: 4px solid #7c765c;
-      padding: 18px 20px;
-      margin: 30px 0 40px;
-      border-radius: 10px;
-      font-size: .95rem;
-      line-height: 1.65;
-    }
 
-    .affiliate-disclosure p {
-      font-size: .95rem;
-      margin: 0;
-      line-height: 1.65;
-    }
+    /* =====================================================
+       CHECKLIST
+       ===================================================== */
 
-    .essential-list {
+    .checklist {
+      margin: 25px 0 35px;
+      padding: 0;
       list-style: none;
-      padding-left: 0 !important;
     }
 
-    .essential-list li {
-      padding-left: 0;
-      margin-bottom: 12px;
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .08);
     }
+
+    .checklist-item:last-child {
+      border-bottom: none;
+    }
+
+    .checklist-item input {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      margin-top: 3px;
+      cursor: pointer;
+      accent-color: #59604c;
+    }
+
+    .checklist-item label {
+      cursor: pointer;
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .checklist-item input:checked + label {
+      text-decoration: line-through;
+      opacity: .55;
+    }
+
+
+    /* =====================================================
+       PRODUCT RECOMMENDATIONS
+       ===================================================== */
 
     .product-card {
       background: #f3efe7;
-      padding: 25px;
       border-radius: 16px;
-      margin: 25px 0 35px;
+      padding: 22px;
+      margin: 22px 0;
     }
 
     .product-card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.3rem;
+      margin: 0 0 8px;
+      font-size: 1.15rem;
     }
 
     .product-card p {
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
-    .affiliate-link {
+    .product-link {
       display: inline-block;
-      padding: 11px 17px;
-      background: #1f2420;
-      color: white;
+      font-weight: 700;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: .95rem;
-    }
-
-    .affiliate-link:hover {
-      opacity: .9;
     }
 
     .affiliate-note {
       font-size: .82rem !important;
-      margin-top: 10px !important;
-      margin-bottom: 0 !important;
-      opacity: .75;
+      line-height: 1.5 !important;
+      opacity: .7;
+      margin-top: 28px !important;
     }
 
-    .checklist-box {
-      background: #1f2420;
-      color: white;
-      padding: 30px;
-      border-radius: 18px;
-      margin: 35px 0;
+
+    /* =====================================================
+       CHECKLIST INTRO BOX
+       ===================================================== */
+
+    .checklist-intro {
+      background: #f3efe7;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 25px 0 35px;
     }
 
-    .checklist-box h3 {
-      margin-top: 0;
-      font-size: 1.4rem;
-    }
-
-    .checklist-box ul {
+    .checklist-intro p:last-child {
       margin-bottom: 0;
     }
 
-    .mini-tip {
-      border-left: 3px solid #7c765c;
-      padding-left: 18px;
-      margin: 25px 0;
-      font-style: italic;
+
+    /* =====================================================
+       FINAL CHECKLIST
+       ===================================================== */
+
+    .final-checklist {
+      background: #1f2420;
+      color: white;
+      border-radius: 18px;
+      padding: 28px;
+      margin-top: 35px;
     }
 
+    .final-checklist h2 {
+      margin-top: 0;
+    }
+
+    .final-checklist .checklist-item {
+      border-bottom-color: rgba(255,255,255,.12);
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
     @media (max-width: 900px) {
+
       .article-layout {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -235,9 +252,12 @@
       .article-sidebar {
         position: static;
       }
+
     }
 
+
     @media (max-width: 600px) {
+
       .article-layout {
         padding-left: 20px;
         padding-right: 20px;
@@ -250,583 +270,1332 @@
       .article-hero-image {
         margin-bottom: 40px;
       }
+
     }
+
   </style>
+
 </head>
+
+
 
 <body>
 
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a href="index.html" class="logo">Campus Diaries</a>
 
-      <nav>
-        <a href="index.html">Latest</a>
-        <a href="index.html#categories">Categories</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#latest" class="nav-button">Read the blog →</a>
-      </nav>
-    </div>
-  </header>
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
+<header class="site-header">
 
-  <main class="article-layout">
+  <div class="nav-wrap">
 
-    <article class="article-main">
+    <a href="index.html" class="logo">
+      Campus Diaries
+    </a>
 
-      <a href="travel.html" class="article-back">← Back to Travel</a>
+    <nav>
 
-      <div class="article-category">
-        STUDY ABROAD · TRAVEL · STUDENT LIFE
-      </div>
+      <a href="index.html">
+        Latest
+      </a>
 
-      <h1>
-        Study Abroad Essentials: The Ultimate University Moving Checklist
-      </h1>
+      <a href="index.html#categories">
+        Categories
+      </a>
 
-      <p class="article-intro">
-        Moving to another country for university is exciting, but figuring out what to actually take with you can feel overwhelming. From important documents and money to shoes, luggage, technology and those little things that make a new room feel like home, here's a practical study abroad checklist to help you prepare.
-      </p>
+      <a href="index.html#about">
+        About
+      </a>
 
+      <a href="index.html#latest" class="nav-button">
+        Read the blog →
+      </a>
 
-      <div class="article-hero-image">
-        <img src="images/article7.jpg" alt="Study abroad essentials and university travel checklist">
-      </div>
+    </nav>
 
+  </div>
 
-      <div class="affiliate-disclosure">
-        <p>
-          <strong>Affiliate disclosure:</strong>
-          Some links in this guide may be affiliate links. If you purchase something through one of these links, Campus Diaries may earn a commission at no extra cost to you.
-          <br><br>
-          <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
-        </p>
-      </div>
+</header>
 
 
-      <h2>1. Your Important Documents</h2>
 
-      <p>
-        This is the first thing to organize because replacing an important document while you're abroad can be much harder than replacing a pair of socks.
-      </p>
+<!-- =====================================================
+     ARTICLE
+     ===================================================== -->
 
-      <ul class="essential-list">
-        <li>☐ Passport</li>
-        <li>☐ Student visa or residence permit</li>
-        <li>☐ University acceptance letter</li>
-        <li>☐ Enrollment or registration documents</li>
-        <li>☐ Accommodation confirmation</li>
-        <li>☐ Flight details</li>
-        <li>☐ Health insurance documents</li>
-        <li>☐ Academic transcripts</li>
-        <li>☐ School certificates</li>
-        <li>☐ Passport-size photographs</li>
-        <li>☐ Emergency contact information</li>
-        <li>☐ Digital copies of important documents</li>
-      </ul>
+<main class="article-layout">
 
-      <p class="mini-tip">
-        Keep your passport, visa documents, university paperwork and other important documents in your hand luggage rather than your checked suitcase.
-      </p>
 
+  <!-- ===================================================
+       MAIN ARTICLE
+       =================================================== -->
 
-      <h2>2. Your Travel Bag</h2>
+  <article class="article-main">
 
-      <p>
-        A good backpack or personal bag is one of those things you'll probably use constantly once you arrive. Look for something comfortable enough for university, travel days and everyday exploring.
-      </p>
 
-      <div class="product-card">
-        <h3>🎒 A Student Travel Backpack</h3>
+    <a href="travel.html" class="article-back">
+      ← Back to Travel
+    </a>
 
-        <p>
-          Look for a backpack with comfortable straps, a laptop compartment, useful pockets and enough space for your everyday university essentials.
-        </p>
 
-        <a
-          href="YOUR-BACKPACK-AFFILIATE-LINK"
-          target="_blank"
-          rel="sponsored noopener"
-          class="affiliate-link">
-          Check backpack options →
-        </a>
+    <p class="article-category">
+      STUDY ABROAD · TRAVEL
+    </p>
 
-        <p class="affiliate-note">
-          (paid link)
-        </p>
-      </div>
 
+    <h1>
+      Study Abroad Essentials:
+      The Ultimate University Moving Checklist
+    </h1>
 
-      <h2>3. Luggage</h2>
 
-      <p>
-        Your suitcase is going to be carrying a surprisingly large part of your life, so choose something practical rather than simply choosing the biggest suitcase you can find.
-      </p>
+    <p class="article-intro">
+      Moving abroad for university is exciting, but there is a lot to
+      remember before you leave. From important documents and luggage to
+      technology, clothes, money and those small things you only realise
+      you need once you're already there — this checklist is designed to
+      help you get organised before your new chapter begins.
+    </p>
 
-      <p>
-        Consider the size and weight limits of your airline before buying luggage. A suitcase that looks enormous in your bedroom can become a problem when you have to lift it onto a train or pay an overweight baggage fee.
-      </p>
 
-      <div class="product-card">
-        <h3>🧳 A Reliable Suitcase</h3>
+    <!-- HERO IMAGE -->
 
-        <p>
-          Look for sturdy wheels, a useful interior layout and a size that works with your airline's baggage allowance.
-        </p>
+    <div class="article-hero-image">
 
-        <a
-          href="YOUR-LUGGAGE-AFFILIATE-LINK"
-          target="_blank"
-          rel="sponsored noopener"
-          class="affiliate-link">
-          Check luggage options →
-        </a>
-
-        <p class="affiliate-note">
-          (paid link)
-        </p>
-      </div>
-
-
-      <h2>4. Shoes You'll Actually Wear</h2>
-
-      <p>
-        Shoes can take up a ridiculous amount of suitcase space, so think carefully before packing five pairs.
-      </p>
-
-      <p>
-        A comfortable everyday pair is usually more useful than another pair that only works with one outfit. Depending on where you're studying, you may also want weather-appropriate shoes, something slightly smarter for events and a pair for exercise.
-      </p>
-
-      <ul>
-        <li>☐ Comfortable everyday sneakers</li>
-        <li>☐ Weather-appropriate shoes</li>
-        <li>☐ Smart shoes if needed</li>
-        <li>☐ Sports shoes if you use them</li>
-      </ul>
-
-      <div class="product-card">
-        <h3>👟 Comfortable Everyday Shoes</h3>
-
-        <p>
-          Prioritize comfort. You'll probably walk much more than you expect when you're exploring a new city and getting used to university life.
-        </p>
-
-        <a
-          href="YOUR-SHOES-AFFILIATE-LINK"
-          target="_blank"
-          rel="sponsored noopener"
-          class="affiliate-link">
-          Check everyday shoes →
-        </a>
-
-        <p class="affiliate-note">
-          (paid link)
-        </p>
-      </div>
-
-
-      <h2>5. Money & Banking</h2>
-
-      <p>
-        Before leaving, make sure you understand how you'll access your money in your new country.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Debit or credit card</li>
-        <li>☐ Backup payment card</li>
-        <li>☐ Some local currency</li>
-        <li>☐ Emergency money</li>
-        <li>☐ Banking app</li>
-        <li>☐ Important bank information</li>
-        <li>☐ First-month student budget</li>
-      </ul>
-
-      <p>
-        It's also worth checking your bank's international transaction and ATM fees before you travel.
-      </p>
-
-
-      <h2>6. Your Laptop & Technology</h2>
-
-      <p>
-        University life is going to involve a lot of technology, so make sure the essentials are packed somewhere you can easily access them.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Laptop</li>
-        <li>☐ Laptop charger</li>
-        <li>☐ Phone</li>
-        <li>☐ Phone charger</li>
-        <li>☐ Headphones</li>
-        <li>☐ Power bank</li>
-        <li>☐ USB drive if needed</li>
-        <li>☐ Extension lead if appropriate</li>
-      </ul>
-
-      <div class="product-card">
-        <h3>🔌 Travel Adapter</h3>
-
-        <p>
-          Check the plug type and electrical requirements of your destination before buying an adapter. A universal travel adapter can be particularly useful if you plan to travel around different countries.
-        </p>
-
-        <a
-          href="YOUR-ADAPTER-AFFILIATE-LINK"
-          target="_blank"
-          rel="sponsored noopener"
-          class="affiliate-link">
-          Check travel adapters →
-        </a>
-
-        <p class="affiliate-note">
-          (paid link)
-        </p>
-      </div>
-
-
-      <h2>7. Clothes</h2>
-
-      <p>
-        The biggest packing mistake is usually bringing too many clothes.
-      </p>
-
-      <p>
-        Instead, check the climate of your university city and think about what you will realistically wear. Remember that you can buy things after you arrive.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Everyday outfits</li>
-        <li>☐ Comfortable clothes</li>
-        <li>☐ Underwear and socks</li>
-        <li>☐ Sleepwear</li>
-        <li>☐ Jacket or coat if needed</li>
-        <li>☐ Rainwear if needed</li>
-        <li>☐ Sportswear</li>
-        <li>☐ One slightly formal outfit</li>
-        <li>☐ Weather-appropriate clothing</li>
-      </ul>
-
-
-      <h2>8. Toiletries</h2>
-
-      <p>
-        You don't need to pack an entire bathroom. Bring enough of your essentials for your first few days and buy larger products after you arrive.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Toothbrush</li>
-        <li>☐ Toothpaste</li>
-        <li>☐ Shampoo</li>
-        <li>☐ Shower products</li>
-        <li>☐ Deodorant</li>
-        <li>☐ Skincare</li>
-        <li>☐ Hair products</li>
-        <li>☐ Personal hygiene products</li>
-      </ul>
-
-
-      <h2>9. Medication & Health Essentials</h2>
-
-      <p>
-        If you take prescription medication, make sure you have enough for your trip and bring the relevant documentation. Check the rules of your destination country before travelling because medicines can be subject to different import rules.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Prescription medication</li>
-        <li>☐ Prescription or medical documentation</li>
-        <li>☐ Basic first-aid supplies</li>
-        <li>☐ Health insurance information</li>
-        <li>☐ Medical records if required</li>
-        <li>☐ Glasses or contact-lens supplies if applicable</li>
-      </ul>
-
-
-      <h2>10. Your Student Room</h2>
-
-      <p>
-        Before buying room decorations and organization products, find out exactly what your accommodation already provides.
-      </p>
-
-      <p>
-        Some student residences provide bedding, kitchen equipment and storage, while others don't. Knowing this beforehand can save you from spending money and filling your suitcase with things you didn't need.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Bedsheets if not provided</li>
-        <li>☐ Pillowcase</li>
-        <li>☐ Towel</li>
-        <li>☐ Laundry bag</li>
-        <li>☐ Hangers</li>
-        <li>☐ Small storage organizers</li>
-        <li>☐ Desk organizers</li>
-        <li>☐ A few personal decorations</li>
-      </ul>
-
-
-      <h2>11. Your Phone & SIM</h2>
-
-      <p>
-        Your phone is going to be one of your most useful tools during the first few days in a new country.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Make sure your phone is unlocked</li>
-        <li>☐ Check international roaming</li>
-        <li>☐ Research local SIM or eSIM options</li>
-        <li>☐ Save emergency numbers</li>
-        <li>☐ Save your accommodation address</li>
-        <li>☐ Download offline maps</li>
-        <li>☐ Download your university app if available</li>
-      </ul>
-
-
-      <h2>12. A Reusable Water Bottle</h2>
-
-      <p>
-        This is a small thing, but you'll probably use it almost every day. A reusable bottle can be useful for university, travelling around the city and long days on campus.
-      </p>
-
-      <div class="product-card">
-        <h3>🥤 Reusable Water Bottle</h3>
-
-        <p>
-          Look for something leak-resistant and easy to carry. The best bottle is usually the one you'll actually remember to take with you.
-        </p>
-
-        <a
-          href="YOUR-WATER-BOTTLE-AFFILIATE-LINK"
-          target="_blank"
-          rel="sponsored noopener"
-          class="affiliate-link">
-          Check water bottle options →
-        </a>
-
-        <p class="affiliate-note">
-          (paid link)
-        </p>
-      </div>
-
-
-      <h2>13. What Goes in Your Carry-On?</h2>
-
-      <p>
-        Your carry-on should contain the things you'd need if your checked luggage was delayed.
-      </p>
-
-      <div class="checklist-box">
-        <h3>Keep these with you ✈️</h3>
-
-        <ul>
-          <li>Passport</li>
-          <li>Visa and residence documents</li>
-          <li>University documents</li>
-          <li>Wallet and cards</li>
-          <li>Phone</li>
-          <li>Laptop</li>
-          <li>Chargers</li>
-          <li>Medication</li>
-          <li>Important contact information</li>
-          <li>Accommodation details</li>
-          <li>One change of clothes</li>
-          <li>Basic toiletries</li>
-        </ul>
-      </div>
-
-
-      <h2>14. Things to Do Before You Leave</h2>
-
-      <p>
-        Packing is only half of preparing to study abroad. The week before you leave is a good time to make sure the practical side of your move is sorted.
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Check your visa or residence requirements</li>
-        <li>☐ Confirm your accommodation</li>
-        <li>☐ Save your accommodation address</li>
-        <li>☐ Research airport-to-accommodation transport</li>
-        <li>☐ Research public transport</li>
-        <li>☐ Find nearby grocery stores</li>
-        <li>☐ Find a nearby pharmacy</li>
-        <li>☐ Find the nearest medical facility</li>
-        <li>☐ Save emergency numbers</li>
-        <li>☐ Download useful maps</li>
-        <li>☐ Check your university orientation information</li>
-        <li>☐ Make a first-month budget</li>
-        <li>☐ Tell family or friends your travel details</li>
-      </ul>
-
-
-      <h2>15. Things You Don't Need to Pack</h2>
-
-      <p>
-        This might be the most useful section of the entire checklist.
-      </p>
-
-      <p>
-        When you're moving abroad for the first time, it's easy to think you need to bring your entire life with you. You don't.
-      </p>
-
-      <p>
-        You probably don't need to pack huge amounts of shampoo, every book you own, ten pairs of shoes, kitchen equipment your accommodation already provides or decorations that you can easily buy later.
-      </p>
-
-      <p>
-        Think of your first trip as bringing the essentials that help you get settled. You can slowly build your new life once you're there.
-      </p>
-
-
-      <h2>16. The First-Week Essentials</h2>
-
-      <p>
-        Your first week will probably be chaotic in the best possible way. You'll be figuring out your university, your neighbourhood, public transport, groceries and where everything is.
-      </p>
-
-      <p>
-        Make your first week easier by having these ready:
-      </p>
-
-      <ul class="essential-list">
-        <li>☐ Comfortable shoes</li>
-        <li>☐ Everyday backpack</li>
-        <li>☐ Phone with working connection</li>
-        <li>☐ Bank card</li>
-        <li>☐ Some local currency</li>
-        <li>☐ Basic toiletries</li>
-        <li>☐ Weather-appropriate clothes</li>
-        <li>☐ University timetable or orientation information</li>
-        <li>☐ Accommodation address</li>
-      </ul>
-
-
-      <h2>17. The Ultimate Study Abroad Checklist</h2>
-
-      <div class="checklist-box">
-
-        <h3>Before you leave 🌍</h3>
-
-        <ul>
-          <li>☐ Passport</li>
-          <li>☐ Visa / residence documents</li>
-          <li>☐ University documents</li>
-          <li>☐ Accommodation confirmation</li>
-          <li>☐ Insurance</li>
-          <li>☐ Money and bank cards</li>
-          <li>☐ Laptop and charger</li>
-          <li>☐ Phone and charger</li>
-          <li>☐ Travel adapter</li>
-          <li>☐ Backpack</li>
-          <li>☐ Suitcase</li>
-          <li>☐ Comfortable shoes</li>
-          <li>☐ Clothes</li>
-          <li>☐ Toiletries</li>
-          <li>☐ Medication</li>
-          <li>☐ Room essentials</li>
-          <li>☐ Emergency contacts</li>
-          <li>☐ First-month budget</li>
-          <li>☐ Transport plan from the airport</li>
-          <li>☐ Digital copies of important documents</li>
-        </ul>
-
-      </div>
-
-
-      <h2>Final Thought</h2>
-
-      <p>
-        Moving to another country for university can feel like you're supposed to have everything figured out before you leave. You don't.
-      </p>
-
-      <p>
-        The goal isn't to pack your entire life into two suitcases. It's to bring the things that will help you arrive safely, settle in comfortably and start building your new routine.
-      </p>
-
-      <p>
-        Once you're there, you'll discover what you actually need — and that's part of the adventure.
-      </p>
-
-      <p>
-        <strong>Save this checklist before your study abroad move and come back to it while you're packing. 🌍✈️</strong>
-      </p>
-
-
-    </article>
-
-
-    <aside class="article-sidebar">
-
-      <div class="sidebar-card light">
-
-        <h3>Study abroad essentials</h3>
-
-        <ul>
-          <li>Documents</li>
-          <li>Money & banking</li>
-          <li>Backpack</li>
-          <li>Luggage</li>
-          <li>Shoes</li>
-          <li>Technology</li>
-          <li>Clothes</li>
-          <li>Toiletries</li>
-          <li>Health essentials</li>
-          <li>Room essentials</li>
-          <li>Phone & SIM</li>
-          <li>Carry-on bag</li>
-        </ul>
-
-      </div>
-
-
-      <div class="sidebar-card dark">
-
-        <h3>Remember</h3>
-
-        <p>
-          You don't need to bring your entire life with you. Pack the essentials, leave some space in your suitcase and remember that you'll be able to build your new life once you arrive.
-        </p>
-
-      </div>
-
-
-      <div class="sidebar-card light">
-
-        <h3>More from Campus Diaries</h3>
-
-        <p>
-          Comparing European student cities before you apply?
-        </p>
-
-        <p style="margin-top:15px;">
-          <a href="article2.html">
-            Read the city comparison guide →
-          </a>
-        </p>
-
-      </div>
-
-    </aside>
-
-  </main>
-
-
-  <footer>
-
-    <div class="footer-top">
-
-      <div>
-        <div class="logo">Campus Diaries</div>
-        <p>Study. Travel. Live a little.</p>
-      </div>
+      <img
+        src="images/article7.jpg"
+        alt="Study abroad university moving checklist"
+      >
 
     </div>
 
-    <div class="footer-bottom">
 
-      <p>© 2026 Campus Diaries</p>
+
+    <!-- =================================================
+         HOW TO USE
+         ================================================= -->
+
+    <div class="checklist-intro">
+
+      <p>
+        <strong>How to use this checklist:</strong>
+      </p>
+
+      <p>
+        Work through each section before your move and tick things off
+        as you prepare them. You don't need to buy everything on this
+        list — use it as a starting point and adjust it depending on
+        your destination, university and lifestyle.
+      </p>
 
     </div>
 
-  </footer>
+
+
+    <!-- =================================================
+         1. IMPORTANT DOCUMENTS
+         ================================================= -->
+
+    <h2>
+      1. Important Documents
+    </h2>
+
+    <p>
+      Your documents should be one of the first things you organise.
+      Keep important originals somewhere safe and keep digital copies
+      in a secure place as well.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-1">
+        <label for="documents-1">
+          Passport
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-2">
+        <label for="documents-2">
+          Student visa or residence documents
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-3">
+        <label for="documents-3">
+          University acceptance letter
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-4">
+        <label for="documents-4">
+          Accommodation confirmation
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-5">
+        <label for="documents-5">
+          Travel insurance documents
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-6">
+        <label for="documents-6">
+          Copies of important certificates
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-7">
+        <label for="documents-7">
+          Passport-size photographs
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="documents-8">
+        <label for="documents-8">
+          Digital copies of important documents
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         2. BACKPACK
+         ================================================= -->
+
+    <h2>
+      2. Your Travel Backpack
+    </h2>
+
+    <p>
+      Keep the things you need during the journey in your carry-on
+      rather than putting everything into your checked luggage.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="bag-1">
+        <label for="bag-1">
+          Comfortable backpack
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="bag-2">
+        <label for="bag-2">
+          Laptop compartment
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="bag-3">
+        <label for="bag-3">
+          Passport and document pocket
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="bag-4">
+        <label for="bag-4">
+          Water bottle
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="bag-5">
+        <label for="bag-5">
+          Small travel pouch
+        </label>
+      </li>
+
+    </ul>
+
+
+    <div class="product-card">
+
+      <h3>
+        🎒 What to look for in a student backpack
+      </h3>
+
+      <p>
+        Look for something comfortable, durable and large enough for
+        your laptop, documents and everyday university essentials.
+      </p>
+
+      <a
+        href="YOUR-BACKPACK-AFFILIATE-LINK"
+        target="_blank"
+        rel="sponsored noopener"
+        class="product-link"
+      >
+        See backpack options →
+      </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         3. LUGGAGE
+         ================================================= -->
+
+    <h2>
+      3. Luggage
+    </h2>
+
+    <p>
+      You don't need to take your entire room with you. Focus on the
+      things you'll actually use during your first few weeks.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="luggage-1">
+        <label for="luggage-1">
+          Main suitcase
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="luggage-2">
+        <label for="luggage-2">
+          Small carry-on
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="luggage-3">
+        <label for="luggage-3">
+          Luggage tags
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="luggage-4">
+        <label for="luggage-4">
+          Packing cubes
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="luggage-5">
+        <label for="luggage-5">
+          Small laundry bag
+        </label>
+      </li>
+
+    </ul>
+
+
+    <div class="product-card">
+
+      <h3>
+        🧳 Packing tip
+      </h3>
+
+      <p>
+        Packing cubes can make it much easier to separate clothes,
+        accessories and other small items inside your suitcase.
+      </p>
+
+      <a
+        href="YOUR-LUGGAGE-AFFILIATE-LINK"
+        target="_blank"
+        rel="sponsored noopener"
+        class="product-link"
+      >
+        See luggage options →
+      </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         4. SHOES
+         ================================================= -->
+
+    <h2>
+      4. Shoes
+    </h2>
+
+    <p>
+      Shoes can take up a surprising amount of luggage space, so
+      choose a few pairs that actually work for your everyday life.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="shoes-1">
+        <label for="shoes-1">
+          Comfortable everyday sneakers
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="shoes-2">
+        <label for="shoes-2">
+          Weather-appropriate shoes
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="shoes-3">
+        <label for="shoes-3">
+          Shower or bathroom slides
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="shoes-4">
+        <label for="shoes-4">
+          One smarter pair if needed
+        </label>
+      </li>
+
+    </ul>
+
+
+    <div class="product-card">
+
+      <h3>
+        👟 Your everyday pair matters
+      </h3>
+
+      <p>
+        If you'll be walking or using public transport frequently,
+        comfortable shoes are one of the things you'll probably use
+        almost every day.
+      </p>
+
+      <a
+        href="YOUR-SHOES-AFFILIATE-LINK"
+        target="_blank"
+        rel="sponsored noopener"
+        class="product-link"
+      >
+        See comfortable shoe options →
+      </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         5. MONEY & BANKING
+         ================================================= -->
+
+    <h2>
+      5. Money & Banking
+    </h2>
+
+    <p>
+      Sort out your payment options before you travel so you aren't
+      trying to figure everything out during your first few days.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="money-1">
+        <label for="money-1">
+          Bank card
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="money-2">
+        <label for="money-2">
+          Backup payment method
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="money-3">
+        <label for="money-3">
+          Small amount of local currency if appropriate
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="money-4">
+        <label for="money-4">
+          Banking app installed
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="money-5">
+        <label for="money-5">
+          Emergency contact information
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         6. LAPTOP & TECHNOLOGY
+         ================================================= -->
+
+    <h2>
+      6. Laptop & Technology
+    </h2>
+
+    <p>
+      Your technology will probably become a big part of university
+      life, so check that everything is working before you leave.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="tech-1">
+        <label for="tech-1">
+          Laptop
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="tech-2">
+        <label for="tech-2">
+          Laptop charger
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="tech-3">
+        <label for="tech-3">
+          Phone and charger
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="tech-4">
+        <label for="tech-4">
+          Headphones
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="tech-5">
+        <label for="tech-5">
+          Power bank
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="tech-6">
+        <label for="tech-6">
+          Backup important files
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         7. TRAVEL ADAPTER
+         ================================================= -->
+
+    <h2>
+      7. Travel Adapter
+    </h2>
+
+    <p>
+      Check which plug type your destination uses before you travel.
+      An adapter can be one of those tiny things you really don't
+      want to realise you forgot after arriving.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="adapter-1">
+        <label for="adapter-1">
+          Destination-compatible travel adapter
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="adapter-2">
+        <label for="adapter-2">
+          Enough charging ports for your devices
+        </label>
+      </li>
+
+    </ul>
+
+
+    <div class="product-card">
+
+      <h3>
+        🔌 A useful travel essential
+      </h3>
+
+      <p>
+        A universal travel adapter can be useful if you expect to
+        travel to different countries during your studies.
+      </p>
+
+      <a
+        href="YOUR-ADAPTER-AFFILIATE-LINK"
+        target="_blank"
+        rel="sponsored noopener"
+        class="product-link"
+      >
+        See travel adapter options →
+      </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         8. CLOTHES
+         ================================================= -->
+
+    <h2>
+      8. Clothes
+    </h2>
+
+    <p>
+      Think about the climate where you'll actually be living rather
+      than packing for every possible situation.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="clothes-1">
+        <label for="clothes-1">
+          Everyday tops
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="clothes-2">
+        <label for="clothes-2">
+          Trousers or jeans
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="clothes-3">
+        <label for="clothes-3">
+          Comfortable clothes for university
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="clothes-4">
+        <label for="clothes-4">
+          Sleepwear
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="clothes-5">
+        <label for="clothes-5">
+          Underwear and socks
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="clothes-6">
+        <label for="clothes-6">
+          Weather-appropriate jacket
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="clothes-7">
+        <label for="clothes-7">
+          One outfit for formal occasions if needed
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         9. TOILETRIES
+         ================================================= -->
+
+    <h2>
+      9. Toiletries
+    </h2>
+
+    <p>
+      You can buy many toiletries after arriving, so focus on the
+      things you personally need immediately.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="toiletries-1">
+        <label for="toiletries-1">
+          Toothbrush and toothpaste
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="toiletries-2">
+        <label for="toiletries-2">
+          Shampoo and conditioner
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="toiletries-3">
+        <label for="toiletries-3">
+          Skincare essentials
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="toiletries-4">
+        <label for="toiletries-4">
+          Hairbrush or comb
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="toiletries-5">
+        <label for="toiletries-5">
+          Deodorant
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="toiletries-6">
+        <label for="toiletries-6">
+          Small toiletry bag
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         10. MEDICATION & HEALTH
+         ================================================= -->
+
+    <h2>
+      10. Medication & Health
+    </h2>
+
+    <p>
+      If you take regular medication, check the rules for bringing it
+      into your destination country and carry the appropriate
+      documentation.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="health-1">
+        <label for="health-1">
+          Regular medication if applicable
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="health-2">
+        <label for="health-2">
+          Prescription or supporting documents if required
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="health-3">
+        <label for="health-3">
+          Health insurance information
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="health-4">
+        <label for="health-4">
+          Basic personal health essentials
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         11. STUDENT ROOM
+         ================================================= -->
+
+    <h2>
+      11. Student Room Essentials
+    </h2>
+
+    <p>
+      Don't pack everything for your future room. Check what your
+      accommodation already provides first.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="room-1">
+        <label for="room-1">
+          Bedding, if not provided
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="room-2">
+        <label for="room-2">
+          Small laundry bag
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="room-3">
+        <label for="room-3">
+          A few study supplies
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="room-4">
+        <label for="room-4">
+          Small personal items that make the room feel familiar
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         12. WATER BOTTLE
+         ================================================= -->
+
+    <h2>
+      12. Reusable Water Bottle
+    </h2>
+
+    <p>
+      A reusable bottle is a small thing that can become part of your
+      everyday university routine.
+    </p>
+
+
+    <div class="product-card">
+
+      <h3>
+        💧 Everyday student essential
+      </h3>
+
+      <p>
+        Look for a bottle that's easy to carry and clean, especially
+        if you'll be walking around campus throughout the day.
+      </p>
+
+      <a
+        href="YOUR-WATER-BOTTLE-AFFILIATE-LINK"
+        target="_blank"
+        rel="sponsored noopener"
+        class="product-link"
+      >
+        See water bottle options →
+      </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         13. PHONE & SIM
+         ================================================= -->
+
+    <h2>
+      13. Phone & SIM
+    </h2>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="phone-1">
+        <label for="phone-1">
+          Unlocked phone if applicable
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="phone-2">
+        <label for="phone-2">
+          Charger
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="phone-3">
+        <label for="phone-3">
+          eSIM or SIM plan researched
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="phone-4">
+        <label for="phone-4">
+          Important contacts saved
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         14. THINGS TO DO BEFORE LEAVING
+         ================================================= -->
+
+    <h2>
+      14. Things to Do Before You Leave
+    </h2>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="before-1">
+        <label for="before-1">
+          Check your flight details
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="before-2">
+        <label for="before-2">
+          Confirm your accommodation address
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="before-3">
+        <label for="before-3">
+          Check university arrival instructions
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="before-4">
+        <label for="before-4">
+          Save important addresses offline
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="before-5">
+        <label for="before-5">
+          Download useful travel and university apps
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="before-6">
+        <label for="before-6">
+          Tell family or trusted contacts your travel plans
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="before-7">
+        <label for="before-7">
+          Check baggage allowance
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         15. WHAT NOT TO PACK
+         ================================================= -->
+
+    <h2>
+      15. Things You Probably Don't Need to Pack
+    </h2>
+
+    <p>
+      One of the easiest ways to overpack is trying to bring everything
+      from home. Before putting something in your suitcase, ask:
+      <em>Can I easily buy this after I arrive?</em>
+    </p>
+
+    <p>
+      Depending on your destination and accommodation, you may not
+      need to bring large quantities of toiletries, kitchen supplies,
+      cleaning products, stationery or bulky room decorations.
+    </p>
+
+
+
+    <!-- =================================================
+         16. FIRST WEEK
+         ================================================= -->
+
+    <h2>
+      16. Your First-Week Essentials
+    </h2>
+
+    <p>
+      The first few days are mostly about getting settled. Keep your
+      most important things easy to access.
+    </p>
+
+
+    <ul class="checklist">
+
+      <li class="checklist-item">
+        <input type="checkbox" id="firstweek-1">
+        <label for="firstweek-1">
+          Passport and important documents
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="firstweek-2">
+        <label for="firstweek-2">
+          Phone and charger
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="firstweek-3">
+        <label for="firstweek-3">
+          Bank card and payment method
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="firstweek-4">
+        <label for="firstweek-4">
+          A few everyday outfits
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="firstweek-5">
+        <label for="firstweek-5">
+          Toiletries
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="firstweek-6">
+        <label for="firstweek-6">
+          Comfortable shoes
+        </label>
+      </li>
+
+      <li class="checklist-item">
+        <input type="checkbox" id="firstweek-7">
+        <label for="firstweek-7">
+          University and accommodation information
+        </label>
+      </li>
+
+    </ul>
+
+
+
+    <!-- =================================================
+         FINAL CHECKLIST
+         ================================================= -->
+
+    <div class="final-checklist">
+
+      <h2>
+        Ultimate Study Abroad Checklist
+      </h2>
+
+      <p>
+        Before you leave, make sure you've covered the basics:
+      </p>
+
+
+      <ul class="checklist">
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-1">
+          <label for="final-1">
+            Documents organised
+          </label>
+        </li>
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-2">
+          <label for="final-2">
+            Accommodation confirmed
+          </label>
+        </li>
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-3">
+          <label for="final-3">
+            Flight and travel plans confirmed
+          </label>
+        </li>
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-4">
+          <label for="final-4">
+            Luggage packed
+          </label>
+        </li>
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-5">
+          <label for="final-5">
+            Technology and chargers packed
+          </label>
+        </li>
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-6">
+          <label for="final-6">
+            Money and payment methods sorted
+          </label>
+        </li>
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-7">
+          <label for="final-7">
+            Health and insurance documents ready
+          </label>
+        </li>
+
+        <li class="checklist-item">
+          <input type="checkbox" id="final-8">
+          <label for="final-8">
+            First-week essentials packed
+          </label>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FINAL THOUGHT
+         ================================================= -->
+
+    <h2>
+      Final Thought
+    </h2>
+
+    <p>
+      You don't need to have every single detail figured out before
+      you leave. The goal isn't to pack your entire life into a
+      suitcase — it's to make the first few days in your new country
+      a little easier.
+    </p>
+
+    <p>
+      Pack the essentials, organise your important documents, leave
+      some room in your suitcase and give yourself time to settle in.
+      Your university chapter is about to begin.
+    </p>
+
+
+
+    <!-- AFFILIATE DISCLOSURE -->
+
+    <p class="affiliate-note">
+      <strong>Affiliate disclosure:</strong>
+      Some product links on this page may be affiliate links. If you
+      purchase something through an affiliate link, Campus Diaries
+      may earn a commission at no additional cost to you. Product
+      recommendations are intended as general suggestions, so always
+      check that an item is suitable for your destination and needs.
+    </p>
+
+
+  </article>
+
+
+
+  <!-- ===================================================
+       SIDEBAR
+       =================================================== -->
+
+  <aside class="article-sidebar">
+
+
+    <div class="sidebar-card light">
+
+      <h3>
+        Your packing route
+      </h3>
+
+      <p>
+        PACK →
+        <br>
+        PREPARE →
+        <br>
+        GO
+      </p>
+
+    </div>
+
+
+    <div class="sidebar-card dark">
+
+      <h3>
+        Remember
+      </h3>
+
+      <p>
+        You don't need to take your entire life with you. Pack what
+        you'll actually use, check what your accommodation provides
+        and remember that you can buy many everyday things after
+        you arrive.
+      </p>
+
+    </div>
+
+
+    <div class="sidebar-card light">
+
+      <h3>
+        More from Campus Diaries
+      </h3>
+
+      <p>
+
+        <a href="article.html">
+          Study in Central Europe →
+        </a>
+
+        <br><br>
+
+        <a href="article2.html">
+          Compare European student cities →
+        </a>
+
+      </p>
+
+    </div>
+
+
+  </aside>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+  <div class="footer-top">
+
+    <div>
+
+      <div class="logo">
+        Campus Diaries
+      </div>
+
+      <p>
+        Study. Travel. Live a little.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Campus Diaries
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     CHECKLIST SAVING
+     ===================================================== -->
+
+<script>
+
+  const checkboxes = document.querySelectorAll(
+    '.checklist-item input[type="checkbox"]'
+  );
+
+  checkboxes.forEach((checkbox) => {
+
+    const savedState =
+      localStorage.getItem(
+        'campus-diaries-' + checkbox.id
+      );
+
+    if (savedState === 'true') {
+      checkbox.checked = true;
+    }
+
+
+    checkbox.addEventListener('change', () => {
+
+      localStorage.setItem(
+        'campus-diaries-' + checkbox.id,
+        checkbox.checked
+      );
+
+    });
+
+  });
+
+</script>
+
 
 </body>
+
 </html>
