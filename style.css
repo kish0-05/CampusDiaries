@@ -2853,3 +2853,1154 @@ input {
   }
 
 }
+/* ============================================================
+   CAMPUS DIARIES — ARTICLE MAGAZINE OVERRIDE
+   Makes every article page belong to the new homepage world.
+============================================================ */
+
+
+/* ============================================================
+   ARTICLE PAGE BACKGROUND
+============================================================ */
+
+body:has(.article-layout) {
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(214,189,118,.12),
+      transparent 25%
+    ),
+    var(--paper);
+
+}
+
+
+/* ============================================================
+   ARTICLE HEADER
+============================================================ */
+
+body:has(.article-layout) .site-header {
+
+  min-height: 92px;
+
+  padding: 22px 5vw;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--line);
+
+  background: rgba(238,228,210,.96);
+
+}
+
+
+body:has(.article-layout) .nav-wrap {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+}
+
+
+/* old article logo */
+
+body:has(.article-layout) .logo {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 5px;
+
+  font-family: var(--serif);
+
+  font-size: 25px;
+
+  line-height: .8;
+
+  font-weight: 500;
+
+}
+
+
+body:has(.article-layout) .logo span {
+
+  font-family: var(--serif);
+
+  font-size: 29px;
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  color: var(--wine);
+
+}
+
+
+body:has(.article-layout) .nav-wrap nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 27px;
+
+}
+
+
+body:has(.article-layout) .nav-wrap nav a {
+
+  position: relative;
+
+  padding: 0;
+
+  background: none;
+
+  border: 0;
+
+  border-radius: 0;
+
+  color: var(--ink);
+
+  font-family: var(--mono);
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  letter-spacing: .13em;
+
+  text-transform: uppercase;
+
+}
+
+
+body:has(.article-layout) .nav-wrap nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -7px;
+
+  width: 0;
+
+  height: 1px;
+
+  background: var(--wine);
+
+  transition: width .3s ease;
+
+}
+
+
+body:has(.article-layout) .nav-wrap nav a:hover::after {
+
+  width: 100%;
+
+}
+
+
+body:has(.article-layout) .nav-wrap nav .nav-button {
+
+  color: var(--wine);
+
+}
+
+
+/* ============================================================
+   ARTICLE OUTER LAYOUT
+============================================================ */
+
+body:has(.article-layout) .article-layout {
+
+  width: 100% !important;
+
+  max-width: 1450px !important;
+
+  margin: 0 auto !important;
+
+  padding: 105px 7vw 160px !important;
+
+  display: grid !important;
+
+  grid-template-columns: minmax(0, 1fr) 270px !important;
+
+  gap: 8vw !important;
+
+  align-items: start !important;
+
+}
+
+
+/* ============================================================
+   ARTICLE MAIN COLUMN
+============================================================ */
+
+body:has(.article-layout) .article-main {
+
+  width: 100% !important;
+
+  max-width: 900px !important;
+
+  min-width: 0 !important;
+
+}
+
+
+/* ============================================================
+   BACK LINK
+============================================================ */
+
+body:has(.article-layout) .article-back {
+
+  display: inline-flex !important;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0 0 35px !important;
+
+  padding: 0 0 9px !important;
+
+  border-bottom: 1px solid var(--line);
+
+  color: var(--wine) !important;
+
+  background: transparent !important;
+
+  border-radius: 0 !important;
+
+  font-family: var(--mono) !important;
+
+  font-size: 8px !important;
+
+  font-weight: 400 !important;
+
+  letter-spacing: .15em !important;
+
+  text-transform: uppercase !important;
+
+  text-decoration: none !important;
+
+}
+
+
+body:has(.article-layout) .article-back:hover {
+
+  color: var(--terracotta) !important;
+
+}
+
+
+/* ============================================================
+   ARTICLE CATEGORY
+============================================================ */
+
+body:has(.article-layout) .article-category {
+
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin: 0 0 25px !important;
+
+  color: var(--wine) !important;
+
+  font-family: var(--mono) !important;
+
+  font-size: 8px !important;
+
+  font-weight: 400 !important;
+
+  letter-spacing: .18em !important;
+
+  line-height: 1.5 !important;
+
+  text-transform: uppercase !important;
+
+}
+
+
+body:has(.article-layout) .article-category::before {
+
+  content: "✦";
+
+  font-size: 9px;
+
+  color: var(--terracotta);
+
+}
+
+
+/* ============================================================
+   ARTICLE TITLE
+============================================================ */
+
+body:has(.article-layout) .article-main h1 {
+
+  max-width: 950px !important;
+
+  margin: 0 0 35px !important;
+
+  color: var(--ink) !important;
+
+  font-family: var(--serif) !important;
+
+  font-size: clamp(62px, 7vw, 112px) !important;
+
+  font-weight: 400 !important;
+
+  line-height: .79 !important;
+
+  letter-spacing: -.052em !important;
+
+}
+
+
+/* make words naturally breathe */
+
+body:has(.article-layout) .article-main h1 em {
+
+  color: var(--wine);
+
+  font-style: italic;
+
+}
+
+
+/* ============================================================
+   ARTICLE INTRO
+============================================================ */
+
+body:has(.article-layout) .article-intro {
+
+  max-width: 720px !important;
+
+  margin: 0 0 55px !important;
+
+  color: var(--ink-soft) !important;
+
+  font-family: var(--serif) !important;
+
+  font-size: 23px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.42 !important;
+
+}
+
+
+/* ============================================================
+   HERO IMAGE
+============================================================ */
+
+body:has(.article-layout) .article-hero-image {
+
+  position: relative !important;
+
+  width: 100% !important;
+
+  margin: 0 0 75px !important;
+
+  overflow: hidden !important;
+
+  border-radius: 0 !important;
+
+  background: var(--olive) !important;
+
+}
+
+
+body:has(.article-layout) .article-hero-image::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(48,37,31,.02),
+      rgba(48,37,31,.08)
+    );
+
+}
+
+
+body:has(.article-layout) .article-hero-image img {
+
+  display: block !important;
+
+  width: 100% !important;
+
+  height: min(68vh, 690px) !important;
+
+  max-height: none !important;
+
+  object-fit: cover !important;
+
+  border-radius: 0 !important;
+
+  filter:
+    sepia(.14)
+    saturate(.70)
+    contrast(.94)
+    brightness(.97) !important;
+
+  transition: transform 1s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+body:has(.article-layout) .article-hero-image:hover img {
+
+  transform: scale(1.018);
+
+}
+
+
+/* ============================================================
+   ARTICLE BODY
+============================================================ */
+
+body:has(.article-layout) .article-main > p:not(.article-intro) {
+
+  max-width: 680px !important;
+
+  margin: 0 0 25px !important;
+
+  color: var(--ink-soft) !important;
+
+  font-family: var(--serif) !important;
+
+  font-size: 18px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.72 !important;
+
+}
+
+
+body:has(.article-layout) .article-main > ul,
+body:has(.article-layout) .article-main > ol {
+
+  max-width: 680px;
+
+}
+
+
+/* ============================================================
+   ARTICLE SECTION HEADINGS
+============================================================ */
+
+body:has(.article-layout) .article-main h2 {
+
+  position: relative;
+
+  max-width: 800px !important;
+
+  margin: 85px 0 22px !important;
+
+  padding-top: 23px;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--ink) !important;
+
+  font-family: var(--serif) !important;
+
+  font-size: clamp(38px, 4vw, 58px) !important;
+
+  font-weight: 400 !important;
+
+  line-height: .9 !important;
+
+  letter-spacing: -.035em !important;
+
+}
+
+
+body:has(.article-layout) .article-main h2::before {
+
+  content: "✦";
+
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--terracotta);
+
+  font-family: var(--serif);
+
+  font-size: 12px;
+
+}
+
+
+body:has(.article-layout) .article-main h2:first-of-type {
+
+  margin-top: 25px !important;
+
+}
+
+
+/* ============================================================
+   PULL QUOTE STYLE
+============================================================ */
+
+body:has(.article-layout) .article-main blockquote {
+
+  position: relative;
+
+  max-width: 780px;
+
+  margin: 90px 0;
+
+  padding: 50px 0;
+
+  border-top: 1px solid var(--wine);
+
+  border-bottom: 1px solid var(--wine);
+
+  color: var(--wine);
+
+  font-family: var(--serif);
+
+  font-size: clamp(42px, 5vw, 75px);
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  line-height: .88;
+
+  letter-spacing: -.04em;
+
+}
+
+
+body:has(.article-layout) .article-main blockquote::before {
+
+  content: "“";
+
+  position: absolute;
+
+  left: -45px;
+
+  top: 20px;
+
+  font-size: 100px;
+
+  color: var(--terracotta);
+
+}
+
+
+/* ============================================================
+   CHECKLISTS
+============================================================ */
+
+body:has(.article-layout) .checklist {
+
+  max-width: 760px !important;
+
+  margin: 35px 0 55px !important;
+
+  padding: 0 !important;
+
+  list-style: none !important;
+
+}
+
+
+body:has(.article-layout) .checklist-item {
+
+  display: grid !important;
+
+  grid-template-columns: 25px 1fr !important;
+
+  gap: 15px !important;
+
+  padding: 17px 0 !important;
+
+  border-bottom: 1px solid var(--line-light) !important;
+
+}
+
+
+body:has(.article-layout) .checklist-item input {
+
+  width: 16px !important;
+
+  height: 16px !important;
+
+  margin-top: 5px !important;
+
+  accent-color: var(--wine) !important;
+
+}
+
+
+body:has(.article-layout) .checklist-item label {
+
+  color: var(--ink-soft) !important;
+
+  font-family: var(--serif) !important;
+
+  font-size: 18px !important;
+
+  line-height: 1.5 !important;
+
+}
+
+
+/* ============================================================
+   CHECKLIST INTRO
+============================================================ */
+
+body:has(.article-layout) .checklist-intro {
+
+  max-width: 760px !important;
+
+  margin: 55px 0 !important;
+
+  padding: 35px 40px !important;
+
+  border: 1px solid var(--line) !important;
+
+  border-radius: 0 !important;
+
+  background: var(--paper-deep) !important;
+
+}
+
+
+body:has(.article-layout) .checklist-intro::before {
+
+  content: "A LITTLE NOTE";
+
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--wine);
+
+  font-family: var(--mono);
+
+  font-size: 8px;
+
+  letter-spacing: .17em;
+
+}
+
+
+body:has(.article-layout) .checklist-intro p {
+
+  max-width: none !important;
+
+  margin-bottom: 15px !important;
+
+}
+
+
+/* ============================================================
+   PRODUCT / INFO CARDS
+============================================================ */
+
+body:has(.article-layout) .product-card {
+
+  max-width: 760px !important;
+
+  margin: 30px 0 !important;
+
+  padding: 30px !important;
+
+  border: 1px solid var(--line) !important;
+
+  border-radius: 0 !important;
+
+  background: var(--paper-deep) !important;
+
+}
+
+
+body:has(.article-layout) .product-card h3 {
+
+  font-family: var(--serif) !important;
+
+  font-size: 28px !important;
+
+  font-weight: 400 !important;
+
+}
+
+
+body:has(.article-layout) .product-link {
+
+  color: var(--wine) !important;
+
+  font-family: var(--mono) !important;
+
+  font-size: 8px !important;
+
+  text-transform: uppercase;
+
+  letter-spacing: .12em;
+
+}
+
+
+/* ============================================================
+   FINAL CHECKLIST
+============================================================ */
+
+body:has(.article-layout) .final-checklist {
+
+  max-width: 760px !important;
+
+  margin-top: 60px !important;
+
+  padding: 45px !important;
+
+  border-radius: 0 !important;
+
+  background: var(--wine) !important;
+
+  color: var(--paper-light) !important;
+
+}
+
+
+body:has(.article-layout) .final-checklist h2 {
+
+  color: var(--paper-light) !important;
+
+  border-color: rgba(245,237,223,.3);
+
+}
+
+
+body:has(.article-layout) .final-checklist h2::before {
+
+  color: var(--butter);
+
+}
+
+
+body:has(.article-layout) .final-checklist p {
+
+  color: rgba(245,237,223,.75) !important;
+
+}
+
+
+/* ============================================================
+   ARTICLE SIDEBAR
+============================================================ */
+
+body:has(.article-layout) .article-sidebar {
+
+  position: sticky !important;
+
+  top: 35px !important;
+
+  padding-top: 170px;
+
+}
+
+
+body:has(.article-layout) .sidebar-card {
+
+  position: relative;
+
+  margin-bottom: 25px !important;
+
+  padding: 30px !important;
+
+  border: 1px solid var(--line) !important;
+
+  border-radius: 0 !important;
+
+}
+
+
+body:has(.article-layout) .sidebar-card.light {
+
+  background: var(--paper-deep) !important;
+
+  color: var(--ink) !important;
+
+}
+
+
+body:has(.article-layout) .sidebar-card.dark {
+
+  background: var(--wine) !important;
+
+  color: var(--paper-light) !important;
+
+  border-color: var(--wine) !important;
+
+}
+
+
+body:has(.article-layout) .sidebar-card::before {
+
+  content: "✦";
+
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: var(--terracotta);
+
+  font-size: 12px;
+
+}
+
+
+body:has(.article-layout) .sidebar-card.dark::before {
+
+  color: var(--butter);
+
+}
+
+
+body:has(.article-layout) .sidebar-card h3 {
+
+  margin: 0 0 22px !important;
+
+  font-family: var(--serif) !important;
+
+  font-size: 32px !important;
+
+  font-weight: 400 !important;
+
+  line-height: .9 !important;
+
+}
+
+
+body:has(.article-layout) .sidebar-card p {
+
+  font-family: var(--serif) !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.55 !important;
+
+}
+
+
+body:has(.article-layout) .sidebar-card strong {
+
+  color: var(--wine);
+
+  font-weight: 600;
+
+}
+
+
+body:has(.article-layout) .sidebar-card.dark strong {
+
+  color: var(--butter);
+
+}
+
+
+/* ============================================================
+   ARTICLE FOOTER
+============================================================ */
+
+body:has(.article-layout) > footer {
+
+  background: var(--ink) !important;
+
+  color: var(--paper-light) !important;
+
+  padding: 90px 7vw 25px !important;
+
+}
+
+
+body:has(.article-layout) > footer .footer-top {
+
+  min-height: 300px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  border-bottom: 1px solid rgba(245,237,223,.2);
+
+  padding-bottom: 55px;
+
+}
+
+
+body:has(.article-layout) > footer .logo {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 5px;
+
+  font-family: var(--serif);
+
+  font-size: 35px;
+
+}
+
+
+body:has(.article-layout) > footer .logo span {
+
+  color: var(--butter);
+
+  font-family: var(--serif);
+
+  font-style: italic;
+
+}
+
+
+body:has(.article-layout) > footer p {
+
+  color: rgba(245,237,223,.55);
+
+  font-family: var(--mono);
+
+  font-size: 8px;
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
+}
+
+
+body:has(.article-layout) > footer .footer-bottom {
+
+  padding-top: 22px;
+
+}
+
+
+/* ============================================================
+   DECORATIVE ARTICLE NUMBER
+============================================================ */
+
+body:has(.article-layout) .article-main::before {
+
+  content: "VOL. 01  /  THE DIARY";
+
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: var(--ink-soft);
+
+  font-family: var(--mono);
+
+  font-size: 8px;
+
+  letter-spacing: .18em;
+
+}
+
+
+/* ============================================================
+   IMAGE CAPTION
+============================================================ */
+
+body:has(.article-layout) .article-hero-image + p:first-letter {
+
+  font-family: var(--serif);
+
+}
+
+
+/* ============================================================
+   MOBILE ARTICLE
+============================================================ */
+
+@media (max-width: 900px) {
+
+  body:has(.article-layout) .site-header {
+
+    min-height: 75px;
+
+    padding: 18px 6vw;
+
+  }
+
+
+  body:has(.article-layout) .nav-wrap nav {
+
+    display: none;
+
+  }
+
+
+  body:has(.article-layout) .article-layout {
+
+    display: block !important;
+
+    padding: 70px 7vw 110px !important;
+
+  }
+
+
+  body:has(.article-layout) .article-main {
+
+    max-width: none !important;
+
+  }
+
+
+  body:has(.article-layout) .article-main h1 {
+
+    font-size: clamp(55px, 12vw, 82px) !important;
+
+  }
+
+
+  body:has(.article-layout) .article-intro {
+
+    font-size: 21px !important;
+
+  }
+
+
+  body:has(.article-layout) .article-hero-image img {
+
+    height: 500px !important;
+
+  }
+
+
+  body:has(.article-layout) .article-sidebar {
+
+    position: static !important;
+
+    padding-top: 60px !important;
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  body:has(.article-layout) .article-layout {
+
+    padding: 55px 6vw 90px !important;
+
+  }
+
+
+  body:has(.article-layout) .article-main::before {
+
+    margin-bottom: 40px;
+
+  }
+
+
+  body:has(.article-layout) .article-main h1 {
+
+    font-size: 56px !important;
+
+    line-height: .82 !important;
+
+  }
+
+
+  body:has(.article-layout) .article-intro {
+
+    font-size: 19px !important;
+
+    line-height: 1.45 !important;
+
+    margin-bottom: 40px !important;
+
+  }
+
+
+  body:has(.article-layout) .article-hero-image {
+
+    margin-bottom: 55px !important;
+
+  }
+
+
+  body:has(.article-layout) .article-hero-image img {
+
+    height: 420px !important;
+
+  }
+
+
+  body:has(.article-layout) .article-main > p:not(.article-intro) {
+
+    font-size: 17px !important;
+
+    line-height: 1.75 !important;
+
+  }
+
+
+  body:has(.article-layout) .article-main h2 {
+
+    margin-top: 65px !important;
+
+    font-size: 40px !important;
+
+  }
+
+
+  body:has(.article-layout) .sidebar-card {
+
+    padding: 27px !important;
+
+  }
+
+
+  body:has(.article-layout) .checklist-intro {
+
+    padding: 27px !important;
+
+  }
+
+
+  body:has(.article-layout) .final-checklist {
+
+    padding: 30px !important;
+
+  }
+
+}
