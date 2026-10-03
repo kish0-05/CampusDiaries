@@ -1,436 +1,929 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <title>Campus Diaries | Student Life & Travel</title>
+
   <meta
     name="description"
-    content="Campus Diaries — student life, travel, study abroad and lifestyle ideas."
+    content="Campus Diaries — student life, travel, study abroad, money, lifestyle and little ideas for your next chapter."
   >
-
-  <title>Campus Diaries | Student Life & Travel</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="nav-wrap">
+  <!-- =========================================================
+       GRAIN / PAPER OVERLAY
+  ========================================================== -->
+  <div class="paper-grain" aria-hidden="true"></div>
 
-    <a class="logo" href="index.html">
-      Campus <span>Diaries</span>
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+  <header class="site-header">
+
+    <div class="header-left">
+      <span class="header-edition">VOL. 01</span>
+      <span class="header-line"></span>
+      <span>THE STUDENT EDITION</span>
+    </div>
+
+    <a href="index.html" class="brand">
+      <span class="brand-campus">Campus</span>
+      <span class="brand-diaries">Diaries</span>
     </a>
 
-    <nav>
+    <nav class="main-nav">
       <a href="#latest">Latest</a>
-      <a href="#categories">Categories</a>
+      <a href="#chapters">Chapters</a>
       <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
     </nav>
 
-    <a class="nav-button" href="#newsletter">
-      Read the blog →
-    </a>
+    <button class="menu-button" aria-label="Open menu">
+      <span></span>
+      <span></span>
+    </button>
 
-  </div>
-</header>
-
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero reveal">
-
-  <div>
-
-    <p class="eyebrow">
-      STUDENT LIFE • TRAVEL • LIFESTYLE
-    </p>
-
-    <h1>
-      Your next chapter<br>
-      <em>starts here.</em>
-    </h1>
-
-    <p class="hero-text">
-      Practical guides, study-abroad inspiration, travel ideas and
-      little things that make student life better.
-    </p>
-
-    <div class="hero-actions">
-
-      <a class="button primary" href="article.html">
-        Start reading →
-      </a>
-
-      <a class="button secondary" href="#categories">
-        Explore topics
-      </a>
-
-    </div>
-
-  </div>
+  </header>
 
 
-  <div class="hero-card">
-
-    <div class="stamp">
-      CAMPUS<br>
-      DIARIES
-    </div>
-
-    <div class="hero-card-main">
-      Make the most<br>
-      of where you are.
-    </div>
-
-    <div class="hero-card-bottom">
-      <span>est. 2026</span>
-      <span>✦</span>
-      <span>your guide</span>
-    </div>
-
-  </div>
-
-</section>
+  <main>
 
 
-<!-- TICKER -->
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+    <section class="hero">
 
-<div class="ticker reveal">
+      <div class="hero-image">
 
-  <span>NEW ON THE BLOG</span>
+        <img
+          src="images/article.jpg"
+          alt="European street and travel atmosphere"
+        >
 
-  <a href="article2.html">
-    How to compare European student cities →
-  </a>
+        <div class="hero-image-wash"></div>
 
-</div>
-
-
-<!-- LATEST -->
-
-<section id="latest" class="section">
-
-  <div class="section-heading reveal">
-
-    <div>
-      <p class="eyebrow">LATEST</p>
-      <h2>Stories worth saving.</h2>
-    </div>
-
-    <p>
-      Ideas for studying smarter, travelling further and enjoying
-      the in-between.
-    </p>
-
-  </div>
-
-
-  <div class="featured-grid">
-
-    <a
-      class="featured-post reveal"
-      href="article.html"
-    >
-
-      <div class="post-visual europe">
-
-        <span>EUROPE</span>
-
-        <div class="visual-title">
-          Study +<br>
-          Weekend Travel
+        <div class="hero-stamp">
+          <span>THE</span>
+          <strong>DIARY</strong>
+          <span>OF A STUDENT</span>
         </div>
 
-        <div class="route">
-          PRAGUE → VIENNA → BUDAPEST
+        <div class="hero-photo-note">
+          <span>somewhere in europe</span>
+          <span>✦</span>
         </div>
 
       </div>
 
-      <div class="post-info">
 
-        <p class="post-meta">
-          STUDY ABROAD · 8 MIN READ
+      <div class="hero-copy">
+
+        <div class="hero-topline">
+          <span>STUDENT LIFE · TRAVEL · STUDY ABROAD</span>
+          <span>2026</span>
+        </div>
+
+        <div class="hero-number">
+          01
+        </div>
+
+        <h1>
+          your next
+          <em>chapter</em>
+          starts here.
+        </h1>
+
+        <p class="hero-description">
+          Practical guides, study-abroad inspiration, travel ideas
+          and little things that make student life feel a little
+          more like your own.
         </p>
 
-        <h3>
-          Study in Central Europe:
-          Where You Can Study and Travel on Weekends
-        </h3>
+        <div class="hero-actions">
+          <a href="#latest" class="editorial-link">
+            <span>Enter the diary</span>
+            <span class="arrow">↘</span>
+          </a>
+
+          <a href="#chapters" class="quiet-link">
+            explore chapters
+          </a>
+        </div>
+
+        <div class="hand-note">
+          <span class="scribble">make the most of</span>
+          <span class="scribble-script">where you are.</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         MARQUEE / INTRO STRIP
+    ======================================================== -->
+    <div class="diary-strip">
+
+      <div class="strip-inner">
+
+        <span>STUDENT LIFE</span>
+        <i>✦</i>
+        <span>TRAVEL</span>
+        <i>✦</i>
+        <span>STUDY ABROAD</span>
+        <i>✦</i>
+        <span>LITTLE THINGS</span>
+        <i>✦</i>
+        <span>YOUR NEXT CHAPTER</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =======================================================
+         LATEST
+    ======================================================== -->
+    <section id="latest" class="latest-section">
+
+      <div class="section-intro">
+
+        <div class="section-marker">
+          <span>01</span>
+          <span class="marker-line"></span>
+          <span>THE LATEST</span>
+        </div>
+
+        <div class="section-heading-wrap">
+
+          <h2>
+            stories worth
+            <em>keeping.</em>
+          </h2>
+
+          <p>
+            Guides for the places you're going,
+            the choices you're making and the life
+            you're building along the way.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- This is populated from your existing articles.js -->
+      <div id="latest-stories" class="latest-feature">
+
+        <a
+          class="latest-photo"
+          href="article7.html"
+        >
+
+          <img
+            src="images/article7.jpg"
+            alt="Study abroad essentials"
+            onerror="this.src='images/article.jpg'"
+          >
+
+          <div class="photo-label">
+            <span>NEW</span>
+            <span>ON THE DIARY</span>
+          </div>
+
+          <div class="photo-number">
+            01
+          </div>
+
+        </a>
+
+
+        <article class="latest-story">
+
+          <div class="story-meta">
+            <span>STUDY ABROAD</span>
+            <span>TRAVEL</span>
+          </div>
+
+          <h3>
+            Study Abroad Essentials:
+            <em>The Ultimate University
+            Moving Checklist</em>
+          </h3>
+
+          <p>
+            Moving abroad for university?
+            A practical checklist for getting your
+            documents, luggage, money, technology
+            and first-week essentials organised
+            before you leave.
+          </p>
+
+          <div class="story-footer">
+
+            <span class="story-route">
+              PACK → PREPARE → GO
+            </span>
+
+            <a href="article7.html" class="story-read">
+              Read story
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- Secondary stories -->
+      <div class="story-row">
+
+        <a href="article2.html" class="story-card story-card-one">
+
+          <div class="story-card-image">
+            <img
+              src="images/article2.jpg"
+              alt="European student cities"
+            >
+          </div>
+
+          <div class="story-card-content">
+
+            <span class="card-number">02</span>
+
+            <span class="card-category">
+              STUDY ABROAD · CITY GUIDE
+            </span>
+
+            <h3>
+              How to Compare
+              European Student Cities
+              <em>Before You Apply</em>
+            </h3>
+
+            <span class="card-arrow">↗</span>
+
+          </div>
+
+        </a>
+
+
+        <a href="article3.html" class="story-card story-card-two">
+
+          <div class="story-card-image">
+            <img
+              src="images/article3.jpg"
+              alt="Student budgeting"
+            >
+          </div>
+
+          <div class="story-card-content">
+
+            <span class="card-number">03</span>
+
+            <span class="card-category">
+              MONEY · STUDENT LIFE
+            </span>
+
+            <h3>
+              Budgeting, Saving Money
+              & Side Hustles
+              <em>for International Students</em>
+            </h3>
+
+            <span class="card-arrow">↗</span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         DIARY QUOTE
+    ======================================================== -->
+    <section class="diary-quote">
+
+      <div class="quote-number">
+        02
+      </div>
+
+      <div class="quote-content">
+
+        <span class="quote-label">
+          A NOTE FROM THE DIARY
+        </span>
+
+        <blockquote>
+          “You don't have to have
+          everything figured out
+          <em>yet.</em>”
+        </blockquote>
 
         <p>
-          Compare student cities, transport connections and the
-          things to think about before choosing where to study.
+          There is something lovely about being in the middle
+          of things — choosing a city, meeting new people,
+          getting lost on the way home and slowly figuring
+          out what feels like you.
         </p>
 
-        <span class="read-more">
-          Read story →
+        <div class="quote-signature">
+          — Campus Diaries
+        </div>
+
+      </div>
+
+      <div class="quote-decoration">
+        ✦
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         CHAPTERS
+    ======================================================== -->
+    <section id="chapters" class="chapters-section">
+
+      <div class="chapter-header">
+
+        <div class="section-marker">
+          <span>03</span>
+          <span class="marker-line"></span>
+          <span>THE CHAPTERS</span>
+        </div>
+
+        <h2>
+          Pick a chapter.
+        </h2>
+
+        <p>
+          Different parts of student life,
+          because there is more to university
+          than deadlines.
+        </p>
+
+      </div>
+
+
+      <div class="chapters-list">
+
+
+        <a href="study.html" class="chapter">
+
+          <div class="chapter-number">
+            01
+          </div>
+
+          <div class="chapter-name">
+            Study
+          </div>
+
+          <div class="chapter-description">
+            for the days you're figuring out
+            what comes next
+          </div>
+
+          <div class="chapter-arrow">
+            ↗
+          </div>
+
+        </a>
+
+
+        <a href="travel.html" class="chapter">
+
+          <div class="chapter-number">
+            02
+          </div>
+
+          <div class="chapter-name">
+            Travel
+          </div>
+
+          <div class="chapter-description">
+            for the places you'll remember
+          </div>
+
+          <div class="chapter-arrow">
+            ↗
+          </div>
+
+        </a>
+
+
+        <a href="lifestyle.html" class="chapter">
+
+          <div class="chapter-number">
+            03
+          </div>
+
+          <div class="chapter-name">
+            Lifestyle
+          </div>
+
+          <div class="chapter-description">
+            for making ordinary days
+            feel a little special
+          </div>
+
+          <div class="chapter-arrow">
+            ↗
+          </div>
+
+        </a>
+
+
+        <a href="money.html" class="chapter">
+
+          <div class="chapter-number">
+            04
+          </div>
+
+          <div class="chapter-name">
+            Money
+          </div>
+
+          <div class="chapter-description">
+            for becoming a little
+            more independent
+          </div>
+
+          <div class="chapter-arrow">
+            ↗
+          </div>
+
+        </a>
+
+
+        <a href="room.html" class="chapter">
+
+          <div class="chapter-number">
+            05
+          </div>
+
+          <div class="chapter-name">
+            Room & Organization
+          </div>
+
+          <div class="chapter-description">
+            for creating a space
+            that feels like yours
+          </div>
+
+          <div class="chapter-arrow">
+            ↗
+          </div>
+
+        </a>
+
+
+        <a href="ideas.html" class="chapter">
+
+          <div class="chapter-number">
+            06
+          </div>
+
+          <div class="chapter-name">
+            Ideas
+          </div>
+
+          <div class="chapter-description">
+            for when you need
+            somewhere to start
+          </div>
+
+          <div class="chapter-arrow">
+            ↗
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         ATMOSPHERIC IMAGE
+    ======================================================== -->
+    <section class="atmosphere-section">
+
+      <div class="atmosphere-image">
+
+        <img
+          src="images/article4.jpg"
+          alt="Student life and everyday moments"
+          onerror="this.src='images/article.jpg'"
+        >
+
+        <div class="atmosphere-overlay"></div>
+
+        <span class="atmosphere-word">
+          wander
+        </span>
+
+        <span class="atmosphere-caption">
+          somewhere between
+          where you were
+          and where you're going
         </span>
 
       </div>
 
-    </a>
+    </section>
 
 
-    <a
-      class="small-post reveal reveal-delay-1"
-      href="article2.html"
-    >
+    <!-- =======================================================
+         ABOUT
+    ======================================================== -->
+    <section id="about" class="about-section">
 
-      <div class="mini-icon">
-        ✈
+      <div class="about-number">
+        04
       </div>
 
-      <p class="post-meta">
-        NEW ARTICLE
-      </p>
+      <div class="about-copy">
 
-      <h3>
-        How to compare European student cities
-      </h3>
+        <div class="section-marker">
+          <span>ABOUT THE DIARY</span>
+          <span class="marker-line"></span>
+        </div>
 
-      <p>
-        Cost, university options, transport and everyday student
-        life — all in one checklist.
-      </p>
+        <h2>
+          A little corner
+          of the internet
+          for figuring
+          things <em>out.</em>
+        </h2>
 
-      <span class="read-more">
-        Read story →
+        <p>
+          Campus Diaries is for students who are somewhere
+          between planning the future and figuring out
+          the present.
+        </p>
+
+        <p>
+          From choosing where to study and planning your
+          first weekend away to saving money, making your
+          room feel like home and finding something fun
+          to do on a random Tuesday.
+        </p>
+
+        <a href="#latest" class="editorial-link">
+          <span>Start exploring</span>
+          <span class="arrow">↘</span>
+        </a>
+
+      </div>
+
+
+      <div class="about-note">
+
+        <span class="note-top">
+          EST. 2026
+        </span>
+
+        <div class="note-symbol">
+          CD
+        </div>
+
+        <span class="note-bottom">
+          MADE FOR THE NEXT CHAPTER
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         NEWSLETTER
+    ======================================================== -->
+    <section id="newsletter" class="newsletter-section">
+
+      <div class="newsletter-paper">
+
+        <div class="newsletter-border"></div>
+
+        <div class="newsletter-stamp">
+          THE
+          <strong>DIARY</strong>
+          NOTE
+        </div>
+
+        <div class="newsletter-copy">
+
+          <span class="section-marker newsletter-marker">
+            <span>05</span>
+            <span class="marker-line"></span>
+            <span>THE DIARY NOTE</span>
+          </span>
+
+          <h2>
+            Good ideas,
+            <em>occasionally</em>
+            delivered.
+          </h2>
+
+          <p>
+            New guides, travel inspiration,
+            student-life ideas and little notes
+            worth opening your inbox for.
+          </p>
+
+        </div>
+
+
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
+          method="post"
+          class="newsletter-form"
+        >
+
+          <label for="bd-email">
+            YOUR EMAIL
+          </label>
+
+          <div class="newsletter-input">
+
+            <input
+              type="email"
+              name="email"
+              id="bd-email"
+              placeholder="your@email.com"
+              required
+            >
+
+            <button type="submit">
+              Join →
+            </button>
+
+          </div>
+
+          <small>
+            No inbox overload. Just the occasional good thing.
+          </small>
+
+          <a
+            href="https://buttondown.com/refer/campusdiaries"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="buttondown-credit"
+          >
+            powered by Buttondown
+          </a>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="brand footer-brand-logo">
+          <span class="brand-campus">Campus</span>
+          <span class="brand-diaries">Diaries</span>
+        </a>
+
+        <p>
+          Study. Travel. Live a little.
+        </p>
+
+      </div>
+
+
+      <div class="footer-big">
+        your next
+        <em>chapter.</em>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Campus Diaries
       </span>
 
-    </a>
+      <span>
+        VOL. 01
+      </span>
 
-
-    <article class="small-post dark reveal reveal-delay-2">
-
-      <div class="mini-icon">
-        ✦
-      </div>
-
-      <p class="post-meta">
-        COMING NEXT
-      </p>
-
-      <h3>
-        The student travel planning guide
-      </h3>
-
-      <p>
-        How to turn a free weekend into a memorable trip without
-        overcomplicating it.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- CATEGORIES -->
-
-<section id="categories" class="section">
-
-  <div class="section-heading reveal">
-
-    <div>
-      <p class="eyebrow">EXPLORE</p>
-      <h2>Pick your mood.</h2>
-    </div>
-
-  </div>
-
-
-  <div class="category-grid">
-
-    <a href="study.html" class="category-card reveal">
-      <span>01</span>
-      <strong>Study</strong>
-      <p>
-        Productivity, university life & study-abroad planning.
-      </p>
-      <b>→</b>
-    </a>
-
-    <a href="travel.html" class="category-card reveal reveal-delay-1">
-      <span>02</span>
-      <strong>Travel</strong>
-      <p>
-        Student-friendly destinations, routes & travel ideas.
-      </p>
-      <b>→</b>
-    </a>
-
-    <a href="lifestyle.html" class="category-card reveal reveal-delay-2">
-      <span>03</span>
-      <strong>Lifestyle</strong>
-      <p>
-        Routines, style, self-care and everyday inspiration.
-      </p>
-      <b>→</b>
-    </a>
-
-    <a href="money.html" class="category-card reveal">
-      <span>04</span>
-      <strong>Money</strong>
-      <p>
-        Budgeting, saving and beginner-friendly side hustles.
-      </p>
-      <b>→</b>
-    </a>
-
-    <a href="room.html" class="category-card reveal reveal-delay-1">
-      <span>05</span>
-      <strong>Room & Organization</strong>
-      <p>
-        Make your space practical, calm and yours.
-      </p>
-      <b>→</b>
-    </a>
-
-    <a href="ideas.html" class="category-card reveal reveal-delay-2">
-      <span>06</span>
-      <strong>Ideas</strong>
-      <p>
-        Gift guides, lists, activities and things to try.
-      </p>
-      <b>→</b>
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about" class="about reveal">
-
-  <div class="about-mark">
-    CD
-  </div>
-
-  <div>
-
-    <p class="eyebrow">
-      ABOUT CAMPUS DIARIES
-    </p>
-
-    <h2>
-      A little corner of the internet for figuring things out.
-    </h2>
-
-    <p>
-      Campus Diaries is for students who want useful information
-      without the boring bits — from choosing a study destination
-      to planning your next weekend away.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- NEWSLETTER -->
-
-<section
-  id="newsletter"
-  class="newsletter reveal"
->
-
-  <div>
-
-    <p class="eyebrow">
-      THE DIARY NOTE
-    </p>
-
-    <h2>
-      Good ideas, occasionally delivered.
-    </h2>
-
-    <p>
-      New guides, travel inspiration and student-life ideas.
-      No inbox overload.
-    </p>
-
-  </div>
-
-
-  <form
-    action="https://buttondown.com/api/emails/embed-subscribe/campusdiaries"
-    method="post"
-    class="embeddable-buttondown-form"
-  >
-
-    <label for="bd-email">
-      Enter your email
-    </label>
-
-    <input
-      type="email"
-      name="email"
-      id="bd-email"
-      placeholder="Your email address"
-      aria-label="Your email address"
-      required
-    >
-
-    <input
-      type="submit"
-      value="Subscribe"
-    >
-
-    <small>
-      Occasional guides, travel ideas and student-life inspiration.
-    </small>
-
-  </form>
-
-</section>
-
-</main>
-
-
-<footer>
-
-  <div class="footer-top">
-
-    <div>
-
-      <a class="logo" href="index.html">
-        Campus <span>Diaries</span>
-      </a>
-
-      <p>
-        Study. Travel. Live a little.
-      </p>
+      <span>
+        MADE FOR CURIOUS STUDENTS
+      </span>
 
     </div>
 
-  </div>
+  </footer>
 
 
-  <div class="footer-bottom">
-
-    <span>
-      © 2026 Campus Diaries
-    </span>
-
-    <span>
-      Made for the next chapter.
-    </span>
-
-  </div>
-
-</footer>
+  <!-- =========================================================
+       EXISTING ARTICLE DATABASE
+       DO NOT DELETE THIS
+  ========================================================== -->
+  <script src="articles.js"></script>
 
 
-<script src="site.js"></script>
+  <!-- =========================================================
+       HOMEPAGE INTERACTION
+  ========================================================== -->
+  <script>
+
+    /*
+      Your existing articles.js remains the source of truth.
+
+      This upgrades the "Latest" area when the articles.js
+      database is updated.
+    */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const latest = document.getElementById("latest-stories");
+
+      if (!latest || typeof articles === "undefined" || !articles.length) {
+        return;
+      }
+
+      const article = articles[0];
+
+      const imageMap = {
+        "article.html": "images/article.jpg",
+        "article2.html": "images/article2.jpg",
+        "article3.html": "images/article3.jpg",
+        "article4.html": "images/article4.jpg",
+        "article5.html": "images/article5.jpg",
+        "article6.html": "images/article6.jpg",
+        "article7.html": "images/article7.jpg"
+      };
+
+      const image =
+        imageMap[article.url] || "images/article.jpg";
+
+      latest.innerHTML = `
+
+        <a
+          class="latest-photo"
+          href="${article.url}"
+        >
+
+          <img
+            src="${image}"
+            alt="${article.title}"
+            onerror="this.src='images/article.jpg'"
+          >
+
+          <div class="photo-label">
+            <span>NEW</span>
+            <span>ON THE DIARY</span>
+          </div>
+
+          <div class="photo-number">
+            01
+          </div>
+
+        </a>
+
+
+        <article class="latest-story">
+
+          <div class="story-meta">
+            <span>${article.category || "CAMPUS DIARIES"}</span>
+          </div>
+
+          <h3>
+            ${article.title}
+          </h3>
+
+          <p>
+            ${article.description || ""}
+          </p>
+
+          <div class="story-footer">
+
+            <span class="story-route">
+              ${article.route || "READ → EXPLORE → REPEAT"}
+            </span>
+
+            <a
+              href="${article.url}"
+              class="story-read"
+            >
+              Read story
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+      `;
+
+    });
+
+
+    /* ---------------------------------------------------------
+       SMALL SCROLL REVEALS
+    --------------------------------------------------------- */
+
+    const revealItems =
+      document.querySelectorAll(
+        ".story-card, .chapter, .about-copy, .newsletter-paper"
+      );
+
+    const revealObserver =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("is-visible");
+
+              revealObserver.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealItems.forEach(function(item) {
+
+      item.classList.add("reveal");
+
+      revealObserver.observe(item);
+
+    });
+
+
+    /* ---------------------------------------------------------
+       MOBILE MENU
+    --------------------------------------------------------- */
+
+    const menuButton =
+      document.querySelector(".menu-button");
+
+    const navigation =
+      document.querySelector(".main-nav");
+
+
+    if (menuButton) {
+
+      menuButton.addEventListener("click", function() {
+
+        document.body.classList.toggle("menu-open");
+
+      });
+
+    }
+
+
+    document
+      .querySelectorAll(".main-nav a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          document.body.classList.remove("menu-open");
+
+        });
+
+      });
+
+  </script>
 
 </body>
 </html>
